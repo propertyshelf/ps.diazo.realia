@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules xmlns="http://namespaces.plone.org/diazo"
+    xmlns:css="http://namespaces.plone.org/diazo/css"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns:xi="http://www.w3.org/2001/XInclude">
+
+
+  <!-- <rules css:if-content="#visual-portal-wrapper"> -->
+
+    <!-- Use the theme template from index.html. -->
+    <!-- <theme href="/++theme++ps.diazo.realia/index.html" /> -->
+
+    <!-- <after css:theme-children="html head"> -->
+      <!-- Add custom stylesheet. -->
+      <!-- <link rel="stylesheet" href="{$portal_url}/++theme++ps.diazo.realia/static/main.css" type="text/css" /> -->
+
+      <!-- Add custom JavaScript. -->
+      <!-- <script src="{$portal_url}/++theme++ps.diazo.realia/static/main.js"></script> -->
+
+      <!--Include Google Fonts. -->
+      <!-- <link href='http://fonts.googleapis.com/css?family=Alegreya:400,700' rel='stylesheet' type='text/css' /> -->
+    <!-- </after> -->
+
+  <!-- </rules> -->
+
+</rules>
