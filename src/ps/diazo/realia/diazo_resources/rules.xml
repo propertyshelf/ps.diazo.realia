@@ -5,22 +5,23 @@
     xmlns:xi="http://www.w3.org/2001/XInclude">
 
 
-  <!-- <rules css:if-content="#visual-portal-wrapper"> -->
+  <rules css:if-content="#visual-portal-wrapper">
+
+    <xi:include href="/++theme++ps.diazo.realia/rules/rules.xml"/>
 
     <!-- Use the theme template from index.html. -->
-    <!-- <theme href="/++theme++ps.diazo.realia/index.html" /> -->
+    <theme href="/++theme++ps.diazo.realia/index.html" />
 
-    <!-- <after css:theme-children="html head"> -->
+    <after css:theme-children="html head">
       <!-- Add custom stylesheet. -->
-      <!-- <link rel="stylesheet" href="{$portal_url}/++theme++ps.diazo.realia/static/main.css" type="text/css" /> -->
+      <link rel="stylesheet" href="{$portal_url}/++theme++ps.diazo.realia/static/main.css" type="text/css" />
 
       <!-- Add custom JavaScript. -->
-      <!-- <script src="{$portal_url}/++theme++ps.diazo.realia/static/main.js"></script> -->
+      <script src="{$portal_url}/++theme++ps.diazo.realia/static/main.js"></script>
 
       <!--Include Google Fonts. -->
-      <!-- <link href='http://fonts.googleapis.com/css?family=Alegreya:400,700' rel='stylesheet' type='text/css' /> -->
-    <!-- </after> -->
-
-  <!-- </rules> -->
+      <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css' />
+    </after>
+  </rules>
 
 </rules>

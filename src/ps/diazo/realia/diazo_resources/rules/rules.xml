@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules
+    xmlns="http://namespaces.plone.org/diazo"
+    xmlns:css="http://namespaces.plone.org/diazo/css"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+    <!-- Apply the following rules to standard Plone pages -->
+    <rules css:if-content="#visual-portal-wrapper">
+
+        <after css:theme-children="html head">
+            <link rel="stylesheet" href="{$portal_url}/++theme++realia-propertyshelf/assets/css/mls-india-{$theme_color}.css" type="text/css" />
+        </after>       
+    
+        <before theme-children="/html/body" method="raw">
+            <xsl:attribute name="class">
+              <xsl:value-of select="/html/body/@class" />
+              <xsl:if css:test="#portal-column-one"> portal-col-one</xsl:if>
+              <xsl:if css:test="#portal-column-content"> portal-col-content</xsl:if>
+              <xsl:if css:test="#portal-column-two"> portal-col-two</xsl:if> header-<xsl:value-of select="$header_class"/>
+            </xsl:attribute>
+        </before>
+
+        <after css:theme-children=".info .site-email" method="raw">
+            <div id="site_contact_email">
+                <a href="mailto:{$email}"><xsl:value-of select="$email" /></a>
+            </div>
+        </after>
+        
+        <after css:theme-children=".info .site-phone" method="raw">
+            <div class="site_contact_phone">
+                <a href="tel:{$nr_phone}"><xsl:value-of select="$nr_phone_show" /></a>
+            </div>
+        </after>
+        
+        <!-- Replace title with Plone's page title  -->
+        <replace css:theme="html head title" css:content="html head title" />
+
+        <!-- Copy base tag from Plone -->
+        <before css:theme-children="html head" css:content="html head base" />
+
+        <!-- Copy link, style, meta tags from Plone head -->
+        <after css:theme-children="html head"
+               content="/html/head/link | /html/head/style | /html/head/meta" />
+
+        <!-- merge classes from Plone body with theme body -->
+        <merge attributes="class" css:theme="body" css:content="body"/>
+        
+        <!-- Copy script tags from Plone head to end of body -->
+        <after css:theme-children="html head" css:content="html head script" />
+
+        <!-- Insert your own rules here -->
+        <rules css:if-content="#portal-column-content.width-full">     
+          <drop 
+            css:theme=".content-portlets"
+          />
+        </rules>
+        
+        <replace
+            css:content="#portal-logo"
+            css:theme=".logo a"
+        />
+        
+        <replace
+            css:theme-children=".account .account-login"
+            css:content-children="#portal-personaltools-wrapper #portal-personaltools #anon-personalbar"
+        />        
+    
+        <replace
+            css:content="dt.portletHeader"
+            css:theme-children=".portlet .portletHeader span"
+        />
+        
+        <replace
+            css:content-children="#portal-globalnav"
+            css:theme-children="#navigation ul.nav"
+        />
+        
+        <replace
+            css:content-children="#portal-footer-wrapper .width-full .row #doormat-container"
+            css:theme="#footer-top-inner.container .row"
+        />
+
+        <replace
+            css:content-children="#footer.container"
+            css:theme-children="#footer.container"
+        />
+        
+        <drop
+            css:theme="#breadcrumbs-you-are-here"
+        />
+        
+        <replace
+            css:theme-children=".info .site-email a"
+            css:content-children=".socialheader .toolkit"
+        />
+
+        <rules css:if-content="#site_contact_email">
+            <prepend
+                css:theme=".site-email"
+                css:content-children="#site_contact_email"
+            />
+            <drop
+                css:content="#site_contact_email"
+            />
+        </rules>
+
+        <replace
+            css:theme-children=".site-slogan"
+            css:content-children=".titlecontact .toolkit"
+        />
+        <rules css:if-content="#site_contact_email">
+            <replace
+                css:theme-children=".account-register"
+                css:content-children=".account-register"
+            />
+            <drop
+                css:content=".account-register"
+            />
+        </rules>
+    
+        <replace
+            css:theme-children=".breadcrumb-wrapper ul.breadcrumb.pull-left li"
+            css:content-children="#portal-breadcrumbs"
+        />
+        
+        <drop
+            css:content="span#breadcrumbs-you-are-here"/>
+        
+        <drop
+            css:theme=".toggle"/>
+        
+        <rules css:if-content="#portal-personaltools .actionMenuHeader">
+            <prepend
+                css:theme=".account.pull-right"
+                css:content="#portal-personaltools-wrapper"
+            />
+        </rules>
+        
+        <!-- Add Menu bar dont work : Gun -->
+         <rules css:if-content="#portal-personaltools .actionMenuHeader">
+            <prepend
+                css:theme="#wrapper-inner #content"
+                css:content="#portal-column-content .documentEditablet #edit-bar"
+            />    
+        </rules>  
+        
+        <replace
+            css:theme=".site-search"
+            css:content="#portal-searchbox"
+        />
+        
+        <drop
+            css:content="#LSResult #livesearchLegend"/>
+        
+        <drop
+            css:content=".searchSection"
+        />
+        
+        
+        <replace
+            css:content="#portal-languageselector"
+            css:theme-children=".language-switcher"
+        />
+  
+        <!-- porlet left Start -->
+        <replace
+            css:theme-children=".portlet-left #maincontent"
+            css:content="#portal-column-content"
+            css:if-content="#portal-column-one"
+            css:if-not-content="#portal-column-two"
+        />
+        <replace
+            css:theme-children=".portlet-left #portlet-left"
+            css:content="#portal-column-one"
+            css:if-content="#portal-column-one"
+            css:if-not-content="#portal-column-two"
+        />
+        <drop
+            css:theme=".portlet-right"
+            css:if-content="#portal-column-one"
+            css:if-not-content="#portal-column-two"
+        />
+        <drop
+            css:theme=".portlet-both"
+            css:if-content="#portal-column-one"
+            css:if-not-content="#portal-column-two"
+        />
+        <drop
+            css:theme=".no-portlet"
+            css:if-content="#portal-column-one"
+            css:if-not-content="#portal-column-two"
+        />
+        <!-- porlet left : END -->
+        <!-- porlet right : start -->
+        <replace
+            css:theme-children=".portlet-right #maincontent"
+            css:content="#portal-column-content"
+            css:if-content="#portal-column-two"
+            css:if-not-content="#portal-column-one"
+        />
+        <replace
+            css:theme-children=".portlet-right #portlet-right"
+            css:content="#portal-column-two"
+            css:if-content="#portal-column-two"
+            css:if-not-content="#portal-column-one"
+        />
+        <drop
+            css:theme=".portlet-left"
+            css:if-content="#portal-column-two"
+            css:if-not-content="#portal-column-one"
+        />
+        <drop
+            css:theme=".portlet-both"
+            css:if-content="#portal-column-two"
+            css:if-not-content="#portal-column-one"
+        />
+        <drop
+            css:theme=".no-portlet"
+            css:if-content="#portal-column-two"
+            css:if-not-content="#portal-column-one"
+        />
+        <rules css:if-content="#site_contact_link">
+            <replace
+                css:theme=".list-your-property"
+                css:content="#site_contact_link"
+                method="raw"
+            />
+            <drop
+                css:content="#site_contact_link"
+            />
+        </rules>
+        <rules css:if-content=".site_contact_phone">
+            <prepend
+                css:theme=".info .site-phone"
+                css:content=".site_contact_phone"
+            />
+            <drop
+                css:content=".site_contact_phone"
+            />
+        </rules>
+        <replace
+            css:theme-children=".site-name .brand"
+            css:content-children=".titlecontact h1"
+        />
+        <!-- porlet bold : start -->
+            <rules css:if-content="#portal-column-one">
+                <rules css:if-content="#portal-column-two">
+                <replace
+                css:theme-children=".portlet-both #maincontent"
+                css:content="#portal-column-content"
+                />
+                <drop
+                    css:theme=".no-portlet"
+                />
+                <drop
+                    css:theme=".portlet-left"
+                />
+                <drop
+                    css:theme=".portlet-right"
+                />
+            </rules>
+            </rules>
+            <rules css:if-content="#portal-column-one">
+                <replace
+                css:theme-children="#portlet-right"
+                css:content="#portal-column-two"
+                css:if-content="#portal-column-two"
+                />
+            </rules>
+            <rules css:if-content="#portal-column-two">
+                <replace
+                    css:theme-children="#portlet-left"
+                    css:content="#portal-column-one"
+                    css:if-content="#portal-column-one"
+                />            
+            </rules>
+        <!-- Portlet bold : END -->
+        <!-- No portlet : Start -->
+            <rules css:if-not-content="#portal-column-one">
+                <rules css:if-not-content="#portal-column-two">
+                    <replace
+                        css:theme-children=".no-portlet #maincontent"
+                        css:content="#portal-column-content"/>
+                <drop
+                    css:theme=".portlet-both"
+                />
+                <drop
+                    css:theme=".portlet-left"
+                />
+                <drop
+                    css:theme=".portlet-right"
+                />
+            </rules>
+        </rules>
+        <!-- No Portlet : End -->
+        <!-- Listing Row rules -->
+        <rules css:if-content=".listing-summary">
+                
+        </rules>
+    </rules>
+
+</rules>
