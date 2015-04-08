@@ -8,6 +8,12 @@
     <rules css:if-content="#visual-portal-wrapper">
 
         <after css:theme-children="html head">
+            <link rel="stylesheet" href="{$portal_url}/++theme++ps.diazo.realia/assets/css/mls-india.css" type="text/css"/>
+            <link rel="stylesheet" href="{$portal_url}/++theme++ps.diazo.realia/assets/css/bootstrap.css" type="text/css"/>
+            <link rel="stylesheet" href="{$portal_url}/++theme++ps.diazo.realia/assets/css/bootstrap-responsive.css" type="text/css"/>
+            <link rel="stylesheet" href="{$portal_url}/++theme++ps.diazo.realia/assets/libraries/chosen/chosen.css" type="text/css"/>
+            <link rel="stylesheet" href="{$portal_url}/++theme++ps.diazo.realia/assets/libraries/bootstrap-fileupload/bootstrap-fileupload.css" type="text/css"/>
+            <link rel="stylesheet" href="{$portal_url}/++theme++ps.diazo.realia/assets/css/mls-india-blue.css" type="text/css" id="color-variant-default"/>
             <link rel="stylesheet" href="{$portal_url}/++theme++realia-propertyshelf/assets/css/mls-india-{$theme_color}.css" type="text/css" />
         </after>       
     
