@@ -415,9 +415,15 @@ ul.breadcrumb span#breadcrumbs-current{
     text-align: center;
     text-transform: uppercase;
     color: #fff !important;
+	font-size: 18px;
 }
 .abtngreen a{
     color: #336633 !important;
+}
+.abtngreen:hover, #content p.box.green a:hover {
+  color: #fff !important;
+  font-weight: bold;
+  text-shadow: 2px 2px 2px rgba(106, 113, 149, 1);
 }
 div.portletStaticText{
     box-shadow: none;
