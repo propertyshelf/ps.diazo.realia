@@ -137,6 +137,91 @@ body.header-light .breadcrumb-wrapper{
     border: 2px solid;
     border-radius: 5px;
 }
+#content .listing-collection-tile .collection-item.tileItem{
+    padding-bottom: 25px;
+}
+.listing-collection-tile .collection-item.tileItem div{
+	padding: 0 5%;
+}
+.listing-collection-tile .collection-item.tileItem h2{
+	padding: 0 5%;
+}
+.listing-collection-tile .collection-item.tileItem .item {
+    float: left;
+    margin: 0 0 10px;
+    width: 90% !important;
+}
+.listing-collection-tile .collection-item.tileItem .item.beds_baths .item-heading{
+    display: block;
+    background-image: url("../img/icons/bedandbath.png");
+    background-position: center center;
+    height: 20px;
+    text-indent: -9999px;
+    white-space: nowrap;
+    width: 55px !important;
+	margin: 0 5px 0 0;
+}
+.listing-collection-tile .collection-item.tileItem .item .item-body a{
+	color: #707070;
+}
+.listing-collection-tile .collection-item.tileItem .item.lot_size span{
+    float: left;
+    padding: 12.6px 13.6px !important;
+}
+body #content .development-summary .tileItem {
+	margin: 0 0 30px 0;
+    padding: 2%;
+	width: 96%;
+}
+body #content .development-summary .tileItem .tileHeadline{
+	margin: 0;
+}
+body #content .listing-summary.development-summary figure {
+    max-width: 40%;
+    width: auto;
+}
+body #content #main #content .listing-summary.development-summary .row.propertyrow section {
+    width: 60%;
+}
+body #content #main #content .listing-summary.development-summary .row section {
+    padding: 0.5% 0 0 2%;
+}
+body #content #main #content .listing-summary.development-summary .row section dd{
+    width: 66%;
+}
+body #content #main #content .listing-summary.development-summary .row section dt{
+    width: 30%;
+}
+body #content .development-summary section dt.location {
+    background-image: url("../img/icons/location-type-icon.png");
+    background-position: center center;
+    color: transparent;
+    float: left;
+    height: 24px;
+    white-space: nowrap;
+    width: 20px !important;
+	margin-right: 2% !important;
+}
+body #content .development-summary section dd.location {
+    background-image: none;
+}
+body #content .development-summary section .label {
+    background-color: transparent;
+	color: #707070;
+	padding: 0;
+	text-shadow: unset;
+	line-height: 20px;
+	margin-bottom: 7px !important;
+	font-size: 14px;
+}
+#content .listing-collection-tile .price p,
+#content .listing-collection-tile .price a{
+    bottom: 0;
+    font-size: 24px;
+    position: absolute;
+    right: 0;
+	padding: 0 10px 10px;
+}
 form input.standalone[type="submit"]{
     background-image: url("../img/arrow-right-white.png");
     background-position: 90% center;
@@ -700,13 +785,13 @@ section .tileItem section.body .title-price .title{
 section .row .tileItem{
     width:99%;
 }
-section .row .tileItem .propertyrow section.body{
-    width: 70% !important;
+body #content section .row .tileItem .propertyrow section.body{
+    width: 70%;
     margin-left: 0;
     padding-top: 2%;
     padding-bottom: 0;
-    height: auto !important;
-    padding-bottom: 10px !important;
+    height: auto;
+    padding-bottom: 10px;
 }
 /*--New listing search:END--*/
 /*--Blue block--*/
@@ -737,7 +822,6 @@ section .row .tileItem .propertyrow section.body{
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
     display: inline-block;
     float: left;
-    height: auto !important;
     margin-bottom: 30px !important;
     margin-left: 3%;
     min-height: 384px;
@@ -1114,9 +1198,9 @@ section dd.List0{
     height: 171px;
     width: 192px;
 }
-section .tileItem section {
-    height: 123px !important;
-    padding: 2% !important;
+body section .tileItem section {
+    height: 123px;
+    padding: 2%;
     position: relative;
 }
 .new-listings dl{
@@ -2595,10 +2679,10 @@ table.accordion_table th{
         margin-left: 4px;
         margin-top: 4px;
     }
-    #content .listing-summary figure{
-        margin:0 !important;
-        width: 217px !important;
-        padding: 0 !important;
+    body #content .listing-summary figure{
+        margin:0;
+        width: 217px;
+        padding: 0;
     }
     /*
     section#recent-listings .row .tileItem .row section.body{
@@ -2688,12 +2772,22 @@ table.accordion_table th{
     .listing #listing-images{
         margin-right: 0 !important;
     }
-    section .row .tileItem .propertyrow section.body{
-        width: 63% !important;
+    body section .row .tileItem .propertyrow section.body{
+        width: 63%
     }
-    #content .listing-summary figure{
+	body #content #main #content .listing-summary.development-summary .row.propertyrow section{
+		width: 55%;
+	}
+	body #content #main #content .listing-summary.development-summary .row section dt {
+		width: 40%;
+	}
+
+	body #content #main #content .listing-summary.development-summary .row section dd {
+		width: 60%;
+	}
+    body #content .listing-summary figure{
         margin:0 !important;
-        width: 220px !important;
+        width: 220px;
         padding: 0 !important;
     }
     #search-form #form .form-row-listing-type #formfield-form-widgets-listing_type span.option:nth-child(4){
@@ -2705,6 +2799,18 @@ table.accordion_table th{
     }
 }
 @media (max-width:1023px) and (min-width:980px){
+	body #content #main #content .listing-summary.development-summary .row .tileItem  figure{
+		margin: 0;
+	}
+	body #content #main #content .listing-summary.development-summary .row.propertyrow section{
+		width: 53%;
+	}
+	body #content #main #content .listing-summary.development-summary .row section dt {
+		width: 40%;
+	}
+	body #content #main #content .listing-summary.development-summary .row section dd {
+		width: 60%;
+	}
     .container .navigation ul.nav.have-search{
         max-width: 76%;
     }
@@ -2747,8 +2853,8 @@ table.accordion_table th{
     .portletQuickSearch .form-row-beds-baths select{
         width: 49%;
     }
-    section .row .tileItem .propertyrow section.body{
-        width: 70% !important;
+    body section .row .tileItem .propertyrow section.body{
+        width: 70%;
     }
     #search-form #form .form-rows .field .separator{
         margin-left: 4px;
@@ -2786,6 +2892,21 @@ table.accordion_table th{
     }
 }
 @media (max-width:979px) and (min-width:720px){
+	body #content #main #content .listing-summary.development-summary .row .tileItem  figure{
+		margin: 0;
+	}
+	body #content #main #content .listing-summary.development-summary .row.propertyrow section{
+		width: 53%;
+	}
+	body #content #main #content .listing-summary.development-summary .row section dt {
+		width: 40%;
+	}
+	body #content #main #content .listing-summary.development-summary .row section dd {
+		width: 60%;
+	}
+	.listing-collection-tile .collection-item.tileItem {
+		height: auto!important;
+	}
     .template-listing-detail #content .listing #listing-info{
         float: right;
         width: 41%;
@@ -2856,7 +2977,7 @@ table.accordion_table th{
         margin-top: 4px;
     }
     section .row .tileItem .propertyrow section.body{
-        width: 96% !important;
+        width: 96%;
     }
     #search-form #form .form-row-listing-type #formfield-form-widgets-listing_type span.option{
         width: 24% !important; 
@@ -2879,8 +3000,8 @@ table.accordion_table th{
         width: 100%;
         margin: 0;
     }
-    section .row .tileItem .propertyrow section.body{
-        width: 95% !important;
+    body section .row .tileItem .propertyrow section.body{
+        width: 95%;
         margin-left: 0;
         padding-top: 2%;
         padding-bottom: 0;
@@ -2912,8 +3033,8 @@ table.accordion_table th{
     .tileItem .row .image .content a{
         width: 96% !important;
     }
-    .row .tileItem .row section.body{
-        width: 96% !important;
+    body .row .tileItem .row section.body{
+        width: 96%;
         margin-bottom: 2%;
     }
     .row .tileItem .row{
@@ -2969,6 +3090,23 @@ table.accordion_table th{
     }
 }
 @media (max-width:719px) and (min-width:560px){
+	body #content #main #content .listing-summary.development-summary .row .tileItem  figure{
+		margin: 0;
+		max-width: none;
+	}
+	body #content #main #content .listing-summary.development-summary .row.propertyrow section{
+		margin-top: 20px;
+		padding: 0;
+	}
+	body #content #main #content .listing-summary.development-summary .row section dt {
+		width: 40%;
+	}
+	body #content #main #content .listing-summary.development-summary .row section dd {
+		width: 60%;
+	}
+	.listing-collection-tile .collection-item.tileItem {
+		height: auto!important;
+	}
     .template-listing-detail #content .listing #listing-info{
         margin-top: 450px;
     }
@@ -3042,8 +3180,8 @@ table.accordion_table th{
         margin-left: 4px;
         margin-top: 4px;
     }
-    section .row .tileItem .propertyrow section.body{
-        width: 96% !important;
+    body section .row .tileItem .propertyrow section.body{
+        width: 96%;
     }
     #search-form #form .form-row-listing-type #formfield-form-widgets-listing_type span.option{
         width: 24% !important; 
@@ -3066,8 +3204,8 @@ table.accordion_table th{
         width: 100%;
         margin: 0;
     }
-    section .row .tileItem .propertyrow section.body{
-        width: 95% !important;
+    body section .row .tileItem .propertyrow section.body{
+        width: 95%;
         margin-left: 0;
         padding-top: 2%;
         padding-bottom: 0;
@@ -3146,6 +3284,23 @@ table.accordion_table th{
     }
 }
 @media (max-width:559px) and (min-width:440px){
+	body #content #main #content .listing-summary.development-summary .row .tileItem  figure{
+		margin: 0;
+		max-width: none;
+	}
+	body #content #main #content .listing-summary.development-summary .row.propertyrow section{
+		margin-top: 20px;
+		padding: 0;
+	}
+	body #content #main #content .listing-summary.development-summary .row section dt {
+		width: 40%;
+	}
+	body #content #main #content .listing-summary.development-summary .row section dd {
+		width: 60%;
+	}
+	.listing-collection-tile .collection-item.tileItem {
+		height: auto!important;
+	}
     .template-listing-detail #content #main #maincontent{
         margin: 0;
     }
@@ -3212,8 +3367,8 @@ table.accordion_table th{
         margin-left: 4px;
         margin-top: 4px;
     }
-    section .row .tileItem .propertyrow section.body{
-        width: 96% !important;
+    body section .row .tileItem .propertyrow section.body{
+        width: 96%;
     }
     #search-form #form .form-row-listing-type #formfield-form-widgets-listing_type span.option{
         margin-right: 0 !important;
@@ -3235,8 +3390,8 @@ table.accordion_table th{
         width: 100%;
         margin: 0;
     }
-    section .row .tileItem .propertyrow section.body{
-        width: 95% !important;
+    body section .row .tileItem .propertyrow section.body{
+        width: 95%;
         margin-left: 0;
         padding-top: 2%;
         padding-bottom: 0;
@@ -3312,6 +3467,23 @@ table.accordion_table th{
     }
 }
 @media (max-width:439px) and (min-width:280px){
+	body #content #main #content .listing-summary.development-summary .row .tileItem  figure{
+		margin: 0;
+		max-width: none;
+	}
+	body #content #main #content .listing-summary.development-summary .row.propertyrow section{
+		margin-top: 20px;
+		padding: 0;
+	}
+	body #content #main #content .listing-summary.development-summary .row section dt {
+		width: 40%;
+	}
+	body #content #main #content .listing-summary.development-summary .row section dd {
+		width: 60%;
+	}
+	.listing-collection-tile .collection-item.tileItem {
+		height: auto!important;
+	}
     .template-listing-detail #content .listing #listing-info{
         margin-top: 435px;
     }
@@ -3382,8 +3554,8 @@ table.accordion_table th{
         width: 100%;
         margin: 0;
     }
-    section .row .tileItem .propertyrow section.body{
-        width: 95% !important;
+    body section .row .tileItem .propertyrow section.body{
+        width: 95%;
         margin-left: 0;
         padding-top: 2%;
         padding-bottom: 0;
@@ -3510,8 +3682,8 @@ table.accordion_table th{
         width: 100%;
         margin: 0;
     }
-    section .row .tileItem .propertyrow section.body{
-        width: 95% !important;
+    body section .row .tileItem .propertyrow section.body{
+        width: 95%;
         margin-left: 0;
         padding-top: 2%;
         padding-bottom: 0;

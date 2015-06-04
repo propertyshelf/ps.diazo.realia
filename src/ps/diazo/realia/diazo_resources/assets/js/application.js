@@ -1,3 +1,97 @@
+function column_counter(items){
+console.log('column counter');
+  my_width = $(items).width();
+  my_head_width = $(items).find('.collection-item h2:first').width();
+  //find out how many items in one row
+  if(my_width > 800){
+    listing_col=3;
+  }
+  else if(my_width > 200){
+    if(my_head_width < 400){
+      listing_col=2;
+    }
+    else{
+      listing_col=1;
+    }
+  }
+  else if(my_width < 200){
+    listing_col=1;
+  }
+  else{
+    listing_col=false;
+  }
+  
+  return listing_col;
+}
+
+function balance_height(items){
+console.log('balance height');
+  //get nr. of item columns
+  columns= column_counter(items);
+  //we have more then 1 column
+  if(columns>1){
+    //set height depending on column nr.
+    $(items).children('.collection-item').each(function(index){
+      // Modulo operator to fing begin of each row 
+      mod=index%columns;
+      
+      if(mod<1){
+        //mod == 0 -> first element in a row
+        if(index > 0){
+          // we are at least in second row
+          // get the max height of last row items
+          row_height= Math.max(height0, height1, height2);
+          // set the new heights for each item in the last row
+          if(item0){
+            $(item0).height(row_height);
+          }
+          if(item1){
+            $(item1).height(row_height);
+          }
+          if(item2){
+            $(item2).height(row_height);
+          }
+        }
+
+        // remember first row item with the name 'item0'
+        item0 =$(this);
+        // unset css defaults for calculate real height
+        item0.height('auto');
+        item0.css('min-height', 'auto');
+        height0=item0.height();
+        item1=null;
+        height1=0;
+        item2=null;
+        height2=0;
+
+      }
+      else{
+        if(mod==1){
+          // remember second row item with the name 'item1'
+          // last item when have 2 columns
+          item1 = $(this);
+          // unset css defaults for calculate real height
+          item1.height('auto');
+          item1.css('min-height', 'auto');
+          height1=item1.height();
+        }
+        if(mod==2){
+          // remember third row item with the name 'item2'
+          // last when have 3 columns
+          item2= $(this);
+          // unset css defaults for calculate real height
+          item2.height('auto');
+          item2.css('min-height', 'auto');
+          height2=item2.height();
+        }
+      }
+      
+    });
+  }
+  else{
+    //do nothing
+  }
+}
 function map_listing_data(obj){
  //use data input to give back a easy to access array for mapping
   dict=[];
@@ -409,4 +503,18 @@ $(document).ready(function() {
     
         $("#recent-listings .tileItem section").addClass("new-listings");
        // $(".item h5.item-heading").text("Area");
+		$(window).resize(function() {
+			if ($('.listing-collection-tile').length >0){
+				$('.listing-collection-tile').each(function(index){
+					balance_height($(this));
+				});
+			}
+		});
+		$( window ).load(function() {
+			if ($('.listing-collection-tile').length >0){
+				$('.listing-collection-tile').each(function(index){
+					balance_height($(this));
+				});
+			}
+		});
 });
