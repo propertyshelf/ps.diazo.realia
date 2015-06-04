@@ -54,6 +54,9 @@
     background-color: #000;
     filter: alpha(opacity=80); /* For IE8 and earlier */
 }
+.header-dark #header-wrapper #header #header-inner .navbar .navbar-inner .site-phone a {
+    color: #fff;
+}
 #content #main .portletWrapper{
     margin: 0 0 1em;
 }
