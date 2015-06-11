@@ -37,7 +37,13 @@
                 <a href="tel:{$nr_phone}"><xsl:value-of select="$nr_phone_show" /></a>
             </div>
         </after>
-        
+
+        <before 
+            css:content=".development__header"
+            css:theme="#content"
+            method="raw"
+        />     
+           
         <!-- Replace title with Plone's page title  -->
         <replace css:theme="html head title" css:content="html head title" />
 

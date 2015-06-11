@@ -37,6 +37,24 @@
 .ie8 .container{
     width: 1170px;
 }
+body #content .listing-summary .tileItem{
+	width: 98%;
+	margin-left: 5px;
+}
+body #content .listing-summary .tileItem .row figure{
+	margin: 0 3% 0 0;
+	padding: 0;
+}
+body #content .listing-summary .tileItem .row section{
+	margin: 1.5% 0 0;
+	padding: 0;
+}
+body #content .listing-summary .tileItem .row figure{
+	width: 25%;
+}
+body #content .listing-summary .tileItem .row section{
+	width: 70%;
+}
 .ie8 #header-wrapper #header #header-inner .navbar .navbar-inner .site-email{
     float: left;
     line-height: 90px;
@@ -173,24 +191,55 @@ body #content .development-summary .tileItem {
     padding: 2%;
 	width: 96%;
 }
+body #content #main #content .listing-summary.development-summary .row section dt.lot_size {
+    background-image: url("../img/icons/area-icon.png");
+    background-position: center center;
+    color: transparent;
+    float: left;
+    height: 25px;
+	margin-right: 8px;
+    margin-top: 5px;
+    white-space: nowrap;
+    width: 27px;
+}
+.development_details .listing-summary .tileItem {
+    margin-bottom: 1em !important;
+}
+.development_details .data_row .price {
+    font-size: 1.2em;
+    height: auto;
+    padding: 9px 0 !important;
+}
+.development_details .data_row .lot_size {
+    font-size: 12px;
+    line-height: 15px;
+}
 body #content .development-summary .tileItem .tileHeadline{
-	margin: 0;
+	margin-top: 0;
+}
+body #content .listing-summary.development-summary .tileItem figure .content{
+	padding: 3%;
+}
+body #content .listing-summary.development-summary .tileItem figure img{
+	height: auto;
 }
 body #content .listing-summary.development-summary figure {
     max-width: 40%;
     width: auto;
 }
 body #content #main #content .listing-summary.development-summary .row.propertyrow section {
-    width: 60%;
+    width: 57%;
 }
 body #content #main #content .listing-summary.development-summary .row section {
     padding: 0.5% 0 0 2%;
 }
 body #content #main #content .listing-summary.development-summary .row section dd{
     width: 66%;
+	margin-top: 7px;
 }
 body #content #main #content .listing-summary.development-summary .row section dt{
     width: 30%;
+	margin-top: 7px;
 }
 body #content .development-summary section dt.location {
     background-image: url("../img/icons/location-type-icon.png");
@@ -781,17 +830,6 @@ section .tileItem section.body .title-price .title{
     text-align: left;
     line-height: 24px !important;
     transition: color 0.2s ease-in 0s;
-}
-section .row .tileItem{
-    width:99%;
-}
-body #content section .row .tileItem .propertyrow section.body{
-    width: 70%;
-    margin-left: 0;
-    padding-top: 2%;
-    padding-bottom: 0;
-    height: auto;
-    padding-bottom: 10px;
 }
 /*--New listing search:END--*/
 /*--Blue block--*/
@@ -1598,7 +1636,7 @@ body section .tileItem section {
 }
 .tileItem.visualIEFloatFix section{
     background: none repeat scroll 0 0 white !important;
-    padding-bottom: 0 !important;
+    padding-bottom: 0;
 }
 /*--Recent listings style : TEST --*/
 #site-email-2{
@@ -2680,18 +2718,16 @@ table.accordion_table th{
         margin-top: 4px;
     }
     body #content .listing-summary figure{
-        margin:0;
-        width: 217px;
-        padding: 0;
+
     }
     /*
     section#recent-listings .row .tileItem .row section.body{
         width: 74% !important;
     }
     */
-    section .tileItem .row figure .content img{
-        height: 220px !important;
-        width: auto !important;
+    body section .tileItem .row figure .content img{
+        height: 220px;
+        width: auto;
         max-width:none;
     }
     #listing-info{
@@ -2758,10 +2794,9 @@ table.accordion_table th{
         margin-left: 4px;
         margin-top: 4px;
     }
-    section .tileItem .row figure .content img{
-        height: auto !important;
-        width: auto !important;
-    }
+    body .listing-summary .tileItem .row figure .content img{
+		height: 190px;
+	}
     #listing-info{
         float: right;
         margin-left: 0;
@@ -2786,9 +2821,7 @@ table.accordion_table th{
 		width: 60%;
 	}
     body #content .listing-summary figure{
-        margin:0 !important;
-        width: 220px;
-        padding: 0 !important;
+
     }
     #search-form #form .form-row-listing-type #formfield-form-widgets-listing_type span.option:nth-child(4){
         margin-right:7% !important;
@@ -2863,10 +2896,9 @@ table.accordion_table th{
     .row .tileItem .propertyrow figure{
         margin:0;
     }
-    section .tileItem .row figure .content img{
-        height: auto !important;
-        width: auto !important;
-    }
+    body .listing-summary .tileItem .row figure .content img{
+		height: 190px;
+	}
     #portal-searchbox{
     left: 0;
     margin: 0;
@@ -2892,6 +2924,15 @@ table.accordion_table th{
     }
 }
 @media (max-width:979px) and (min-width:720px){
+	body #content .no-portlet .listing-summary .tileItem .row figure {
+		width: 100%;
+	}
+	body #content .no-portlet .listing-summary .tileItem .row section {
+		width: 95%;
+	}
+	body #content #main #maincontent {
+		margin: 0;
+	}
 	body #content #main #content .listing-summary.development-summary .row .tileItem  figure{
 		margin: 0;
 	}
@@ -2968,9 +3009,9 @@ table.accordion_table th{
     .portletQuickSearch .form-row-beds-baths select{
         width: 49%;
     }
-    section .tileItem .row figure .content img{
-        height: auto !important;
-        width: auto !important;
+    body section .tileItem .row figure .content img{
+        height: auto;
+        width: auto;
     }
     #search-form #form .form-rows .field .separator{
         margin-left: 4px;
@@ -3009,8 +3050,16 @@ table.accordion_table th{
     .tileItem .row figure{
         margin: 0;
         padding-left: 25%;
-        width: 70% !important;
     }
+	body #content .listing-summary .tileItem .row figure{
+		width: 100%;
+		margin: 0;
+	}
+	body #content .listing-summary .tileItem .row section{
+		height: auto;
+		padding: 2%;
+		width: 96%;
+	}
     #listing-collection .tileItem section{
         height: auto !important;
     }
@@ -3024,11 +3073,11 @@ table.accordion_table th{
         height:auto;
         position: relative;
         text-align: center;
-        width: 100% !important;
+        width: 100%;
         padding: 0 !important;
     }
-    section .tileItem .row figure .content img{
-        width: auto !important;
+    body section .tileItem .row figure .content img{
+        width: auto;
     }
     .tileItem .row .image .content a{
         width: 96% !important;
@@ -3090,6 +3139,14 @@ table.accordion_table th{
     }
 }
 @media (max-width:719px) and (min-width:560px){
+	body #content .no-portlet .listing-summary .tileItem .row figure {
+		width: 100%;
+	}
+	body #content .no-portlet .listing-summary .tileItem .row section {
+		width: 95%;
+		height: auto;
+		padding: 2%
+	}
 	body #content #main #content .listing-summary.development-summary .row .tileItem  figure{
 		margin: 0;
 		max-width: none;
@@ -3172,9 +3229,9 @@ table.accordion_table th{
     .portletQuickSearch .form-row-beds-baths select{
         width: 49%;
     }
-    section .tileItem .row figure .content img{
-        height: auto !important;
-        width: auto !important;
+    body section .tileItem .row figure .content img{
+        height: auto;
+        width: auto;
     }
     #search-form #form .form-rows .field .separator{
         margin-left: 4px;
@@ -3231,8 +3288,8 @@ table.accordion_table th{
         width: 100% !important;
         padding: 0 !important;
     }
-    section .tileItem .row figure .content img{
-        width: auto !important;
+    body section .tileItem .row figure .content img{
+        width: auto;
     }
     .tileItem .row .image .content a{
         width: 96% !important;
@@ -3284,6 +3341,14 @@ table.accordion_table th{
     }
 }
 @media (max-width:559px) and (min-width:440px){
+	body #content .no-portlet .listing-summary .tileItem .row figure {
+		width: 100%;
+	}
+	body #content .no-portlet .listing-summary .tileItem .row section {
+		width: 95%;
+		height: auto;
+		padding: 2%
+	}
 	body #content #main #content .listing-summary.development-summary .row .tileItem  figure{
 		margin: 0;
 		max-width: none;
@@ -3359,9 +3424,9 @@ table.accordion_table th{
     .portletQuickSearch .form-row-beds-baths select{
         width: 49%;
     }
-    section .tileItem .row figure .content img{
-        height: auto !important;
-        width: auto !important;
+    body section .tileItem .row figure .content img{
+        height: auto;
+        width: auto;
     }
     #search-form #form .form-rows .field .separator{
         margin-left: 4px;
@@ -3396,11 +3461,6 @@ table.accordion_table th{
         padding-top: 2%;
         padding-bottom: 0;
     }
-    .tileItem .row figure{
-        margin: 0;
-        padding-left: 25%;
-        width: 70% !important;
-    }
     #listing-collection .tileItem section{
         height: auto !important;
     }
@@ -3414,11 +3474,11 @@ table.accordion_table th{
         height:auto;
         position: relative;
         text-align: center;
-        width: 100% !important;
+        width: 100%;
         padding: 0 !important;
     }
-    section .tileItem .row figure .content img{
-        width: auto !important;
+    body section .tileItem .row figure .content img{
+        width: auto;
     }
     .tileItem .row .image .content a{
         width: 96% !important;
@@ -3467,6 +3527,17 @@ table.accordion_table th{
     }
 }
 @media (max-width:439px) and (min-width:280px){
+	body #content .listing-summary .tileItem {
+		margin: 0;
+	}
+	body #content .listing-summary .tileItem .row figure {
+		width: 100%;
+	}
+	body #content .listing-summary .tileItem .row section {
+		width: 95%;
+		height: auto;
+		padding: 2%
+	}
 	body #content #main #content .listing-summary.development-summary .row .tileItem  figure{
 		margin: 0;
 		max-width: none;
@@ -3560,11 +3631,6 @@ table.accordion_table th{
         padding-top: 2%;
         padding-bottom: 0;
     }
-    .tileItem .row figure{
-        margin: 0;
-        padding-left: 25%;
-        width: 70% !important;
-    }
     #listing-collection .tileItem section{
         height: auto !important;
     }
@@ -3582,8 +3648,8 @@ table.accordion_table th{
         width: 100% !important;
         padding: 0 !important;
     }
-    section .tileItem .row figure .content img{
-        width: auto !important;
+    body section .tileItem .row figure .content img{
+        width: auto;
     }
     .tileItem .row .image .content a{
         width: 96% !important;
@@ -3709,8 +3775,8 @@ table.accordion_table th{
         width: 100% !important;
         padding: 0 !important;
     }
-    section .tileItem .row figure .content img{
-        width: auto !important;
+    body section .tileItem .row figure .content img{
+        width: auto;
     }
     .tileItem .row .image .content a{
         width: 96% !important;
