@@ -37,6 +37,28 @@
 .ie8 .container{
     width: 1170px;
 }
+#content-core.development_details {
+	overflow: unset;
+}
+body .development_details .ll .data_row .lot_size {
+    width: 65%;
+}
+body #content .development__groups .listing-summary .tileItem {
+	width: 48%;
+}
+body #content .portlet-both .listing-summary .tileItem .row figure {
+    width: 100%;
+	margin: 0;
+	text-align: center !important;
+}
+body #content .portlet-both .listing-summary .tileItem .row figure .content img{
+	height: auto;
+	width: auto;
+}
+body #content .portlet-both .listing-summary .tileItem .row section{
+    padding: 0 2%;
+    width: 94%;
+}
 body #content .listing-summary .tileItem{
 	width: 98%;
 	margin-left: 5px;
@@ -46,7 +68,7 @@ body #content .listing-summary .tileItem .row figure{
 	padding: 0;
 }
 body #content .listing-summary .tileItem .row section{
-	margin: 1.5% 0 0;
+	margin: 1.5% 0;
 	padding: 0;
 }
 body #content .listing-summary .tileItem .row figure{
@@ -200,12 +222,12 @@ body #content #main #content .listing-summary.development-summary .row section d
 	margin-right: 8px;
     margin-top: 5px;
     white-space: nowrap;
-    width: 27px;
+    width: 27px !important;
 }
 .development_details .listing-summary .tileItem {
     margin-bottom: 1em !important;
 }
-.development_details .data_row .price {
+body #content .development_details .data_row .price {
     font-size: 1.2em;
     height: auto;
     padding: 9px 0 !important;
@@ -225,10 +247,10 @@ body #content .listing-summary.development-summary .tileItem figure img{
 }
 body #content .listing-summary.development-summary figure {
     max-width: 40%;
-    width: auto;
+    width: auto !important;
 }
 body #content #main #content .listing-summary.development-summary .row.propertyrow section {
-    width: 57%;
+    width: 54%;
 }
 body #content #main #content .listing-summary.development-summary .row section {
     padding: 0.5% 0 0 2%;
@@ -697,9 +719,6 @@ label.horizontal.collapser.collapsed{
 }
 #main .row #portlet-right{
     margin-left:0;
-}
-.tileItem .propertyrow{
-    margin:0 !important;
 }
 section .row{
     margin: 0;
@@ -1237,7 +1256,6 @@ section dd.List0{
     width: 192px;
 }
 body section .tileItem section {
-    height: 123px;
     padding: 2%;
     position: relative;
 }
@@ -2811,14 +2829,19 @@ table.accordion_table th{
         width: 63%
     }
 	body #content #main #content .listing-summary.development-summary .row.propertyrow section{
-		width: 55%;
+		width: 54%;
 	}
 	body #content #main #content .listing-summary.development-summary .row section dt {
 		width: 40%;
 	}
-
 	body #content #main #content .listing-summary.development-summary .row section dd {
 		width: 60%;
+	}
+	body #content #main .no-portlet #content .listing-summary.development-summary .row section dt {
+		width: 40%;
+	}
+	body #content #main .no-portlet #content .listing-summary.development-summary .row section dd {
+		width: 50%;
 	}
     body #content .listing-summary figure{
 
@@ -2832,6 +2855,12 @@ table.accordion_table th{
     }
 }
 @media (max-width:1023px) and (min-width:980px){
+	body #content #main .no-portlet #content .listing-summary.development-summary .row section dt {
+		width: 40%;
+	}
+	body #content #main .no-portlet #content .listing-summary.development-summary .row section dd {
+		width: 50%;
+	}
 	body #content #main #content .listing-summary.development-summary .row .tileItem  figure{
 		margin: 0;
 	}
@@ -2924,6 +2953,18 @@ table.accordion_table th{
     }
 }
 @media (max-width:979px) and (min-width:720px){
+	body #content #main .no-portlet #content .listing-summary.development-summary .row section dt {
+		width: 40%;
+	}
+	body #content #main .no-portlet #content .listing-summary.development-summary .row section dd {
+		width: 56%;
+	}
+	body #content .development__groups .listing-summary .tileItem {
+		width: 100%;
+	}
+	#content .portlet-both #maincontent .span6{
+		width: 100%;
+	}
 	body #content .no-portlet .listing-summary .tileItem .row figure {
 		width: 100%;
 	}
@@ -3139,6 +3180,32 @@ table.accordion_table th{
     }
 }
 @media (max-width:719px) and (min-width:560px){
+	body #content #main .no-portlet #content .listing-summary.development-summary .row section dt {
+		width: 37%;
+	}
+	body #content #main .no-portlet #content .listing-summary.development-summary .row section dd {
+		width: 53%;
+	}
+	body #content-core.development_details .development__groups .listing-summary .tileItem .image_row figure a img {
+		position: static;
+	}
+	.development_details .development__groups .listing-summary .tileItem .image_row {
+		height: auto;
+		max-height: none;
+	}
+	.development_details .development__groups .listing-summary .tileItem .image_row .tileHeadline{
+		text-align: left;
+		float:left;
+		padding-top: 10px;
+	}
+	body #content .development__groups .listing-summary .tileItem {
+		width: 100%;
+	}
+	body #content .listing-summary .tileItem .row section{
+		height: auto;
+		padding: 2%;
+		width: 96%;
+	}
 	body #content .no-portlet .listing-summary .tileItem .row figure {
 		width: 100%;
 	}
@@ -3150,6 +3217,7 @@ table.accordion_table th{
 	body #content #main #content .listing-summary.development-summary .row .tileItem  figure{
 		margin: 0;
 		max-width: none;
+		width: 100% !important;
 	}
 	body #content #main #content .listing-summary.development-summary .row.propertyrow section{
 		margin-top: 20px;
@@ -3341,10 +3409,39 @@ table.accordion_table th{
     }
 }
 @media (max-width:559px) and (min-width:440px){
-	body #content .no-portlet .listing-summary .tileItem .row figure {
+	body #content #main .no-portlet #content .listing-summary.development-summary .row section dt {
+		width: 36%;
+	}
+	body #content #main .no-portlet #content .listing-summary.development-summary .row section dd {
+		width: 53%;
+	}
+	body #content-core.development_details .development__groups .listing-summary .tileItem .image_row figure a img {
+		position: static;
+	}
+	body #content-core.development_details .development__groups .listing-summary .tileItem .image_row figure {
 		width: 100%;
 	}
-	body #content .no-portlet .listing-summary .tileItem .row section {
+	.development_details .development__groups .listing-summary .tileItem .image_row {
+		height: auto;
+		max-height: none;
+	}
+	.development_details .development__groups .listing-summary .tileItem .image_row .tileHeadline{
+		text-align: left;
+		float:left;
+		padding-top: 10px;
+	}
+	body #content #main #content .listing-summary.development-summary .row .tileItem  figure{
+		margin: 0;
+		max-width: none;
+		width: 100% !important;
+	}
+	body #content .development__groups .listing-summary .tileItem {
+		width: 100%;
+	}
+	body #content .listing-summary .tileItem .row figure {
+		width: 100%;
+	}
+	body #content .listing-summary .tileItem .row section {
 		width: 95%;
 		height: auto;
 		padding: 2%
@@ -3527,6 +3624,32 @@ table.accordion_table th{
     }
 }
 @media (max-width:439px) and (min-width:280px){
+	body #content #main .no-portlet #content .listing-summary.development-summary .row section dt {
+		width: 36%;
+	}
+	body #content #main .no-portlet #content .listing-summary.development-summary .row section dd {
+		width: 53%;
+	}
+	body #content-core.development_details .development__groups .listing-summary .tileItem .image_row figure a img {
+		position: static;
+	}
+	.development_details .development__groups .listing-summary .tileItem .image_row {
+		height: auto;
+		max-height: none;
+	}
+	.development_details .development__groups .listing-summary .tileItem .image_row .tileHeadline{
+		text-align: left;
+		float:left;
+		padding-top: 10px;
+	}
+	body #content #main #content .listing-summary.development-summary .row .tileItem  figure{
+		margin: 0;
+		max-width: none;
+		width: 100% !important;
+	}
+	body #content .development__groups .listing-summary .tileItem {
+		width: 100%;
+	}
 	body #content .listing-summary .tileItem {
 		margin: 0;
 	}
