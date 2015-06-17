@@ -37,6 +37,9 @@
 .ie8 .container{
     width: 1170px;
 }
+body .development__header .development__banner {
+	width: 100% ;
+}
 #content-core.development_details {
 	overflow: unset;
 }
@@ -715,9 +718,11 @@ label.horizontal.collapser.collapsed{
 #content #main .no-portlet{
     margin-left: 0;
 }
+.portlet-both #recent-listings .tileItem .propertyrow .body .title-price .title.span2 {
+	width: 65%;
+}
 #content #main #maincontent{
-    margin-left: 10px;
-    margin-right: 10px;
+
 }
 #main .row #portlet-right{
     margin-left:0;
@@ -3763,7 +3768,7 @@ table.accordion_table th{
         width:100% !important;
     }
     #content .listing-summary figure img{
-        width: auto !important;
+        width: auto;
         height: auto;
     }
     #content .listing-summary figure{
@@ -3822,6 +3827,32 @@ table.accordion_table th{
     }
 }
 @media (max-width:479px) and (min-width:1px){
+	body #content .portlet-both .listing-summary .tileItem .row figure .content img {
+		width: 100%;
+	}
+	#content .development__overview .lead_image {
+		margin: 0;
+	}
+	#content .development__overview .lead_image img {
+		width: 100%;
+		max-width: none;
+	}
+	#content #content-core.development_details .listing-summary figure img {
+	    max-height: none;
+		max-width: none;
+		min-height: auto;
+		width: 100%;
+	}
+	body #content .listing-summary .tileItem .row section {
+		width: 95%;
+		height: auto;
+		padding: 2%
+	}
+    #portal-column-one, #portal-column-two, #portal-column-content {
+        clear: both;
+        width: 97.75%;
+        margin-left: 0 !important;
+    }
     #site_contact_link{
         display: none;
     }
@@ -3890,9 +3921,7 @@ table.accordion_table th{
     .properties-rows .property .image .content a:hover{
         width:100% !important;
     }
-    #content .listing-summary figure img{
-        width: auto !important;
-    }
+
     #content .listing-summary figure{
         height:auto;
         position: relative;
