@@ -3,8 +3,8 @@
 
 from setuptools import setup, find_packages
 
-version = '0.1'
-description = 'Propertyshelf Propertyshelfs Realia Theme.'
+version = '0.2'
+description = 'Plone Realia Theme'
 long_description = ('\n'.join([
     open('README.rst').read(),
     open('CHANGES.rst').read(),
