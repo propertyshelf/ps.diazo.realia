@@ -37,6 +37,29 @@
 .ie8 .container{
     width: 1170px;
 }
+body .listing-summary.development-summary .tileItem {
+    background-color: #fff;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    margin-bottom: 30px;
+    padding: 0;
+    position: relative;
+}
+body #content .listing-summary.development-summary .tileItem figure a img{
+	padding: 3.5%;
+	height: auto;
+	width: 93%;
+}
+body #content .listing-summary.development-summary .tileItem section{
+	padding: 0.5% 0 0 2%;
+    width: 54%;
+	float: right;
+	margin: 1.5% 0;
+}
+body #content .listing-summary.development-summary .tileItem section .location {
+	font-size: 18px;
+	margin-bottom: 20px;
+}
 body .development__header .development__banner {
 	width: 100% ;
 }
@@ -216,7 +239,7 @@ body #content .development-summary .tileItem {
     padding: 2%;
 	width: 96%;
 }
-body #content #main #content .listing-summary.development-summary .row section dt.lot_size {
+body #content #main #content .listing-summary.development-summary section dt.lot_size {
     background-image: url("../img/icons/area-icon.png");
     background-position: center center;
     color: transparent;
@@ -242,31 +265,22 @@ body #content .development_details .data_row .price {
 body #content .development-summary .tileItem .tileHeadline{
 	margin-top: 0;
 }
-body #content .listing-summary.development-summary .tileItem figure .content{
-	padding: 3%;
-}
-body #content .listing-summary.development-summary .tileItem figure img{
-	height: auto;
-}
 body #content .listing-summary.development-summary figure {
     max-width: 40%;
     width: auto !important;
 	min-width: 250px;
 }
-body #content #main #content .listing-summary.development-summary .row.propertyrow section {
-    width: 54%;
-	float: right;
-}
-body #content #main #content .listing-summary.development-summary .row section {
+body #content #main #content .listing-summary.development-summary section {
     padding: 0.5% 0 0 2%;
 }
-body #content #main #content .listing-summary.development-summary .row section dd{
-    width: 66%;
-	margin-top: 7px;
+body #content #main #content .listing-summary.development-summary section dd{
+    width: auto;
 }
-body #content #main #content .listing-summary.development-summary .row section dt{
+body #content #main #content .listing-summary.development-summary section dd.lot_size{
+    margin-top: 7px;
+}
+body #content #main #content .listing-summary.development-summary section dt{
     width: 30%;
-	margin-top: 7px;
 }
 body #content .development-summary section dt.location {
     background-image: url("../img/icons/location-type-icon.png");
@@ -287,7 +301,7 @@ body #content .development-summary section .label {
 	padding: 0;
 	text-shadow: unset;
 	line-height: 20px;
-	margin-bottom: 7px !important;
+	margin-bottom: 13px !important;
 	font-size: 14px;
 }
 #content .listing-collection-tile .price p,
@@ -297,6 +311,21 @@ body #content .development-summary section .label {
     position: absolute;
     right: 0;
 	padding: 0 10px 10px;
+}
+body #content .listing-grid .listing-collection-tile .price {
+	width: auto !important; 
+}
+body #content .listing-grid .listing-collection-tile .price a{
+    font-size: 18px;
+    padding: 0;
+    position: static;
+}
+body #content .listing-grid .listing-collection-tile .price p{
+    padding: 2px 10px 5px;
+    position: static;
+}
+body #content .listing-grid .listing-collection-tile .price
+	width: auto !important; 
 }
 form input.standalone[type="submit"]{
     background-image: url("../img/arrow-right-white.png");
@@ -1028,6 +1057,9 @@ section .tileItem section.body .title-price .title{
     padding: 0;
     text-align: center;
 }
+body .listing-grid .listing-collection-tile .collection-item .price {
+	width: auto !important;
+}
 .listing-grid .listing-collection-tile .collection-item h2{
     display: none;
 }
@@ -1035,13 +1067,13 @@ body .listing-collection-tile .tile-header h2{
     background-color:transparent;
     }
     
-.listing-grid .listing-collection-tile .collection-item .price{
+body .listing-grid .listing-collection-tile .collection-item.tileItem .price{
     margin: 0;
     padding: 0;
     position: absolute;
     right: 10px;
     top: 157px;
-    width: auto;
+    width: auto !important;
 }
 .listing-grid .listing-collection-tile .collection-item .price p{
     color: #313131;
@@ -1072,10 +1104,6 @@ body .listing-collection-tile .tile-header h2{
     line-height: 22px;
 }
 .listing-grid .beds_baths p{
-    background-color: #fff;
-    background-image: url("../img/bedbath.png");
-    background-position: left center;
-    background-repeat: no-repeat;
     color: #313131;
     padding-left: 25px;
     text-align: right;
@@ -2838,11 +2866,11 @@ table.accordion_table th{
 	body #content #main #content .listing-summary.development-summary .row.propertyrow section{
 		width: 54%;
 	}
-	body #content #main #content .listing-summary.development-summary .row section dt {
+	body #content #main #content .listing-summary.development-summary section dt {
 		width: 40%;
 	}
-	body #content #main #content .listing-summary.development-summary .row section dd {
-		width: 60%;
+	body #content #main #content .listing-summary.development-summary section dd {
+
 	}
 	body #content #main .no-portlet #content .listing-summary.development-summary .row section dt {
 		width: 40%;
@@ -2874,11 +2902,11 @@ table.accordion_table th{
 	body #content #main #content .listing-summary.development-summary .row.propertyrow section{
 		width: 53%;
 	}
-	body #content #main #content .listing-summary.development-summary .row section dt {
+	body #content #main #content .listing-summary.development-summary section dt {
 		width: 40%;
 	}
-	body #content #main #content .listing-summary.development-summary .row section dd {
-		width: 60%;
+	body #content #main #content .listing-summary.development-summary section dd {
+
 	}
     .container .navigation ul.nav.have-search{
         max-width: 76%;
@@ -2960,6 +2988,9 @@ table.accordion_table th{
     }
 }
 @media (max-width:979px) and (min-width:720px){
+	body #content #main #content .listing-summary.development-summary figure img {
+		width: 93% !important;
+	}
 	body #content #main .no-portlet #content .listing-summary.development-summary .row section dt {
 		width: 40%;
 	}
@@ -2987,11 +3018,11 @@ table.accordion_table th{
 	body #content #main #content .listing-summary.development-summary .row.propertyrow section{
 		width: 53%;
 	}
-	body #content #main #content .listing-summary.development-summary .row section dt {
+	body #content #main #content .listing-summary.development-summary section dt {
 		width: 40%;
 	}
-	body #content #main #content .listing-summary.development-summary .row section dd {
-		width: 60%;
+	body #content #main #content .listing-summary.development-summary section dd {
+
 	}
 	.listing-collection-tile .collection-item.tileItem {
 		height: auto!important;
@@ -3187,6 +3218,18 @@ table.accordion_table th{
     }
 }
 @media (max-width:719px) and (min-width:560px){
+	body #content #main #content .listing-summary.development-summary figure {
+		max-width: none;
+		width: 100% !important;
+		margin: 0;
+	}
+	body #content .listing-summary.development-summary .tileItem section {
+		float: left;
+		width: 100%;
+	}
+	body #content #main #content .listing-summary.development-summary section dd.location {
+		width: auto;
+	}
 	body #content #main .no-portlet #content .listing-summary.development-summary .row section dt {
 		width: 37%;
 	}
@@ -3230,11 +3273,11 @@ table.accordion_table th{
 		margin-top: 20px;
 		padding: 0;
 	}
-	body #content #main #content .listing-summary.development-summary .row section dt {
+	body #content #main #content .listing-summary.development-summary section dt {
 		width: 40%;
 	}
-	body #content #main #content .listing-summary.development-summary .row section dd {
-		width: 60%;
+	body #content #main #content .listing-summary.development-summary section dd {
+
 	}
 	.listing-collection-tile .collection-item.tileItem {
 		height: auto!important;
@@ -3416,6 +3459,18 @@ table.accordion_table th{
     }
 }
 @media (max-width:559px) and (min-width:440px){
+	body #content #main #content .listing-summary.development-summary figure {
+		max-width: none;
+		width: 100% !important;
+		margin: 0;
+	}
+	body #content .listing-summary.development-summary .tileItem section {
+		float: left;
+		width: 100%;
+	}
+	body #content #main #content .listing-summary.development-summary section dd.location {
+		width: auto;
+	}
 	body #content #main .no-portlet #content .listing-summary.development-summary .row section dt {
 		width: 36%;
 	}
@@ -3461,11 +3516,11 @@ table.accordion_table th{
 		margin-top: 20px;
 		padding: 0;
 	}
-	body #content #main #content .listing-summary.development-summary .row section dt {
+	body #content #main #content .listing-summary.development-summary section dt {
 		width: 40%;
 	}
-	body #content #main #content .listing-summary.development-summary .row section dd {
-		width: 60%;
+	body #content #main #content .listing-summary.development-summary section dd {
+
 	}
 	.listing-collection-tile .collection-item.tileItem {
 		height: auto!important;
@@ -3631,6 +3686,18 @@ table.accordion_table th{
     }
 }
 @media (max-width:439px) and (min-width:280px){
+	body #content #main #content .listing-summary.development-summary figure {
+		max-width: none;
+		width: 100% !important;
+		margin: 0;
+	}
+	body #content .listing-summary.development-summary .tileItem section {
+		float: left;
+		width: 100%;
+	}
+	body #content #main #content .listing-summary.development-summary section dd.location {
+		width: auto;
+	}
 	body #content #main .no-portlet #content .listing-summary.development-summary .row section dt {
 		width: 36%;
 	}
@@ -3676,11 +3743,11 @@ table.accordion_table th{
 		margin-top: 20px;
 		padding: 0;
 	}
-	body #content #main #content .listing-summary.development-summary .row section dt {
+	body #content #main #content .listing-summary.development-summary section dt {
 		width: 40%;
 	}
-	body #content #main #content .listing-summary.development-summary .row section dd {
-		width: 60%;
+	body #content #main #content .listing-summary.development-summary section dd {
+
 	}
 	.listing-collection-tile .collection-item.tileItem {
 		height: auto!important;

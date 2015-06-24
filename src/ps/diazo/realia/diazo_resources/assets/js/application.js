@@ -1,5 +1,4 @@
 function column_counter(items){
-console.log('column counter');
   my_width = $(items).width();
   my_head_width = $(items).find('.collection-item h2:first').width();
   //find out how many items in one row
@@ -25,7 +24,6 @@ console.log('column counter');
 }
 
 function balance_height(items){
-console.log('balance height');
   //get nr. of item columns
   columns= column_counter(items);
   //we have more then 1 column
@@ -102,11 +100,25 @@ function map_listing_data(obj){
   else{
     dict.type ='house';
   }
-  
-  dict.price= obj[0].children[1].innerHTML;
-  dict.listingtype= obj[0].children[5].innerHTML;
-  dict.propertytype= obj[0].children[9].innerHTML;
-  
+   try{
+		dict.price= obj[0].children[1].innerHTML;
+   } 
+   catch(err){ 
+		dict.price='';
+   }
+  try{
+		dict.listingtype= obj[0].children[5].innerHTML;
+   } 
+  catch(err){
+	    dict.listingtype='';
+  }
+   try{
+		dict.propertytype= obj[0].children[9].innerHTML;
+  } 
+  catch(err){
+	    dict.propertytype='';
+  }
+
   if(dict.type =="house"){
     dict.location = obj[0].children[13].innerHTML;
     dict.area = obj[0].children[19].innerHTML;
@@ -368,6 +380,15 @@ function nr_phone(){
 //set jquery
 jq=$;
 $(document).ready(function() {
+	isdevelopment = $('.development-summary').length;
+	islistingsummery = $('.listing-summary').length;
+
+    if(islistingsummery >0 && isdevelopment < 1 ){
+		$(".listing-summary .tileItem").addClass('property ' + width_indicator).wrapInner('<div class="row propertyrow" />');
+		$(".listing-summary .property .row figure").addClass('image').wrapInner('<div class="content" />');
+		$(".listing-summary").addClass('properties-rows').wrapInner('<div class="row" />');
+    }  
+
     if($(".site_contact_phone a").html().length < 1){
         phone_parameter_string_empty();
     }  
@@ -380,8 +401,7 @@ $(document).ready(function() {
         $( "table.accordion_table" ).wrap( "<div class='accordion_wrapper'></div>" );
         $( ".accordion" ).accordion({ header: "h2", heightStyle:"content", collapsible: true, active:false });
     }
-
-    
+	
     if($("#portal-searchbox").length >0){
         have_search();
     }
@@ -466,9 +486,8 @@ $(document).ready(function() {
      
         //listing row
         //add some classes
-        $(".listing-summary").addClass('properties-rows').wrapInner('<div class="row" />');
-        $(".listing-summary .tileItem").addClass('property ' + width_indicator).wrapInner('<div class="row propertyrow" />');
-        $(".listing-summary .property .row figure").addClass('image span3').wrapInner('<div class="content" />');
+
+        
         // move image out of parent link
         $( ".listing-summary .property .row .image .content a" ).each(function( index ) {
             child = $(this).children('img');
@@ -497,7 +516,6 @@ $(document).ready(function() {
                 $(this).append('<div class="locationtype"><span class="key" title="Location Type" >&nbsp</span><span class="value">'+dictonary.locationtype+'</span></div>');   
             }
              $(this).append('<div class="area"><span class="key" title="Area" >&nbsp</span><span class="value">'+dictonary.area+'</span></div>');
-            
             
         });
     
