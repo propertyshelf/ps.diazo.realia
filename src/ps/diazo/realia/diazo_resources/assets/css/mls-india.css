@@ -37,6 +37,9 @@
 .ie8 .container{
     width: 1170px;
 }
+#portal-column-content.cell {
+	left: unset;
+}
 body .listing-summary.development-summary .tileItem {
     background-color: #fff;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
@@ -3528,11 +3531,8 @@ table.accordion_table th{
     .template-listing-detail #content #main #maincontent{
         margin: 0;
     }
-    .template-listing-detail #content .listing #listing-info{
-        margin-top: 435px;
-    }
     .template-listing-detail #content .listing #listing-images{
-        position: absolute;
+        position: static;
         top: 150px;
     }
     #portal-column-one, #portal-column-two, #portal-column-content {
@@ -3752,11 +3752,8 @@ table.accordion_table th{
 	.listing-collection-tile .collection-item.tileItem {
 		height: auto!important;
 	}
-    .template-listing-detail #content .listing #listing-info{
-        margin-top: 435px;
-    }
     .template-listing-detail #content .listing #listing-images{
-        position: absolute;
+        position: static;
         top: 115px;
     }
     #portal-column-one, #portal-column-two, #portal-column-content {
@@ -4048,7 +4045,7 @@ table.accordion_table th{
     }
     .listing-summary #search-form form span.option .label{
         display: inline-block;
-        padding-left: 1.4em;
+        padding-left: 20px !important;
         width: 80%;
     }
     .portletQuickSearch #form-widgets-location_city{

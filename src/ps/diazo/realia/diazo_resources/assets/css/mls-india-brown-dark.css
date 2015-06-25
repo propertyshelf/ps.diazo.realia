@@ -3001,16 +3001,8 @@ body #wrapper-outer #wrapper{
 -moz-transition:left 0.3s ease-in;
 -o-transition:left 0.3s ease-in;
 transition:left 0.3s ease-in;
-display:table;
-height:100%;
 position:relative;
 width:100%}
-body #wrapper-outer #wrapper #wrapper-inner{
-display:table-row;
-height:100%}
-body #wrapper-outer #wrapper #footer-wrapper{
-display:table-row;
-height:1px}
 @media (min-width: 980px){
 body{
 padding-top:0px}
