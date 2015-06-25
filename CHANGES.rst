@@ -3,6 +3,13 @@ Changelog
 =========
 
 
+0.3 (2015-06-26)
+----------------
+
+- full support new ListingSlider
+- QoC improvements
+
+
 0.2 (2015-06-24)
 ----------------
 
