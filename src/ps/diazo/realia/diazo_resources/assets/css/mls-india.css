@@ -40,6 +40,9 @@
 #portal-column-content.cell {
 	left: unset;
 }
+.template-manage-portlets .carousel {
+	display: none;
+}
 body .listing-summary.development-summary .tileItem {
     background-color: #fff;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
@@ -406,11 +409,14 @@ a:focus {
     margin-left: -24%;
     opacity: 0.9;
 }
-.carousel-banner{
-    display: block !important;
-}
 .carousel .carousel-banners .carousel-banner.carousel-banner-active{
     z-index: 2;
+	display: block !important;
+	opacity: 1 !important;
+}
+.carousel .carousel-banners .carousel-banner{
+	opacity: 1 !important;
+	display: none !important;
 }
 .carousel-banner-active .slider-table {   
     margin-left: 0;
@@ -461,6 +467,23 @@ a:focus {
     background-repeat: repeat-x;
     background-size: 268px 1px;
     overflow: hidden;
+}
+body .carousel .carousel-banners {
+    height: auto !important;
+    max-width: 100%;
+    min-width: 100%;
+}
+body .carousel-banners .carousel-banner {
+    height: auto !important;
+    max-width: 100%;
+    min-width: 100%;
+    position: static !important;
+}
+.carousel .carousel-banners .carousel-banner img{
+    height: 100% !important;
+    max-width: 100%;
+    min-width: 100%;
+    width: 100% !important;
 }
 .carousel-pager a{
     border-radius: 75%;
