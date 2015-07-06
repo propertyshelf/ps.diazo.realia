@@ -13,3 +13,7 @@ Propertyshelfs Realia-II Theme
   * Html5, CSS3
   * use as Zip Upload
   * propertyshelfs listing embedding solutions
+
+:Parameter:
+  * Theme Color 20 style ( blue , gray-blue )
+  * Header Class 4 style ( normal , light , dark , dark-dark)
