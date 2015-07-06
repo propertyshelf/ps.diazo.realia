@@ -160,7 +160,12 @@
             css:theme=".site-search"
             css:content="#portal-searchbox"
         />
-        
+ 
+		<before
+            css:theme="#content"
+            css:content=".carousel"
+        />
+
         <drop
             css:content="#LSResult #livesearchLegend"/>
         
