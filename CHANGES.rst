@@ -3,7 +3,7 @@ Changelog
 =========
 
 
-0.3 (2015-06-26)
+0.4 (2015-07-07)
 ----------------
 
 - full support new ListingSlider
