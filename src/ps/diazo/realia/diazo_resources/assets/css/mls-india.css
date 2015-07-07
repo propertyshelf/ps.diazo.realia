@@ -52,7 +52,12 @@ div.position-1:4 {
 div.position-3\:4 {
     margin: 0 !important;
 }
-
+body #portal-logo {
+	display: block;
+}
+body #portal-personaltools {
+	margin: 0;
+}
 .cell {
 	left: unset !important;
 }
