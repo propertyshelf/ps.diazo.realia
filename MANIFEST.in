@@ -1,3 +1,5 @@
 graft src/ps
 graft docs/
 include *.cfg *.rst *.in
+global-exclude *pyc
+global-exclude *~
