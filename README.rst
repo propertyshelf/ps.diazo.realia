@@ -14,6 +14,10 @@ Propertyshelfs Realia-II Theme
   * use as Zip Upload
   * propertyshelfs listing embedding solutions
 
+:DEACTIVATE plone default css files:
+    - reset.css
+    - public.css
+
 :Parameter:
   * Theme Color 20 style ( blue , gray-blue )
   * Header Class 4 style ( normal , light , dark , dark-dark)
