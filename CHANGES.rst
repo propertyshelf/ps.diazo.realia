@@ -3,7 +3,7 @@ Changelog
 =========
 
 
-0.5 (unreleased)
+0.5 (2015-07-08)
 ----------------
 
 - collective.cover bug-fix
