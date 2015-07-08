@@ -14,6 +14,11 @@ Propertyshelfs Realia-II Theme
   * use as Zip Upload
   * propertyshelfs listing embedding solutions
 
+:Setup Steps:
+    *DEACTIVATE Plone default css files*
+    - reset.css
+    - public.css
+
 :Parameter:
     *You can adjust the following Diazo parameters in Advanced settings of the "Theming" in Site Setup*
 
@@ -23,6 +28,11 @@ Propertyshelfs Realia-II Theme
         - dark
         - dark-dark
         - *Default:* header_class = string:normal
+
+    *slider_fullscreen:*
+        - true
+        - false
+        - *Default:* slider_fullscreen = string:false
 
     *nr_phone_show:*
         - This phone number shows on header contact information

@@ -1,3 +1,14 @@
+/*Improve Content START*/
+.improve-content .float-left-30 {
+float: left;
+width: 30%;
+margin-right: 4%;
+}
+.improve-content .float-left-65 {
+float: left;
+width: 65%;
+}
+/*Improve Content END*/
 .ie8 .span1{
     width: 70px;
 }
