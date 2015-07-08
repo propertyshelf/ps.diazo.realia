@@ -6,7 +6,8 @@ Changelog
 0.5 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- collective.cover bug-fix
+- add Diazo Parameter for switch on/off full-width slider
 
 
 0.4 (2015-07-07)
