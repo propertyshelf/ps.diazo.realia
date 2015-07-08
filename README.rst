@@ -15,9 +15,10 @@ Propertyshelfs Realia-II Theme
   * propertyshelfs listing embedding solutions
 
 :Setup Steps:
-    Deactivate the following Plone default css files in portal_css via ZMI
-    * reset.css
-    * public.css
+  Deactivate the following Plone default css files in portal_css via ZMI:
+
+      * reset.css
+      * public.css
 
 :Parameter:
     *You can adjust the following Diazo parameters in Advanced settings of the "Theming" in Site Setup*
