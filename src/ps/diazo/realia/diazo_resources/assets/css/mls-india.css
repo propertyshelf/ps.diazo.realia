@@ -37,20 +37,12 @@
 .ie8 .container{
     width: 1170px;
 }
-
-div.width-1\:4,
-div.width-3\:4 {
+.carousel .carousel-banners .carousel-banner .bathroomtable img,
+.carousel .carousel-banners .carousel-banner .bedroomtable img{
+    height: auto !important;
+    max-width: none;
+    min-width: auto;
     width: auto !important;
-}
-
-div.position-0 {
-    margin: 0 !important;
-}
-div.position-1:4 {
-    margin: 0 !important;
-}
-div.position-3\:4 {
-    margin: 0 !important;
 }
 body #portal-logo {
 	display: block;
@@ -58,10 +50,6 @@ body #portal-logo {
 body #portal-personaltools {
 	margin: 0;
 }
-.cell {
-	left: unset !important;
-}
-
 .template-manage-portlets .carousel {
 	display: none;
 }

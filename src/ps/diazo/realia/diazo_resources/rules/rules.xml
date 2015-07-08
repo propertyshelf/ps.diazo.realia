@@ -26,6 +26,12 @@
             </xsl:attribute>
         </before>
 
+        <before theme-children="/html/body/div" method="raw">
+            <xsl:attribute name="class">
+              <xsl:value-of select="/html/body/div/@class" />carousel-fullscreen-<xsl:value-of select="$slider_fullscreen"/>
+            </xsl:attribute>
+        </before>
+
         <after css:theme-children=".info .site-email" method="raw">
             <div id="site_contact_email">
                 <a href="mailto:{$email}"><xsl:value-of select="$email" /></a>
@@ -161,13 +167,20 @@
             css:content="#portal-searchbox"
         />
  
-		<before
-            css:theme="#content"
-            css:content=".carousel"
-        />
+        <rules css:if-content=".carousel" if="$slider_fullscreen = 'true'">
+			<before
+				css:theme="#content.container"
+				css:content=".carousel"
+				method="raw"
+			/>
+			<drop
+				css:content=".carousel"
+			/>
+        </rules>
 
         <drop
-            css:content="#LSResult #livesearchLegend"/>
+            css:content="#LSResult #livesearchLegend"
+		/>
         
         <drop
             css:content=".searchSection"
