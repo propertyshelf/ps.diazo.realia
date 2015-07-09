@@ -1,12 +1,22 @@
 /*Improve Content START*/
+.improve-table {
+    width: 100%;
+	text-align: center;
+}
+.improve-table tr{
+	border: 1px solid #ddd;
+}
+.improve-content {
+	overflow: hidden;
+}
 .improve-content .float-left-30 {
-float: left;
-width: 30%;
-margin-right: 4%;
+	float: left;
+	width: 30%;
+	margin-right: 4%;
 }
 .improve-content .float-left-65 {
-float: left;
-width: 65%;
+	float: left;
+	width: 65%;
 }
 /*Improve Content END*/
 .ie8 .span1{
@@ -3519,6 +3529,15 @@ table.accordion_table th{
     }
 }
 @media (max-width:559px) and (min-width:440px){
+	.improve-content .float-left-30 {
+		width: 100%;
+		margin: 0;
+		text-align: center;
+	}
+	.improve-content .float-left-65 {
+		width: 100%;
+		margin: 0;
+	}
 	body #content #main #content .listing-summary.development-summary figure {
 		max-width: none;
 		width: 100% !important;
