@@ -474,9 +474,7 @@ $(document).ready(function() {
         //Improve searchbox
         $("#portal-searchbox").addClass("site-search").show();
         //Remove Plone classes from content rows
-        $("#portal-column-content").removeClass().addClass(width_indicator).show();
-        $("#portal-column-one").removeClass();
-        $("#portal-column-two").removeClass();
+        $("#portal-column-content").addClass(width_indicator).show();
      
         //listing grid
         if($(".listing-collection-tile").length>0){
