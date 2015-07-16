@@ -1944,6 +1944,12 @@ dl.portlet dt {
     padding: 0 !important;
     margin-bottom: 5%;
 }
+input[type="submit"]{
+  min-height:1.2em;
+}
+.template-search div.row{
+  margin-left:0;
+}
 #content fieldset {
     border-style: none !important;
 }
@@ -1951,9 +1957,9 @@ dl.portlet dt {
     margin: 0 !important;
     padding: 0 !important;
 }
-.portletItem p{
-    margin-bottom: 15px;
-    padding: 10px 15px;
+.portlet .portletItem p{
+    margin-bottom: 5px;
+    padding: 5px;
 }
 .LSRow .advancedsearchlink {
     display: none;
@@ -2081,7 +2087,7 @@ body h1#parent-fieldname-title, body h2#parent-fieldname-title {
     border: 0 none;
     font-size: 30px;
     font-weight: 300;
-    line-height: 40px;
+    line-height: 1.2em;
     margin: 20px 0;
     padding: 0;
 }
