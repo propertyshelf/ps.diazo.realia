@@ -945,6 +945,16 @@ section .tileItem section.body .title-price{
 section .tileItem section.body .title-price .title{
     margin: 0;
 }
+.listing-summary .tileItem section .title-price .title {
+	width: 100%;
+}
+.listing-summary .tileItem section .price {
+    bottom: -20px;
+    color: #313131;
+    font-size: 24px;
+    position: absolute;
+    right: 0;
+}
 .properties-rows .property .image .content a:hover{
     width: 88%;
 }
@@ -2875,6 +2885,9 @@ table.accordion_table th{
     }
 }
 @media (max-width:1199px) and (min-width:1024px){
+	.listing-summary .tileItem section .price {
+		bottom: 0;
+	}
     .container .navigation ul.nav.have-search{
         max-width: 71%;
     }
@@ -2969,6 +2982,9 @@ table.accordion_table th{
     }
 }
 @media (max-width:1023px) and (min-width:980px){
+	.listing-summary .tileItem section .price {
+		bottom: 0;
+	}
 	body #content #main .no-portlet #content .listing-summary.development-summary .row section dt {
 		width: 40%;
 	}
@@ -3067,6 +3083,10 @@ table.accordion_table th{
     }
 }
 @media (max-width:979px) and (min-width:720px){
+	.listing-summary .tileItem section .price {
+		bottom: 0;
+		right: 10px;
+	}
 	body #content #main #content .listing-summary.development-summary figure img {
 		width: 93% !important;
 	}
@@ -3297,6 +3317,10 @@ table.accordion_table th{
     }
 }
 @media (max-width:719px) and (min-width:560px){
+	.listing-summary .tileItem section .price {
+		bottom: 0;
+		right: 10px;
+	}
 	body #content #main #content .listing-summary.development-summary figure {
 		max-width: none;
 		width: 100% !important;
@@ -3538,6 +3562,10 @@ table.accordion_table th{
     }
 }
 @media (max-width:559px) and (min-width:440px){
+	.listing-summary .tileItem section .price {
+		bottom: 0;
+		right: 10px;
+	}
 	.improve-content .float-left-30 {
 		width: 100%;
 		margin: 0;
@@ -3771,6 +3799,14 @@ table.accordion_table th{
     }
 }
 @media (max-width:439px) and (min-width:280px){
+	.listing-summary .tileItem section .price {
+		bottom: 0;
+		right: 10px;
+	}
+	body .listing-summary .tileItem section{
+		width: 100% !important;
+		padding-bottom: 25px !important;
+	}
 	body #content #main #content .listing-summary.development-summary figure {
 		max-width: none;
 		width: 100% !important;

@@ -501,10 +501,10 @@ $(document).ready(function() {
             //clear existing detail structure
             $(this).empty();
             //set price & title
-            $(this).append('<div class="title-price row" ><div class="title '+title_width_indicator+'"><h2><a href="'+ dictonary.linktarget +'">'+dictonary.location+'</a></h2></div><div class="price" >'+ dictonary.price +'</div></div>');
+            $(this).append('<div class="title-price row" ><div class="title '+title_width_indicator+'"><h2><a href="'+ dictonary.linktarget +'">'+dictonary.title+'</a></h2></div></div>');
             //set location
             $(this).append('<div class="location"><a href="'+ dictonary.linktarget +'">'+dictonary.propertytype+' - '+ dictonary.listingtype +'</a></div>');
-            $(this).append('<p class="freetext">'+dictonary.title+'</p>');
+            $(this).append('<p class="freetext">'+dictonary.location+'</p>');
            
 
             if(dictonary.type=="house"){
@@ -514,6 +514,7 @@ $(document).ready(function() {
                 $(this).append('<div class="locationtype"><span class="key" title="Location Type" >&nbsp</span><span class="value">'+dictonary.locationtype+'</span></div>');   
             }
              $(this).append('<div class="area"><span class="key" title="Area" >&nbsp</span><span class="value">'+dictonary.area+'</span></div>');
+             $(this).append('<div class="price" >'+ dictonary.price +'</div>');
             
         });
     
