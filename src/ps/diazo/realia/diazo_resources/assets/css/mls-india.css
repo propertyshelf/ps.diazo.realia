@@ -1,6 +1,15 @@
 body .row {
 	margin: 0;
 }
+body #content .listing-summary figure img {
+    max-width: 100%;
+    min-height: 220px;
+    min-width: 50%;
+	width: unset;
+}
+body #content .listing-summary figure .content {
+    text-align: center;
+}
 .listing-collection-tile .collection-item.tileItem .item.price {
 	margin: 0;
 }
@@ -118,7 +127,9 @@ body .listing-summary.development-summary .tileItem {
 body #content .listing-summary.development-summary .tileItem figure a img{
 	padding: 3.5%;
 	height: auto;
-	width: 93%;
+	min-height: auto;
+	width: auto;
+	max-width: 92%;
 }
 body #content .listing-summary.development-summary .tileItem section{
 	padding: 0.5% 0 0 2%;
@@ -192,6 +203,9 @@ body #content .listing-summary .tileItem .row section{
 }
 .header-dark #header-wrapper #header #header-inner .navbar .navbar-inner .site-phone a {
     color: #fff;
+}
+.development__representatives .representatives__item img {
+   margin-bottom: 15px;
 }
 #content #main .portletWrapper{
     margin: 0 0 1em;
@@ -304,6 +318,12 @@ body.header-light .breadcrumb-wrapper{
     float: left;
     padding: 12.6px 13.6px !important;
 }
+body #wrapper #content .width-8 .listing-collection-tile .collection-item.tileItem  {
+    width: 100%;
+}
+body #wrapper .no-portlet #content .width-8 .listing-collection-tile .collection-item.tileItem  {
+    width: 48%;
+}
 body #content .development-summary .tileItem {
 	margin: 0 0 30px 0;
     padding: 2%;
@@ -338,6 +358,7 @@ body #content .development-summary .tileItem .tileHeadline{
 body #content .listing-summary.development-summary figure {
     max-width: 40%;
     width: auto !important;
+	text-align: center;
 	min-width: 250px;
 }
 body #content #main #content .listing-summary.development-summary section {
@@ -981,7 +1002,7 @@ section .tileItem section.body .title-price .title{
 	width: 100%;
 }
 .listing-summary .tileItem section .price {
-    bottom: -20px;
+    bottom: 0;
     color: #313131;
     font-size: 24px;
     position: absolute;
@@ -3115,6 +3136,19 @@ table.accordion_table th{
     }
 }
 @media (max-width:979px) and (min-width:720px){
+	body #wrapper #content .width-8 .listing-collection-tile .collection-item.tileItem figure img{
+		width: 100%;
+	}
+	body #wrapper #content .width-8 .listing-collection-tile .collection-item.tileItem  {
+		width: 48%;
+	}
+	body #wrapper #content .portlet-both .width-16 .listing-collection-tile .collection-item.tileItem  {
+		height: auto !important;
+	}
+	body .listing-grid .listing-collection-tile .collection-item.tileItem .price{
+		bottom: 10px;
+		top: unset;
+	}
 	#wrapper-outer #content .portlet-both .listing-collection-tile .collection-item.tileItem {
 		width: 100%;
 	}
@@ -3143,9 +3177,6 @@ table.accordion_table th{
 	#wrapper-outer #content .no-portlet .listing-collection-tile .collection-item.tileItem figure a img{
 		max-height: unset;
 		min-height: auto;
-	}
-	body #content #main #content .listing-summary.development-summary figure img {
-		width: 93% !important;
 	}
 	body #content #main .no-portlet #content .listing-summary.development-summary .row section dt {
 		width: 40%;
@@ -3181,7 +3212,7 @@ table.accordion_table th{
 
 	}
 	.listing-collection-tile .collection-item.tileItem {
-		height: auto!important;
+
 	}
     .template-listing-detail #content .listing #listing-info{
         float: right;
@@ -3273,8 +3304,8 @@ table.accordion_table th{
     }
     
     .listing-collection-tile .collection-item{
-        width: 100%;
-        margin: 0;
+        margin-right: 2%;
+		width: 48%;
     }
     body section .row .tileItem .propertyrow section.body{
         width: 95%;
@@ -3374,6 +3405,13 @@ table.accordion_table th{
     }
 }
 @media (max-width:719px) and (min-width:560px){
+	body #wrapper .no-portlet #content .width-8 .listing-collection-tile .collection-item.tileItem {
+		width: 100%;
+	}
+	body .listing-grid .listing-collection-tile .collection-item.tileItem .price{
+		bottom: 10px;
+		top: unset;
+	}
 	#wrapper-outer #content .portlet-both .listing-collection-tile .collection-item.tileItem {
 		width: 100%;
 	}
@@ -3406,8 +3444,12 @@ table.accordion_table th{
 		float: left;
 		width: 100%;
 	}
-	body #content #main #content .listing-summary.development-summary section dd.location {
-		width: auto;
+	body #content .listing-summary.development-summary .tileItem section {
+		float: left;
+		width: 100%;
+	}
+	body #content #main #content .listing-summary.development-summary figure img {
+		min-width: unset;
 	}
 	body #content #main .no-portlet #content .listing-summary.development-summary .row section dt {
 		width: 37%;
@@ -3638,6 +3680,16 @@ table.accordion_table th{
     }
 }
 @media (max-width:559px) and (min-width:440px){
+	body #content #main #content .listing-summary.development-summary figure img {
+		min-width: unset;
+	}
+	body #wrapper .no-portlet #content .width-8 .listing-collection-tile .collection-item.tileItem {
+		width: 100%;
+	}
+	body .listing-grid .listing-collection-tile .collection-item.tileItem .price{
+		bottom: 10px;
+		top: unset;
+	}
 	#wrapper-outer #content .portlet-both .listing-collection-tile .collection-item.tileItem {
 		width: 100%;
 	}
@@ -3895,6 +3947,16 @@ table.accordion_table th{
     }
 }
 @media (max-width:439px) and (min-width:280px){
+	body #content #main #content .listing-summary.development-summary figure img {
+		min-width: unset;
+	}
+	body #wrapper .no-portlet #content .width-8 .listing-collection-tile .collection-item.tileItem {
+		width: 100%;
+	}
+	body .listing-grid .listing-collection-tile .collection-item.tileItem .price{
+		bottom: 10px;
+		top: unset;
+	}
 	#wrapper-outer #content .portlet-both .listing-collection-tile .collection-item.tileItem {
 		width: 100%;
 	}
@@ -3962,7 +4024,7 @@ table.accordion_table th{
 		width: 100%;
 	}
 	body #content .listing-summary .tileItem {
-		margin: 0;
+
 	}
 	body #content .listing-summary .tileItem .row figure {
 		width: 100%;
@@ -4128,6 +4190,9 @@ table.accordion_table th{
     }
 }
 @media (max-width:479px) and (min-width:1px){
+	body #wrapper .no-portlet #content .width-8 .listing-collection-tile .collection-item.tileItem {
+		width: 100%;
+	}
 	body #content .portlet-both .listing-summary .tileItem .row figure .content img {
 		width: 100%;
 	}
