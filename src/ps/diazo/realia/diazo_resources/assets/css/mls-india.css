@@ -403,7 +403,11 @@ body #content .development-summary section .label {
     width: 76%;
     position: absolute;
     right: 0;
-	padding: 0 10px 10px;
+    padding: 0 10px 10px;
+}
+#content .listing-grid .listing-collection-tile .price p,
+#content .listing-grid .listing-collection-tile .price a{
+    width: auto;
 }
 body #content .listing-grid .listing-collection-tile .price {
 	width: auto !important; 
@@ -3136,6 +3140,9 @@ table.accordion_table th{
     }
 }
 @media (max-width:979px) and (min-width:720px){
+	body #content .listing-grid .listing-collection-tile .price a {
+		font-size: 24px;
+	}
 	body #wrapper #content .width-8 .listing-collection-tile .collection-item.tileItem figure img{
 		width: 100%;
 	}
@@ -3323,7 +3330,7 @@ table.accordion_table th{
 	}
 	body #content .listing-summary .tileItem .row section{
 		height: auto;
-		padding: 2%;
+		padding: 2% 2% 5% 2%;
 		width: 96%;
 	}
     #listing-collection .tileItem section{
@@ -3405,6 +3412,9 @@ table.accordion_table th{
     }
 }
 @media (max-width:719px) and (min-width:560px){
+	body #content .listing-grid .listing-collection-tile .price a {
+		font-size: 24px;
+	}
 	body #wrapper .no-portlet #content .width-8 .listing-collection-tile .collection-item.tileItem {
 		width: 100%;
 	}
@@ -3474,7 +3484,7 @@ table.accordion_table th{
 	}
 	body #content .listing-summary .tileItem .row section{
 		height: auto;
-		padding: 2%;
+		padding: 2% 2% 5% 2%;
 		width: 96%;
 	}
 	body #content .no-portlet .listing-summary .tileItem .row figure {
@@ -3680,6 +3690,9 @@ table.accordion_table th{
     }
 }
 @media (max-width:559px) and (min-width:440px){
+	body #content .listing-grid .listing-collection-tile .price a {
+		font-size: 24px;
+	}
 	body #content #main #content .listing-summary.development-summary figure img {
 		min-width: unset;
 	}
@@ -3770,7 +3783,7 @@ table.accordion_table th{
 	body #content .listing-summary .tileItem .row section {
 		width: 95%;
 		height: auto;
-		padding: 2%
+		padding: 2% 2% 5% 2%;
 	}
 	body #content #main #content .listing-summary.development-summary .row .tileItem  figure{
 		margin: 0;
@@ -3947,6 +3960,9 @@ table.accordion_table th{
     }
 }
 @media (max-width:439px) and (min-width:280px){
+	body #content .listing-grid .listing-collection-tile .price a {
+		font-size: 24px;
+	}
 	body #content #main #content .listing-summary.development-summary figure img {
 		min-width: unset;
 	}
@@ -4190,6 +4206,9 @@ table.accordion_table th{
     }
 }
 @media (max-width:479px) and (min-width:1px){
+	body #content .listing-grid .listing-collection-tile .price a {
+		font-size: 24px;
+	}
 	body #wrapper .no-portlet #content .width-8 .listing-collection-tile .collection-item.tileItem {
 		width: 100%;
 	}
@@ -4212,7 +4231,7 @@ table.accordion_table th{
 	body #content .listing-summary .tileItem .row section {
 		width: 95%;
 		height: auto;
-		padding: 2%
+		padding: 2% 2% 5% 2%;
 	}
     #portal-column-one, #portal-column-two, #portal-column-content {
         clear: both;
