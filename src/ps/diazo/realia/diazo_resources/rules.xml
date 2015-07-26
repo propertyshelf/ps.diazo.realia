@@ -13,6 +13,16 @@
     <theme href="/++theme++ps.diazo.realia/index.html" />
 
     <after css:theme-children="html head">
+      <script>
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-12110061-52']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+      </script>
       <!-- Add custom stylesheet. -->
       <link rel="stylesheet" href="{$portal_url}/++theme++ps.diazo.realia/static/main.css" type="text/css" />
 
