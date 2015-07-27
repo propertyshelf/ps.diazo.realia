@@ -2,10 +2,12 @@ body .row {
 	margin: 0;
 }
 body #content .listing-summary figure img {
-    max-width: 100%;
+    max-width: none;
     min-height: 220px;
-    min-width: 50%;
-	width: unset;
+    min-width: 112%;
+    position: relative;
+    right: 12%;
+    width: auto;
 }
 body #content .listing-summary figure .content {
     text-align: center;
@@ -125,11 +127,13 @@ body .listing-summary.development-summary .tileItem {
     position: relative;
 }
 body #content .listing-summary.development-summary .tileItem figure a img{
-	padding: 3.5%;
-	height: auto;
-	min-height: auto;
-	width: auto;
-	max-width: 92%;
+    height: auto;
+    max-width: 93%;
+    min-height: auto;
+    min-width: auto;
+    padding: 3.5%;
+    position: static;
+    width: auto;
 }
 body #content .listing-summary.development-summary .tileItem section{
 	padding: 0.5% 0 0 2%;
@@ -293,7 +297,9 @@ body.header-light .breadcrumb-wrapper{
 .listing-collection-tile .collection-item.tileItem div{
 	padding: 0 5%;
 }
-.listing-collection-tile .collection-item.tileItem h2{
+.listing-collection-tile .collection-item.tileItem h2,
+.listing-collection-tile .collection-item.tileItem h3,
+.listing-collection-tile .collection-item.tileItem h4{
 	padding: 0 5%;
 }
 .listing-collection-tile .collection-item.tileItem .item {

@@ -77,7 +77,19 @@
             css:content="#portal-logo"
             css:theme=".logo a"
         />
-        
+
+        <rules css:if-content="#google-script">
+            <append
+                css:content="#google-script script"
+                css:theme="body"
+            />
+        </rules>
+
+        <append
+            css:content="#portal-footer-wrapper script"
+            css:theme="body"
+        />
+
         <replace
             css:theme-children=".account .account-login"
             css:content-children="#portal-personaltools-wrapper #portal-personaltools #anon-personalbar"
@@ -183,7 +195,7 @@
                 css:content="#portal-personaltools-wrapper"
             />
         </rules>
-        
+
         <!-- Add Menu bar dont work : Gun -->
          <rules css:if-content="#portal-personaltools .actionMenuHeader">
             <prepend
