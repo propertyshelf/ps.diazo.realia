@@ -1,3 +1,6 @@
+body.template-edit input{
+    height: 1.2em;
+}
 body .row {
 	margin: 0;
 }
@@ -2948,6 +2951,10 @@ table.accordion_table th{
     }
 }
 @media (max-width:1199px) and (min-width:1024px){
+    .portlet-right .listing-collection-tile .collection-item.tileItem,
+    .portlet-left .listing-collection-tile .collection-item.tileItem {
+        width: 47%;
+    }
 	.listing-summary .tileItem section .price {
 		bottom: 0;
 	}
@@ -3146,6 +3153,10 @@ table.accordion_table th{
     }
 }
 @media (max-width:979px) and (min-width:720px){
+    #content .listing-summary .propertyrow figure .content img {
+        min-width: auto !important;
+        position: static;
+    }
 	body #content .listing-grid .listing-collection-tile .price a {
 		font-size: 24px;
 	}
@@ -3163,7 +3174,7 @@ table.accordion_table th{
 		top: unset;
 	}
 	#wrapper-outer #content .portlet-both .listing-collection-tile .collection-item.tileItem {
-		width: 100%;
+		width: 48%;
 	}
 	#wrapper-outer #content .portlet-both .listing-collection-tile .collection-item.tileItem figure{
 		max-height: unset;
@@ -3182,14 +3193,13 @@ table.accordion_table th{
 	#wrapper-outer #content .portlet-left .listing-collection-tile .collection-item.tileItem figure,
 	#wrapper-outer #content .portlet-right .listing-collection-tile .collection-item.tileItem figure,
 	#wrapper-outer #content .portlet-both .listing-collection-tile .collection-item.tileItem figure{
-		max-height: unset;
+
 	}
 	#wrapper-outer #content .portlet-left .listing-collection-tile .collection-item.tileItem figure a img,
 	#wrapper-outer #content .portlet-right .listing-collection-tile .collection-item.tileItem figure a img,
 	#wrapper-outer #content .portlet-both .listing-collection-tile .collection-item.tileItem figure a img,
 	#wrapper-outer #content .no-portlet .listing-collection-tile .collection-item.tileItem figure a img{
-		max-height: unset;
-		min-height: auto;
+
 	}
 	body #content #main .no-portlet #content .listing-summary.development-summary .row section dt {
 		width: 40%;
@@ -3418,6 +3428,10 @@ table.accordion_table th{
     }
 }
 @media (max-width:719px) and (min-width:560px){
+    #content .listing-summary .propertyrow figure .content img {
+        min-width: auto !important;
+        position: static;
+    }
 	body #content .listing-grid .listing-collection-tile .price a {
 		font-size: 24px;
 	}
@@ -3696,6 +3710,10 @@ table.accordion_table th{
     }
 }
 @media (max-width:559px) and (min-width:440px){
+    #content .listing-summary .propertyrow figure .content img {
+        min-width: auto;
+        position: static;
+    }
 	body #content .listing-grid .listing-collection-tile .price a {
 		font-size: 24px;
 	}
@@ -3966,6 +3984,12 @@ table.accordion_table th{
     }
 }
 @media (max-width:439px) and (min-width:280px){
+    body #content .listing-summary .propertyrow figure .content img {
+        min-width: auto;
+        position: static;
+        width: 100%;
+        min-height: auto;
+    }
 	body #content .listing-grid .listing-collection-tile .price a {
 		font-size: 24px;
 	}
