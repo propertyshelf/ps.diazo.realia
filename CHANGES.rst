@@ -3,7 +3,7 @@ Changelog
 =========
 
 
-0.6 (unreleased)
+0.6 (2015-07-28)
 ----------------
 
 - Bugfix: include webstatics scripts of the Site controlpanel
