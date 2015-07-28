@@ -6,7 +6,10 @@ Changelog
 0.6 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Bugfix: include webstatics scripts of the Site controlpanel
+- optimized Image behaviour for ListingSummary
+- improve default headline setting (h1-h4)
+- IE extended support
 
 
 0.5 (2015-07-08)
