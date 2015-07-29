@@ -1,4 +1,4 @@
-body.template-edit input{
+body .documentEditable #fieldset-default input{
     height: 1.2em;
 }
 body .row {
