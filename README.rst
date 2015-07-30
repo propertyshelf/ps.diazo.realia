@@ -48,24 +48,24 @@ Propertyshelfs Realia-II Theme
         - *Default:* email = string:info@propertyshelf.com
 
 	*theme_color:*
-	    - blue
-	    - gray-blue
-	    - gray-blue-light
-	    - brown
-	    - brown-dark
-	    - gray-brown
-	    - gray-borwn-dark
-	    - green
-	    - green-light
-	    - gray-green
-	    - magenta
-	    - gray-magenta
-	    - orange
-	    - gray-orange
 	    - red
 	    - gray-red
+	    - magenta
+	    - gray-magenta
+	    - brown
+	    - gray-brown
+	    - brown-dark
+	    - gray-brown-dark
+	    - orange
+	    - gray-orange
+	    - green-light
+	    - gray-green-light
+	    - green
+	    - gray-green
 	    - turquiose
 	    - gray-turquiose
+	    - blue
+	    - gray-blue
 	    - violet
 	    - gray-violet
 	    - *Default:* theme_color = string:blue
