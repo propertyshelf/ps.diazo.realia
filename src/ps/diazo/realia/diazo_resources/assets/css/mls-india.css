@@ -4,6 +4,9 @@ body .documentEditable #fieldset-default input{
 body .row {
 	margin: 0;
 }
+#content .accordion h2 {
+    margin: 0;
+}
 body #content .listing-summary figure img {
     max-width: none;
     min-height: 220px;
@@ -3052,6 +3055,10 @@ table.accordion_table th{
     }
 }
 @media (max-width:1023px) and (min-width:980px){
+    .portlet-right .listing-collection-tile .collection-item.tileItem,
+    .portlet-left .listing-collection-tile .collection-item.tileItem {
+        width: 47%;
+    }
 	.listing-summary .tileItem section .price {
 		bottom: 0;
 	}
@@ -3174,7 +3181,7 @@ table.accordion_table th{
 		top: unset;
 	}
 	#wrapper-outer #content .portlet-both .listing-collection-tile .collection-item.tileItem {
-		width: 48%;
+		width: 31%;
 	}
 	#wrapper-outer #content .portlet-both .listing-collection-tile .collection-item.tileItem figure{
 		max-height: unset;
