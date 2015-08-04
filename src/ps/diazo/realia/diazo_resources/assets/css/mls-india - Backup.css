@@ -1,21 +1,11 @@
-@import "font-realia.less";
-
-body .portlet-both #content .listing-summary.development-summary figure {
-    max-width: 100%;
-    min-width: auto;
-    width: 100% !important;
-}
-body .portlet-both #content .development__groups .listing-summary .tileItem {
-    width: 100%;
-}
-body .portlet-both #content .listing-summary.development-summary .tileItem section {
-    width: 98%;
-}
 body .documentEditable #fieldset-default input{
     height: 1.2em;
 }
 body .row {
 	margin: 0;
+}
+#content .accordion h2 {
+    margin: 0;
 }
 body #content .listing-summary figure img {
     max-width: none;
@@ -158,6 +148,7 @@ body #content .listing-summary.development-summary .tileItem section{
 	margin: 1.5% 0;
 }
 body #content .listing-summary.development-summary .tileItem section .location {
+	font-size: 18px;
 	margin-bottom: 20px;
 }
 body .development__header .development__banner {
@@ -238,6 +229,7 @@ body.header-light .breadcrumb-wrapper{
 }
 .portletAgentInformation .portletItem dl.contact_details dt,
 .portletAgentInformation .portletItem dl.contact_details dd {
+    font-size: 12px !important;
     padding:0 0 10px !important;
 }
 .portletAgentInformation .portletItem dl.contact_details dt{
@@ -259,6 +251,7 @@ body.header-light .breadcrumb-wrapper{
 }
 .field .widget .value label{
     color: #707070;
+    font-weight: bold;
 }
 .portlet {
     background-color: #ffffff;
@@ -267,6 +260,8 @@ body.header-light .breadcrumb-wrapper{
 }
 .h2devnew {
     color: #b80e1d !important;
+    font-size: 23px !important;
+    font-weight: 300;
     text-align: center !important;
     text-transform: uppercase;
 }
@@ -361,10 +356,12 @@ body #content #main #content .listing-summary.development-summary section dt.lot
     margin-bottom: 1em !important;
 }
 body #content .development_details .data_row .price {
+    font-size: 1.2em;
     height: auto;
     padding: 9px 0 !important;
 }
 .development_details .data_row .lot_size {
+    font-size: 12px;
     line-height: 15px;
 }
 body #content .development-summary .tileItem .tileHeadline{
@@ -408,10 +405,12 @@ body #content .development-summary section .label {
 	text-shadow: unset;
 	line-height: 20px;
 	margin-bottom: 13px !important;
+	font-size: 14px;
 }
 #content .listing-collection-tile .price p,
 #content .listing-collection-tile .price a{
     bottom: 0;
+    font-size: 24px;
     text-align: right;
     width: 76%;
     position: absolute;
@@ -426,6 +425,7 @@ body #content .listing-grid .listing-collection-tile .price {
 	width: auto !important; 
 }
 body #content .listing-grid .listing-collection-tile .price a{
+    font-size: 18px;
     padding: 0;
     position: static;
 }
@@ -433,7 +433,7 @@ body #content .listing-grid .listing-collection-tile .price p{
     padding: 2px 10px 5px;
     position: static;
 }
-body #content .listing-grid .listing-collection-tile .price {
+body #content .listing-grid .listing-collection-tile .price
 	width: auto !important; 
 }
 form input.standalone[type="submit"]{
@@ -446,6 +446,7 @@ form input.standalone[type="submit"]{
     border: 0 none;
     border-radius: 0;
     box-shadow: none;
+    font-weight: normal;
     margin-left: 5px;
     padding: 7px 30px 7px 15px;
     text-shadow: none;
@@ -459,11 +460,16 @@ form input.standalone[type="submit"]{
 	margin-bottom: 10px;
 	background: transparent none repeat scroll 0 0;
 	color: #707070;
+	font-size: 14px;
+	font-weight: normal;
 	padding: 0;
 	text-shadow: 0 0 0 rgba(0, 0, 0, 0.25);
 }
 form input.standalone[type="submit"]:hover{
     background-color: #045e83;
+}
+#content .portletCalendar .portletHeader{
+    font-size: 22px;
 }
 a:hover{
     text-decoration: none !important;
@@ -536,12 +542,16 @@ a:focus {
     transition-delay: 0s;
 }
 .slider-table h3{
+    font-size: 24px;
     line-height: 24px;
+    font-weight: lighter;
 }
 .slider-table th{
     color: #ffffff;
+    font-size: 24px;
     line-height: 24px;
     text-align: left;
+    font-weight: lighter;
 }
 .slider-table td{
     padding: 0 10px;
@@ -554,6 +564,7 @@ a:focus {
 }
 .slider-table th .discreet{
     color: #ffffff !important;
+    font-size: 14px !important;
     background-image: url("../img/arrow-right-white.png");
     background-position: right center;
     background-repeat: no-repeat;
@@ -563,6 +574,7 @@ a:focus {
     padding-right: 20px;
 }
 .slider-table p{
+    font-weight: bold;
     color: #ffffff !important;
 }
 .slider-table tbody tr:first-child{
@@ -620,11 +632,13 @@ body .carousel-banners .carousel-banner {
     z-index: 99999;
 }
 .slider-table .bathroomtable{
+    font-weight: bold;
     float: left;
     margin-right: 30px;
 }
 .slider-table .bedroomtable{
     color: #ffffff;
+    font-weight: bold;
     float: left;
 }
 .slider-table .bedroomtable img{
@@ -733,12 +747,14 @@ ul.breadcrumb span#breadcrumbs-current{
     text-align: center;
     text-transform: uppercase;
     color: #fff !important;
+	font-size: 18px;
 }
 .abtngreen a{
     color: #336633 !important;
 }
 .abtngreen:hover, #content p.box.green a:hover {
   color: #fff !important;
+  font-weight: bold;
   text-shadow: 2px 2px 2px rgba(106, 113, 149, 1);
 }
 div.portletStaticText{
@@ -749,6 +765,7 @@ div.portletStaticText{
     box-shadow: none;
     background-color: transparent;
     padding: 0;
+    font-style: normal;
     margin: 0;
 }
 /*-- Portlet other:END--*/
@@ -861,6 +878,10 @@ label.horizontal.collapser.collapsed{
 }
 .listing-collection-tile .tile-header{
 
+}
+.listing-collection-tile .tile-header h2{
+    font-size: 30px;
+    font-weight: 300;
 }
 .listingBar span:last-child a{
     margin-top: 10px;
@@ -999,6 +1020,7 @@ section .tileItem section.body .title-price .title{
 .listing-summary .tileItem section .price {
     bottom: 0;
     color: #313131;
+    font-size: 24px;
     position: absolute;
     right: 0;
 }
@@ -1010,6 +1032,8 @@ section .tileItem section.body .title-price .title{
 }
 .properties-rows .property .title-price .title h2{
     color: #06a7ea;
+    font-size: 20px;
+    font-weight: normal;
     text-align: left;
     line-height: 24px !important;
     transition: color 0.2s ease-in 0s;
@@ -1081,13 +1105,20 @@ section .tileItem section.body .title-price .title{
 .section-slider .galleria-info-text .galleria-info-title a{
     color: #ffffff;
     float: left;
+    font-size: 24px;
     line-height: 1;
     margin: 0;
     padding: 0;
+    font-family: "Open Sans","Arial",sans-serif;
+    font-weight: 100;
 }
 .section-slider .galleria-info-text .galleria-info-description {
     color: #06a7ea;
     text-decoration: none;
+    font-size: 24px;
+    font-family: "Open Sans","Arial",sans-serif;
+    font-weight: 100;
+    font-style: normal;
 }
 .section-slider .galleria-thumbnails{
     float: right;
@@ -1104,10 +1135,14 @@ section .tileItem section.body .title-price .title{
 }
 .listing-search-tile .tile-header h2{
     color: #fff;
+    font-size: 20px;
+    font-weight: bold;
     line-height: 20px;   
 }
 .listing-search-tile #form .horizontal{
     color: #fff;
+    font-size: 14px;
+    font-weight: bold;
     line-height: 20px;
 }
 .listing-search-tile #form span.option{
@@ -1117,6 +1152,7 @@ section .tileItem section.body .title-price .title{
 .listing-search-tile #form span.option label span{
     background-color: transparent;
     color: #fff !important;
+    font-weight: 700 !important;
     background-color: transparent;
 }
 .listing-search-tile #form select{
@@ -1146,6 +1182,8 @@ section .tileItem section.body .title-price .title{
 .listing-search-tile #form-buttons-search{
     border: 0 none;
     color: #fff;
+    font-size: 17.5px;
+    font-weight: bold;
     margin: 0;
     padding: 11px 19px;
     width: 100%;
@@ -1192,6 +1230,7 @@ body .listing-grid .listing-collection-tile .collection-item.tileItem .price{
 .listing-grid .listing-collection-tile .collection-item .price p{
     color: #313131;
     background-color: #fff;
+    font-size: 18px;
     padding: 5px 10px;
 }
 .listing-grid .listing-collection-tile .collection-item .workflow_status{
@@ -1206,10 +1245,13 @@ body .listing-grid .listing-collection-tile .collection-item.tileItem .price{
     background-color: #313131;
     bottom: 48%;
     color: #fff;
+    font-size: 18px;
     padding: 5px 16px;
 }
 .listing-grid .location p.item-body{
     margin-top: 10px;
+    font-size: 18px;
+    font-weight: normal;
     transition: color 0.1s ease-in 0s;
     line-height: 22px;
 }
@@ -1287,6 +1329,8 @@ section dl{
 }
 section dd.List5 {
     color: #06a7ea;
+    font-size: 20px;
+    font-weight: normal;
     position: absolute;
     text-align: left;
     top: 0;
@@ -1294,6 +1338,8 @@ section dd.List5 {
 }
 section dd.Rist6 {
     color: #06a7ea;
+    font-size: 20px;
+    font-weight: normal;
     position: absolute;
     text-align: left;
     top: 0;
@@ -1303,6 +1349,7 @@ section dd.Rist0 {
     clear: right;
     color: #313131;
     float: right !important;
+    font-size: 24px;
     margin-top: 3px !important;
     padding-right: 6px;
     text-align: right;
@@ -1317,6 +1364,7 @@ section dd.Rist2 {
     background-position: left bottom;
     background-repeat: repeat-x;
     color: #707070;
+    font-size: 18px;
     line-height: 1;
     margin-bottom: 12px;
     margin-right: 30px;
@@ -1330,6 +1378,7 @@ section dd.List2 {
     background-position: left bottom;
     background-repeat: repeat-x;
     color: #707070;
+    font-size: 18px;
     line-height: 1;
     margin-bottom: 12px;
     margin-right: 30px;
@@ -1384,6 +1433,7 @@ section dd.List0{
     clear: right;
     color: #313131;
     float: right !important;
+    font-size: 24px;
     margin-top: 3px !important;
     padding-right: 30px;
     text-align: right;
@@ -1401,6 +1451,8 @@ body section .tileItem section {
 }
 .new-listings dd.List5 {
     color: #06a7ea;
+    font-size: 18px;
+    font-weight: normal;
     line-height: 22px;
     position: absolute;
     text-align: left;
@@ -1410,6 +1462,8 @@ body section .tileItem section {
 }
 .new-listings dd.Rist6 {
     color: #06a7ea;
+    font-size: 18px;
+    font-weight: normal;
     position: absolute;
     text-align: left;
     top: 0;
@@ -1421,6 +1475,7 @@ body section .tileItem section {
     clear: right;
     color: #313131;
     float: right !important;
+    font-size: 24px;
     margin-top: 3px !important;
     padding-right: 6px;
     text-align: right;
@@ -1435,6 +1490,7 @@ body section .tileItem section {
     background-position: left bottom;
     background-repeat: repeat-x;
     color: #707070;
+    font-size: 18px;
     line-height: 1;
     margin-bottom: 12px;
     margin-right: 30px;
@@ -1448,6 +1504,7 @@ body section .tileItem section {
     background-position: left bottom;
     background-repeat: repeat-x;
     color: #707070;
+    font-size: 18px;
     line-height: 1;
     margin-bottom: 12px;
     margin-right: 30px;
@@ -1518,6 +1575,7 @@ body section .tileItem section {
     clear: right;
     color: #313131;
     float: right !important;
+    font-size: 24px;
     margin-top: 3px !important;
     padding-right: 6px;
     text-align: right;
@@ -1528,15 +1586,20 @@ body section .tileItem section {
 /*--porletQuickSearch--*/
 .portletQuickSearch .portletHeader{
     color: #fff;
+    font-size: 20px;
+    font-weight: bold;
     line-height: 20px;
     margin-top: 5% !important;
 }
 .portletQuickSearch .option label span{
     background-color: transparent;
     color: #fff !important;
+    font-weight: 700 !important; 
 }
 .portletQuickSearch form label{
     color: #fff;
+    font-size: 14px;
+    font-weight: bold;
     line-height: 20px;
     width: 100%;
 }
@@ -1550,6 +1613,9 @@ body section .tileItem section {
     height: 33px;
     width: 100%;
     line-height: 40px;
+}
+.portletQuickSearch select option{
+    font-family: "Open Sans","Arial",sans-serif !important;
 }
 .portletQuickSearch #form-widgets-location_city{
     height: 25px !important;
@@ -1574,9 +1640,11 @@ body section .tileItem section {
 .portletQuickSearch input#form-buttons-search{
     border: 0 none;
     color: #fff;
+    font-weight: bold;
     margin: 0;
     padding: 11px 19px;
     width: 100%;
+    font-size: 17.5px;
 }
 .portletQuickSearch .form-row-price{
     position: relative;
@@ -1630,6 +1698,8 @@ body section .tileItem section {
 }
 .listing-search-tile .portletHeader{
     color: #fff;
+    font-size: 20px;
+    font-weight: bold;
     line-height: 20px;
 }
 .listing-search-tile .form-row-beds-baths.form-rows{
@@ -1638,9 +1708,12 @@ body section .tileItem section {
 .listing-search-tile .option label span{
     background-color: transparent;
     color: #fff !important;
+    font-weight: 700 !important; 
 }
 .listing-search-tile form label{
     color: #fff;
+    font-size: 14px;
+    font-weight: bold;
     line-height: 20px;
     width: 100%;
 }
@@ -1654,6 +1727,9 @@ body section .tileItem section {
     height: 33px;
     width: 100%;
     line-height: 40px;
+}
+.listing-search-tile select option{
+    font-family: "Open Sans","Arial",sans-serif !important;
 }
 .listing-search-tile #form-widgets-location_city{
     height: 25px !important;
@@ -1680,9 +1756,11 @@ body section .tileItem section {
 .listing-search-tile input#form-buttons-search{
     border: 0 none;
     color: #fff;
+    font-weight: bold;
     margin: 0;
     padding: 11px 19px;
     width: 100%;
+    font-size: 17.5px;
 }
 #listing-search #form-buttons-search{
     width: 30%;
@@ -1772,6 +1850,9 @@ body section .tileItem section {
 .cover-embed-tile iframe{
     margin-bottom: 20px;
 }
+h2 a.summary{
+    font-size: 1.4em;
+}
 h2 a.summary:hover{
     color: #000000;
 }
@@ -1817,6 +1898,15 @@ dl.portletAgentContact {
 .portletAgentInformation .portletItem figure.agency_logo img{
     margin-top: 10px;
 }
+dd.portletItem h3{
+    font-size: 1.5em;
+}
+h1.documentFirstHeading{
+    font-size: 1.7em;
+}
+#listing-info h2{
+    font-size: 1.6em;
+}
 #header-wrapper #header #header-inner .navbar .navbar-inner .site-slogan p {
     border-left: 2px solid #F0F0F0;
     display: inline-block;
@@ -1835,6 +1925,8 @@ dl.portletAgentContact {
     display: block;
     background-color: rgba(0, 0, 0, 0.8);
     color: #FFFFFF;
+    font-size: 20px;
+    font-weight: normal;
     line-height: 1.2em;
     width: 90%;
     height: 100%;
@@ -1885,6 +1977,8 @@ dl.portletAgentContact {
 }
 #header-wrapper #header #header-inner .navbar .navbar-inner .site-phone{
     color: #707070;
+    font-size: 18px;
+    font-weight: 500;
     margin-left: 40px;
     padding-left: 0;
 }
@@ -1923,15 +2017,17 @@ body .listing-summary #search-form .form-rows .field input[type="text"]{
 }
 dl.portlet dt {
     color: #707070;
+    font-size: 24px;
+    font-weight: lighter;
     background: none repeat scroll 0 0 rgba(0, 0, 0, 0) !important;
     padding: 0 !important;
     margin-bottom: 5%;
 }
 input[type="submit"]{
-    min-height:1.2em;
+  min-height:1.2em;
 }
 .template-search div.row{
-    margin-left:0;
+  margin-left:0;
 }
 #content fieldset {
     border-style: none !important;
@@ -1960,7 +2056,11 @@ dd.actionMenuContent{
     height: auto;
     width: auto;
 }
+dl.contact_details dt{
+    font-size: 18px !important;
+}
 span.formHelp{
+    font-size: 12px !important;
     color: #707070 !important;
 }
 .option label span{
@@ -1968,6 +2068,7 @@ span.formHelp{
     padding: 0 !important;
     background-color: transparent !important;
     color: #707070 !important;
+    font-weight: normal !important;
 }
 #search-form #form .form-row-listing-type #formfield-form-widgets-listing_type span.option:nth-child(5){
     margin:0 !important;
@@ -2052,6 +2153,9 @@ body #content dl.enableFormTabbing{
     padding-right: 10px;
     background-color:#fff;
 }
+.row #search-form #show-form a{
+    font-size: 1.5em;
+}
 input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
     background-color: #FFFFFF !important;
 }
@@ -2060,6 +2164,8 @@ input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
 }
 body h1#parent-fieldname-title, body h2#parent-fieldname-title {
     border: 0 none;
+    font-size: 30px;
+    font-weight: 300;
     line-height: 1.2em;
     margin: 20px 0;
     padding: 0;
@@ -2227,6 +2333,13 @@ ul, ol {
 
 /*Developer Benefits*/
 /* General Settings */
+#content .table-pricing,
+#content .table-pricing p,
+#content .table-pricing h1,
+#content .table-pricing h2,
+#content .table-pricing h3{
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
 
 #content .table-pricing{
   border-collapse: collapse;
@@ -2242,18 +2355,20 @@ ul, ol {
 .table-pricing a:link,
 .table-pricing a:visited,
 .table-pricing a:hover{
-    color:inherit;
+  color:inherit;
 }
 
 #content ul{
-    text-align:left;
+  text-align:left;
 }
 
 #content .table-pricing td.invisible{
-    background-color:#fff;
-    border:0 none transparent;
-    visibility: visible;
+  background-color:#fff;
+  border:0 none transparent;
+  visibility: visible;
+  font-size:12px;
 }
+
 
 /*the Price Table header*/
 #content .table-pricing th.green{
@@ -2261,6 +2376,7 @@ ul, ol {
   background-color:#39b54a;
   padding:15px 12px;
   text-align:center;
+  font-size:16px;
   text-transform:none;
   line-height:1em;
 }
@@ -2270,6 +2386,7 @@ ul, ol {
 #content .table-pricing th.green p
 {
   color:#fff !important;
+  font-size:16px;
   text-transform:none;
 }
 
@@ -2283,14 +2400,19 @@ ul, ol {
   vertical-align:middle;
   padding:20px;
   background-color:transparent;
+
   text-transform:uppercase;
   color:#4d4d4d !important;
   text-align:center;
   line-height:1.5em;
+  font-weight:normal;
+  font-size:24px;
   word-wrap: break-word;
 }
 #content .table-pricing thead th.discreet p{
   line-height:1.1em;
+  font-weight:normal;
+  font-size:24px;
   margin:0;
   padding:0;
   color:#4c4c4c;
@@ -2307,6 +2429,7 @@ ul, ol {
 }
 
 #content .table-pricing thead th p{
+  font-size:28px;
   line-height:1em;
   padding:0;
   margin:0;
@@ -2314,14 +2437,19 @@ ul, ol {
 }
 
 #content .table-pricing thead th span.discreet{
+  font-size:13px;
   color:inherit;
+  font-weight:normal;
   text-transform:none;
+
   position:relative;
   top:-10px;
 }
 .table-pricing sub,
 .table-pricing sup{
   text-transform:none;
+  font-weight:normal;
+  font-size:100%;
 }
 .table-pricing thead{
   border-bottom:1px solid #fff;
@@ -2332,20 +2460,36 @@ ul, ol {
 #content .table-pricing th.price {
     background-color: #fff !important;
     color: #7a7a7a !important;
+    font-weight: normal;
     margin: 0 !important;
     padding: 0 0 12px !important;
 }
+#content .table-pricing th.price{
+   background-color:#fff !important;
+   color:#7a7a7a !important;
+   font-weight:normal;
+   margin:0 !important;
+   padding:0 0 12px !important;
+}
+
 #content .table-pricing th.price span.discreet{
   position:relative;
   top:0;
+  font-size:18px;
+}
+
+#content .table-pricing th.price p{
+  font-size:48px;
 }
 #content .table-pricing th.price sup{
+ font-size:24px;
  top:-16px;
 }
 #content .table-pricing th.price sub{
  top:0;
  bottom:0;
 }
+
 /* table body */
 #content .table-pricing tr{
   background-color:#f1f0f0;
@@ -2356,7 +2500,9 @@ ul, ol {
   background-clip: padding-box;
 }
 #content .table-pricing th{
+  font-weight:normal;
   color:#4c4c4c;
+  font-size:14px;
   padding:5px 10px 4px 25px;
   border-right:1px solid #fff;
   vertical-align:top;
@@ -2366,6 +2512,7 @@ ul, ol {
   text-align:center;
   vertical-align:middle;
   color:#7c7c7c;
+  font-size:14px;
   padding:5px 10px 4px 10px;
   border-right:1px solid #e1e1e1;
 }
@@ -2396,11 +2543,13 @@ ul, ol {
   background-color:#cd5761;
   text-align:center;
   color:#fff;
+  font-size:22px;
   padding: 15px 20px;
 }
 
 #content .table-pricing .description_link p,
 #content .table-pricing .description_link span{
+  font-size:22px;
   line-height:1em;
 }
 
@@ -2415,6 +2564,7 @@ ul, ol {
 #content .table-pricing .description_link a,
 #content .table-pricing .description_link a:hover{
   color:#fff !important;
+  font-size:22px;
 }
 #content .table-pricing .description_link a:hover,
 #content .table-pricing .payment_link a:hover{
@@ -2431,6 +2581,7 @@ ul, ol {
 #content .table-pricing .payment_link,
 #content .table-pricing .payment_link a{
   color:#fff !important;
+  font-size:18px;
 }
 
 #content .table-pricing .payment_link a:hover,
@@ -2452,6 +2603,7 @@ ul, ol {
 #content .table-pricing .plan-addon th,
 #content .table-pricing .plan-addon p{
   color:#fff;
+  font-size:22px;
   background-color:#b80e1d;
   line-height:1.1em;
 }
@@ -2463,6 +2615,9 @@ ul, ol {
 
 #content .table-pricing .plan-addon .discreet{
   color:#fff !important;
+  font-size:14px;
+  font-style:italic;
+  
 }
 
 /*highlighted Column*/
@@ -2549,30 +2704,38 @@ ul, ol {
 #content .table-pricing thead .description_link p, 
 #content .table-pricing thead .description_link span,
 #content .table-pricing thead .description_link a{
+  font-size:16px;
+  font-style:italic;
   text-transform:none;
 }
+
+
 /* Accordion Styles */
 #content .accordion{
   max-width:700px;
   margin: 0 auto;
 }
+
 #content .accordion,
 #content .accordion h1,
 #content .accordion h2,
 #content .accordion h3,
 #content .accordion h4,
 #content .accordion p{
+  font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
   clear:both;
   float:none;
 }
 
 #content .accordion h2{
   background-color: #eaeaea;
+  font-size:18px;
   border: 1px solid #959595;
   background-image:none;
   line-height:1em;
   padding: 15px 25px;
   color: #313131;
+
   -webkit-border-radius:0;
   -moz-border-radius:0;
   border-radius:0;
@@ -2585,12 +2748,15 @@ ul, ol {
 #content .accordion h3{
   line-height:1em;
   margin-bottom:20px;
+  font-size:16px;
   color: #5e7d96;
+
 }
 
 #content .accordion,
 #content .accordion p{
   color: #5e7d96;
+  font-size:16px;
 }
 #content .accordion p{
   margin-bottom:20px;
@@ -2622,6 +2788,7 @@ ul, ol {
 }
 /* green link box above pricing table*/
 #content p.box.green{
+  font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
   background-color:transparent;
   display:block;
   max-width:700px;
@@ -2637,6 +2804,7 @@ ul, ol {
   display:block;
   padding:15px 12px;
   text-align:center;
+  font-size:16px
 }
 
 /*red  boxes*/
@@ -2648,6 +2816,9 @@ ul, ol {
   text-align:left;
   display:block;
   text-transform:uppercase;
+  font-size:18px;
+  max-width:650px;
+  margin:0 auto 8px;
 }
 #content .accordion p.box.red a{
   color:#fff !important;
@@ -2703,6 +2874,8 @@ ul, ol {
 #content table.accordion_table p,
 #content table.accordion_table h3{
   color:#5e7d96 !important;
+  font-size:16px;
+  
 }
 
 table.accordion_table td{
@@ -2882,6 +3055,10 @@ table.accordion_table th{
     }
 }
 @media (max-width:1023px) and (min-width:980px){
+    .portlet-right .listing-collection-tile .collection-item.tileItem,
+    .portlet-left .listing-collection-tile .collection-item.tileItem {
+        width: 47%;
+    }
 	.listing-summary .tileItem section .price {
 		bottom: 0;
 	}
@@ -2987,6 +3164,9 @@ table.accordion_table th{
         min-width: auto !important;
         position: static;
     }
+	body #content .listing-grid .listing-collection-tile .price a {
+		font-size: 24px;
+	}
 	body #wrapper #content .width-8 .listing-collection-tile .collection-item.tileItem figure img{
 		width: 100%;
 	}
@@ -3001,7 +3181,7 @@ table.accordion_table th{
 		top: unset;
 	}
 	#wrapper-outer #content .portlet-both .listing-collection-tile .collection-item.tileItem {
-		width: 48%;
+		width: 31%;
 	}
 	#wrapper-outer #content .portlet-both .listing-collection-tile .collection-item.tileItem figure{
 		max-height: unset;
@@ -3255,13 +3435,13 @@ table.accordion_table th{
     }
 }
 @media (max-width:719px) and (min-width:560px){
-    #content-core.development_details .listing-summary figure {
-        width: 30% !important;
-    }
     #content .listing-summary .propertyrow figure .content img {
         min-width: auto !important;
         position: static;
     }
+	body #content .listing-grid .listing-collection-tile .price a {
+		font-size: 24px;
+	}
 	body #wrapper .no-portlet #content .width-8 .listing-collection-tile .collection-item.tileItem {
 		width: 100%;
 	}
@@ -3313,6 +3493,18 @@ table.accordion_table th{
 	}
 	body #content #main .no-portlet #content .listing-summary.development-summary .row section dd {
 		width: 53%;
+	}
+	body #content-core.development_details .development__groups .listing-summary .tileItem .image_row figure a img {
+		position: static;
+	}
+	.development_details .development__groups .listing-summary .tileItem .image_row {
+		height: auto;
+		max-height: none;
+	}
+	.development_details .development__groups .listing-summary .tileItem .image_row .tileHeadline{
+		text-align: left;
+		float:left;
+		padding-top: 10px;
 	}
 	body #content .development__groups .listing-summary .tileItem {
 		width: 100%;
@@ -3525,13 +3717,13 @@ table.accordion_table th{
     }
 }
 @media (max-width:559px) and (min-width:440px){
-    body .development_details .listing-summary .tileItem .image_row {
-        max-height: 101px;
-    }
     #content .listing-summary .propertyrow figure .content img {
         min-width: auto;
         position: static;
     }
+	body #content .listing-grid .listing-collection-tile .price a {
+		font-size: 24px;
+	}
 	body #content #main #content .listing-summary.development-summary figure img {
 		min-width: unset;
 	}
@@ -3592,6 +3784,21 @@ table.accordion_table th{
 	}
 	body #content #main .no-portlet #content .listing-summary.development-summary .row section dd {
 		width: 53%;
+	}
+	body #content-core.development_details .development__groups .listing-summary .tileItem .image_row figure a img {
+		position: static;
+	}
+	body #content-core.development_details .development__groups .listing-summary .tileItem .image_row figure {
+		width: 100%;
+	}
+	.development_details .development__groups .listing-summary .tileItem .image_row {
+		height: auto;
+		max-height: none;
+	}
+	.development_details .development__groups .listing-summary .tileItem .image_row .tileHeadline{
+		text-align: left;
+		float:left;
+		padding-top: 10px;
 	}
 	body #content #main #content .listing-summary.development-summary .row .tileItem  figure{
 		margin: 0;
@@ -3784,15 +3991,15 @@ table.accordion_table th{
     }
 }
 @media (max-width:439px) and (min-width:280px){
-    body .development_details .image_row .tileHeadline {
-        padding: 2%;
-    }
     body #content .listing-summary .propertyrow figure .content img {
         min-width: auto;
         position: static;
         width: 100%;
         min-height: auto;
     }
+	body #content .listing-grid .listing-collection-tile .price a {
+		font-size: 24px;
+	}
 	body #content #main #content .listing-summary.development-summary figure img {
 		min-width: unset;
 	}
@@ -3849,8 +4056,17 @@ table.accordion_table th{
 	body #content #main .no-portlet #content .listing-summary.development-summary .row section dd {
 		width: 53%;
 	}
+	body #content-core.development_details .development__groups .listing-summary .tileItem .image_row figure a img {
+		position: static;
+	}
 	.development_details .development__groups .listing-summary .tileItem .image_row {
-
+		height: auto;
+		max-height: none;
+	}
+	.development_details .development__groups .listing-summary .tileItem .image_row .tileHeadline{
+		text-align: left;
+		float:left;
+		padding-top: 10px;
 	}
 	body #content #main #content .listing-summary.development-summary .row .tileItem  figure{
 		margin: 0;
@@ -4027,9 +4243,9 @@ table.accordion_table th{
     }
 }
 @media (max-width:479px) and (min-width:1px){
-    body .development_details .image_row .tileHeadline {
-        padding: 2%;
-    }
+	body #content .listing-grid .listing-collection-tile .price a {
+		font-size: 24px;
+	}
 	body #wrapper .no-portlet #content .width-8 .listing-collection-tile .collection-item.tileItem {
 		width: 100%;
 	}
@@ -4044,7 +4260,10 @@ table.accordion_table th{
 		max-width: none;
 	}
 	#content #content-core.development_details .listing-summary figure img {
-
+	    max-height: none;
+		max-width: none;
+		min-height: auto;
+		width: 100%;
 	}
 	body #content .listing-summary .tileItem .row section {
 		width: 95%;
@@ -4124,9 +4343,7 @@ table.accordion_table th{
     .properties-rows .property .image .content a:hover{
         width:100% !important;
     }
-    #content-core.development_details .listing-summary figure{ 
-        width: 30% !important;
-    }
+
     #content .listing-summary figure{
         height:auto;
         position: relative;
