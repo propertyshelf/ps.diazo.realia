@@ -297,6 +297,13 @@
                 css:content="#site_contact_link"
             />
         </rules>
+
+        <rules css:if-not-content="#site_contact_link">
+            <drop
+                css:theme=".btn.btn-primary.list-your-property"
+            />
+        </rules>
+
         <rules css:if-content=".site_contact_phone">
             <prepend
                 css:theme=".info .site-phone"
