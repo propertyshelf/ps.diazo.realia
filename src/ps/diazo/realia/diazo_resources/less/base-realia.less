@@ -1,5 +1,11 @@
 @import "font-realia.less";
 
+#wrapper-outer #wrapper {
+    min-height: 100%;
+}
+#content .cell .listing-search-tile.tile-content .tile-header h2 {
+    margin: 20px 0;
+}
 body .portlet-both #content .listing-summary.development-summary figure {
     max-width: 100%;
     min-width: auto;
@@ -439,7 +445,6 @@ form input.standalone[type="submit"]{
     background-repeat: no-repeat;
     background-size: 8px 11px;
     padding-right: 30px;
-    background-color: #06a7ea;
     border: 0 none;
     border-radius: 0;
     box-shadow: none;
@@ -458,9 +463,6 @@ form input.standalone[type="submit"]{
 	color: #707070;
 	padding: 0;
 	text-shadow: 0 0 0 rgba(0, 0, 0, 0.25);
-}
-form input.standalone[type="submit"]:hover{
-    background-color: #045e83;
 }
 a:hover{
     text-decoration: none !important;
@@ -599,7 +601,6 @@ body .carousel-banners .carousel-banner {
 }
 .carousel-pager a.carousel-pager-item-active{
     border-radius: 75%;
-    background-color: #022a3b;
     display: block;
     float: left;
     height: 10px;
@@ -835,17 +836,14 @@ label.horizontal.collapser.collapsed{
     padding: 9px 15px !important;
     width: 8px;
 }
+.listingBar a:hover{
+    color:#ffffff !important;
+}
+.listingBar a:hover{
+    color:#ffffff !important;
+}
 .listingBar span.active:hover{
-    background-color:#06a7ea;
-    border-color:#329fd7;
     color:#ffffff !important;
-}
-.listingBar a:hover{
-    color:#ffffff !important;
-}
-.listingBar a:hover{
-    color:#ffffff !important;
-    background-color:#06a7ea !important;
 }
 .breadcrumb-wrapper .container .row{
     margin-left: 0;
@@ -1006,7 +1004,6 @@ section .tileItem section.body .title-price .title{
     width: 88% !important;
 }
 .properties-rows .property .title-price .title h2{
-    color: #06a7ea;
     text-align: left;
     line-height: 24px !important;
     transition: color 0.2s ease-in 0s;
@@ -1083,7 +1080,6 @@ section .tileItem section.body .title-price .title{
     padding: 0;
 }
 .section-slider .galleria-info-text .galleria-info-description {
-    color: #06a7ea;
     text-decoration: none;
 }
 .section-slider .galleria-thumbnails{
@@ -1160,7 +1156,6 @@ section .tileItem section.body .title-price .title{
 /*--Search Listing : END--*/
 /*--listings grid : Start--*/
 #portal-column-content .listing-collection-tile figure{
-    background-color: #ccc;
     border: medium none;
     margin: 0;
     max-height: 200px;
@@ -1187,7 +1182,6 @@ body .listing-grid .listing-collection-tile .collection-item.tileItem .price{
     width: auto !important;
 }
 .listing-grid .listing-collection-tile .collection-item .price p{
-    color: #313131;
     background-color: #fff;
     padding: 5px 10px;
 }
@@ -1200,7 +1194,6 @@ body .listing-grid .listing-collection-tile .collection-item.tileItem .price{
     width: auto;
 }
 .listing-grid .listing-collection-tile .collection-item .workflow_status p{
-    background-color: #313131;
     bottom: 48%;
     color: #fff;
     padding: 5px 16px;
@@ -1283,14 +1276,12 @@ section dl{
     position: relative;
 }
 section dd.List5 {
-    color: #06a7ea;
     position: absolute;
     text-align: left;
     top: 0;
     transition: color 0.2s ease-in 0s;
 }
 section dd.Rist6 {
-    color: #06a7ea;
     position: absolute;
     text-align: left;
     top: 0;
@@ -1397,7 +1388,6 @@ body section .tileItem section {
     position: relative;
 }
 .new-listings dd.List5 {
-    color: #06a7ea;
     line-height: 22px;
     position: absolute;
     text-align: left;
@@ -1406,7 +1396,6 @@ body section .tileItem section {
     width: 65% !important;
 }
 .new-listings dd.Rist6 {
-    color: #06a7ea;
     position: absolute;
     text-align: left;
     top: 0;
@@ -2198,10 +2187,6 @@ ul, ol {
     display:none;
 }
 /*Hide listing end*/
- #content .listing-summary figure{
-    background-color: #ccc;
-    border-right: 1px dotted #ccc;
-}
 .ie8 .site-en #portal-searchbox, .site-es #portal-searchbox, .site-de #portal-searchbox{
     position: relative;
     left: -86px;
