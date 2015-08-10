@@ -1,5 +1,74 @@
 @import "font-realia.less";
 
+// Add New style Skype
+body form input.standalone[type="submit"]{
+    background-color: #5bc506;
+}
+.skypecontacts #header-wrapper #header #header-inner .navbar .navbar-inner .site-slogan {
+    border-left: medium none;
+    display: inline-block;
+    line-height: 18px;
+    width: 50%;
+    text-align: center;
+    padding-left: 0;
+}
+.skypecontacts #header-wrapper #header #header-inner .navbar .navbar-inner .site-slogan h1{
+    color: #7aa732;
+    font-size: 29px;
+    text-shadow: -1px 0 #000;
+    text-transform: uppercase;
+}
+.skypecontacts #header-wrapper #header #header-inner .navbar .navbar-inner .site-slogan p{
+    color: #000;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+.skypecontacts #header-wrapper {
+    height: 120px;
+}
+.skypecontacts #header-wrapper #header #header-inner .navbar .navbar-inner .site-slogan {
+    margin-top: 10px;
+    margin-left: 0;
+}
+.skypecontacts .row .logo-wrapper.span4 {
+    width: auto;
+}
+.skypecontacts #header-wrapper #header #header-inner .navbar .navbar-inner .info {
+    float: right;
+    margin-top: 1.5%;
+    overflow: initial;
+    padding-top: 0;
+    width: 21%;
+    margin-left: 0;
+}
+body.skypecontacts #header-wrapper #header #header-inner .navbar .navbar-inner .site-email,
+body.skypecontacts #header-wrapper #header #header-inner .navbar .navbar-inner .site-phone,
+body.skypecontacts .skype_contacts {
+    line-height: normal;
+    margin: 0;
+    width: 100%;
+}
+.skypecontacts .skype_contacts {
+    float: left;
+    line-height: 90px;
+    margin-left: 40px;
+}
+.skypecontacts.header-dark .skype_contacts span{
+    background-image: url("../img/icons/skype.png");
+}
+.skypecontacts .skype_contacts span{
+    font-size: 18px;
+    background-image: url("../img/icons/skype-gray.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: 18px 17px;
+    padding-left: 30px;
+}
+
+// End Skpe
+.header-dark #header-wrapper #header #header-inner .navbar .navbar-inner .skype_contacts span{
+    color: #fff;
+}
 #wrapper-outer #wrapper {
     min-height: 100%;
 }
@@ -300,6 +369,9 @@ body #content .listing-summary .tileItem .row section{
     background-size: 20px 20px;
     color: #707070;
     padding-left: 30px;
+}
+.header-dark #header-wrapper #header #header-inner .navbar .navbar-inner .site-phone a{
+    background-image: url("../img/icons/phone-white.png");
 }
 .portletStaticText dd.portletItem .borderimage .image-inline{
     border: 2px solid;
@@ -1803,15 +1875,6 @@ dl.portletAgentContact {
 .portletAgentInformation .portletItem figure.agency_logo img{
     margin-top: 10px;
 }
-#header-wrapper #header #header-inner .navbar .navbar-inner .site-slogan p {
-    border-left: 2px solid #F0F0F0;
-    display: inline-block;
-    line-height: 18px;
-    padding-left: 15px;
-}
-#header-wrapper #header #header-inner .navbar .navbar-inner .site-slogan p {
-    max-width: 70px;
-}
 * {
     margin: 0;
     padding: 0;
@@ -2763,6 +2826,17 @@ table.accordion_table th{
     }
 }
 @media (max-width:1199px) and (min-width:1024px){
+    .skypecontacts #header-wrapper #header #header-inner .navbar .navbar-inner .site-email a,
+    .skypecontacts #header-wrapper #header #header-inner .navbar .navbar-inner .site-phone a,
+    .skypecontacts .skype_contacts span {
+        font-size: 15px;
+    }
+    .skypecontacts #header-wrapper #header #header-inner .navbar .navbar-inner .site-slogan {
+        width: 48%;
+    }
+    .skypecontacts #header-wrapper #header #header-inner .navbar .navbar-inner .site-slogan p {
+        font-size: 15px;
+    }
     .portlet-right .listing-collection-tile .collection-item.tileItem,
     .portlet-left .listing-collection-tile .collection-item.tileItem {
         width: 47%;
@@ -2864,6 +2938,17 @@ table.accordion_table th{
     }
 }
 @media (max-width:1023px) and (min-width:980px){
+    .skypecontacts #header-wrapper #header #header-inner .navbar .navbar-inner .site-email a,
+    .skypecontacts #header-wrapper #header #header-inner .navbar .navbar-inner .site-phone a,
+    .skypecontacts .skype_contacts span {
+        font-size: 15px;
+    }
+    .skypecontacts #header-wrapper #header #header-inner .navbar .navbar-inner .site-slogan {
+        width: 48%;
+    }
+    .skypecontacts #header-wrapper #header #header-inner .navbar .navbar-inner .site-slogan p {
+        font-size: 15px;
+    }
 	.listing-summary .tileItem section .price {
 		bottom: 0;
 	}
@@ -2965,6 +3050,12 @@ table.accordion_table th{
     }
 }
 @media (max-width:979px) and (min-width:720px){
+    .skypecontacts #header-wrapper #header #header-inner .navbar .navbar-inner .site-slogan {
+        width: 48%;
+    }
+    .skypecontacts #header-wrapper #header #header-inner .navbar .navbar-inner .site-slogan p {
+        font-size: 15px;
+    }
     #content .listing-summary .propertyrow figure .content img {
         min-width: auto !important;
         position: static;
@@ -3237,6 +3328,15 @@ table.accordion_table th{
     }
 }
 @media (max-width:719px) and (min-width:560px){
+    .skypecontacts #header-wrapper #header #header-inner .navbar .navbar-inner .site-slogan {
+        width: 47%;
+    }
+    .skypecontacts #header-wrapper #header #header-inner .navbar .navbar-inner .site-slogan h1 {
+        font-size: 20px;
+    }
+    .skypecontacts #header-wrapper #header #header-inner .navbar .navbar-inner .site-slogan p {
+        font-size: 12px;
+    }
     #content-core.development_details .listing-summary figure {
         width: 30% !important;
     }
@@ -3507,6 +3607,9 @@ table.accordion_table th{
     }
 }
 @media (max-width:559px) and (min-width:440px){
+    .skypecontacts #header-wrapper #header #header-inner .navbar .navbar-inner .site-slogan {
+        display: none;
+    }
     body .development_details .listing-summary .tileItem .image_row {
         max-height: 101px;
     }
@@ -3766,6 +3869,9 @@ table.accordion_table th{
     }
 }
 @media (max-width:439px) and (min-width:280px){
+    .skypecontacts #header-wrapper #header #header-inner .navbar .navbar-inner .site-slogan {
+        display: none;
+    }
     body .development_details .image_row .tileHeadline {
         padding: 2%;
     }

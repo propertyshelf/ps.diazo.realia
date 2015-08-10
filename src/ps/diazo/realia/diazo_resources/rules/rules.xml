@@ -19,6 +19,7 @@
         <before theme-children="/html/body" method="raw">
             <xsl:attribute name="class">
               <xsl:value-of select="/html/body/@class" />
+              <xsl:if css:test=".titlecontact"> skypecontacts</xsl:if>
               <xsl:if css:test="#portal-column-one"> portal-col-one</xsl:if>
               <xsl:if css:test="#portal-column-content"> portal-col-content</xsl:if>
               <xsl:if css:test="#portal-column-two"> portal-col-two</xsl:if> header-<xsl:value-of select="$header_class"/>
@@ -163,10 +164,6 @@
             />
         </rules>
 
-        <replace
-            css:theme-children=".site-slogan"
-            css:content-children=".titlecontact .toolkit"
-        />
         <rules css:if-content="#site_contact_email">
             <replace
                 css:theme-children=".account-register"
@@ -312,10 +309,28 @@
                 css:content=".site_contact_phone"
             />
         </rules>
-        <replace
-            css:theme-children=".site-name .brand"
-            css:content-children=".titlecontact h1"
-        />
+
+        <rules css:if-content=".titlecontact">
+            <replace
+                css:theme-children=".skype_contacts"
+                css:content-children=".titlecontact .toolkit"
+                method="raw"
+            />
+            <drop
+                css:content=".titlecontact"
+            />
+        </rules>
+
+        <rules css:if-content=".slogan">
+            <replace
+                css:theme-children=".site-slogan"
+                css:content-children=".slogan"
+                method="raw"
+            />
+            <drop
+                css:content=".slogan"
+            />
+        </rules>
         <!-- porlet bold : start -->
             <rules css:if-content="#portal-column-one">
                 <rules css:if-content="#portal-column-two">
