@@ -110,7 +110,6 @@ Propertyshelfs Realia-II Theme
             
             <p>Smaller text below</p>
         </div>
-        
         <div class= "lang lang-es" >
             <h1>Slogan cliente</h1>
             
