@@ -73,15 +73,14 @@ Propertyshelfs Realia-II Theme
 :Header features:
 
     *This package have 2 features for its header*
-    
     - Default: "List your property"-button
 
     In "Site Setup" > "Theming Toolkit Settings"
-        - Check Box "Show Social Header Viewlet"
-	- Space on "Social Plugins Code" have html
+    - Check Box "Show Social Header Viewlet"
+    - Space on "Social Plugins Code" have html
 
     <div id="site_contact_link">
-	<a class="btn btn-primary btn-large list-your-property arrow-right" href="http://test.com/">List your property</a>
+	<a class="btn btn-primary btn-large list-your-property arrow-right" href="http://test.com/">List your property         </a>
     </div>
 
     You can change URL and TEXT whatever you want
@@ -94,10 +93,11 @@ Propertyshelfs Realia-II Theme
 
     And Then put your name Skype
 
-    Example
+    *Example*
 
     <div class="slogan">
 	<h1>Real Estate</h1>
+	
 	<p>Your Global Real Estate & MLS Connection</p>
     </div>
 
