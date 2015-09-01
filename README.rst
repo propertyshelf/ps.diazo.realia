@@ -92,8 +92,10 @@ Propertyshelfs Realia-II Theme
     **"Slogan"-header**
     
     In "Site Setup" > "Theming Toolkit Settings"
-        - checkbox "Show Social Header Viewlet" is checked
-        - in "Social Plugins Code" text-area you will need the html below:
+    
+    - checkbox "Show Social Header Viewlet" is checked
+    
+    - in "Social Plugins Code" text-area you will need the html below:
         
     <div class="slogan">
         <h1>Customer Slogan</h1>
