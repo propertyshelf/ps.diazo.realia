@@ -95,6 +95,7 @@ Propertyshelfs Realia-II Theme
         
     <div class="slogan">
         <h1>Customer Slogan</h1>
+        
         <p>Smaller text below</p>
     </div>
     
