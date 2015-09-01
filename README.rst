@@ -99,6 +99,7 @@ Propertyshelfs Realia-II Theme
         
         <div class="slogan">
             <h1>Customer Slogan</h1>
+            
             <p>Smaller text below</p>
         </div>
     
@@ -108,19 +109,19 @@ Propertyshelfs Realia-II Theme
     - to identify the language of the content you will need to add the css class lang-XX (XX is the used language code)
     **Example:**
     
-    <div class="slogan">
-        <div class= "lang lang-en" >
-            <h1>Customer Slogan</h1>
+        <div class="slogan">
+           <div class= "lang lang-en" >
+                <h1>Customer Slogan</h1>
             
-            <p>Smaller text below</p>
-        </div>
+                <p>Smaller text below</p>
+            </div>
         
-        <div class= "lang lang-es" >
-            <h1>Slogan cliente</h1>
+            <div class= "lang lang-es" >
+                <h1>Slogan cliente</h1>
             
-            <p>Texto más pequeño debajo</p>
+                <p>Texto más pequeño debajo</p>
+            </div>
         </div>
-    </div>
     
     **Skype Contact:**
     
