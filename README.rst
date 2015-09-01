@@ -117,9 +117,10 @@ Propertyshelfs Realia-II Theme
             <p>Texto más pequeño debajo</p>
         </div>
     </div>
+    
     **Skype Contact:**
     
-    In "Site Setup" > "Theming Toolkit Settings"
+    In **"Site Setup" > "Theming Toolkit Settings"**
 	
     - checkbox "Show Site title & contact viewlet" is checked
 	    
