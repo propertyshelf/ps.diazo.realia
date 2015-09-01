@@ -72,51 +72,52 @@ Propertyshelfs Realia-II Theme
 
 :Header features:
 
-    *This package have 2 features for its header*
+    *This package have 2 features for its header 
     
-    - Default: "List your property"-button
+    Default: "List your property"-button
 
     In "Site Setup" > "Theming Toolkit Settings"
-    
-    - Check Box "Show Social Header Viewlet"
-    
-    - Space on "Social Plugins Code" have html
+        - checkbox "Show Social Header Viewlet" is checked
+	      - in "Social Plugins Code" text-area you will need the html below:
 
-    <div id="site_contact_link">
-	<a class="btn btn-primary btn-large list-your-property arrow-right" href="http://test.com/">List your property         </a>
-    </div>
-
-    You can change URL and TEXT whatever you want
+        <div id="site_contact_link">
+            <a class="btn btn-primary btn-large list-your-property arrow-right" href="URL">TEXT</a>
+        </div>
+        
+    You can adjust URL and TEXT as you need.
     If you want to switch slogan
 
-    just change <div id="site_contact_link"> to <div class="slogan">
-    and write H1 for title P for text
-
-    Dont forget check box "Show Site title & contact viewlet"
-
-    And Then put your name Skype
-
-    *Example*
-
+    "Slogan"-header
+    
+    In "Site Setup" > "Theming Toolkit Settings"
+        - checkbox "Show Social Header Viewlet" is checked
+        - in "Social Plugins Code" text-area you will need the html below:
+        
     <div class="slogan">
-	<h1>Real Estate</h1>
-	
-	<p>Your Global Real Estate & MLS Connection</p>
+        <h1>Customer Slogan</h1>
+        <p>Smaller text below</p>
+    </div>
+    
+    Multi-lingual Slogans
+    
+    - to identify a content as language-active you will need to add the css class lang at your slogan
+    - to identify the language of the content you will need to add the css class lang-XX (XX is the used language code)
+    - Example:
+    
+    <div class="slogan">
+        <div class= "lang lang-en" >
+            <h1>Customer Slogan</h1>
+            <p>Smaller text below</p>
+        </div>
+        <div class= "lang lang-es" >
+            <h1>Slogan cliente</h1>
+            <p>Texto m?s peque?o debajo</p>
+        </div>
     </div>
 
-    *For multilanguage* 
-
-    Just create new html inside div slogan <div class="lang lang-??"> for language
-
-    Exmaple
-
-    <div class="slogan">
-	<div class="lang lang-es">
-             <h1>Title for page es</h1>
-	     <p>Text for page es</p>
-	</div>
-	<div class="lang lang-en">
-             <h1>Title for page es</h1>
-	     <p>Text for page es</p>
-	</div>
-    </div>
+    Skype Contact
+    
+    In "Site Setup" > "Theming Toolkit Settings"
+    - checkbox "Show Site title & contact viewlet" is checked
+    - in its input field you can add your Skype name
+    - the Skype-icon will show automatically
