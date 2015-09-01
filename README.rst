@@ -76,12 +76,12 @@ Propertyshelfs Realia-II Theme
     
     **Default: "List your property"-button**
 
-    In "Site Setup" > "Theming Toolkit Settings"
+    In **"Site Setup" > "Theming Toolkit Settings"**
         - checkbox "Show Social Header Viewlet" is checked
 	- in "Social Plugins Code" text-area you will need the html below:
 
         <div id="site_contact_link">
-            <a class="btn btn-primary btn-large list-your-property arrow-right" href="URL">TEXT</a>
+        <a class="btn btn-primary btn-large list-your-property arrow-right" href="URL">TEXT</a>
         </div>
         
     You can adjust URL and TEXT as you need.
