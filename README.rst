@@ -72,9 +72,9 @@ Propertyshelfs Realia-II Theme
 
 :Header features:
 
-    *This package have 2 features for its header 
+    *This package have 2 features for its header*
     
-    Default: "List your property"-button
+    - Default: "List your property"-button
 
     In "Site Setup" > "Theming Toolkit Settings"
         - Check Box "Show Social Header Viewlet"
