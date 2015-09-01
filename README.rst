@@ -107,6 +107,7 @@ Propertyshelfs Realia-II Theme
     <div class="slogan">
         <div class= "lang lang-en" >
             <h1>Customer Slogan</h1>
+            
             <p>Smaller text below</p>
         </div>
         
@@ -116,7 +117,6 @@ Propertyshelfs Realia-II Theme
             <p>Texto más pequeño debajo</p>
         </div>
     </div>
-
     **Skype Contact:**
     
     In "Site Setup" > "Theming Toolkit Settings"
