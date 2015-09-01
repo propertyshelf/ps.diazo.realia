@@ -122,8 +122,8 @@ Propertyshelfs Realia-II Theme
     
     In "Site Setup" > "Theming Toolkit Settings"
 	
-        - checkbox "Show Site title & contact viewlet" is checked
+    - checkbox "Show Site title & contact viewlet" is checked
 	    
-        - in its input field you can add your Skype name
+    - in its input field you can add your Skype name
         
-        - the Skype-icon will show automatically
+    - the Skype-icon will show automatically
