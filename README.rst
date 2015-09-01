@@ -82,12 +82,12 @@ Propertyshelfs Realia-II Theme
 
         <div id="site_contact_link">
             <a class="btn btn-primary btn-large list-your-property arrow-right" href="URL">TEXT</a>
-            </div>
+        </div>
         
     You can adjust URL and TEXT as you need.
     If you want to switch slogan
 
-    "Slogan"-header
+    **"Slogan"-header**
     
     In "Site Setup" > "Theming Toolkit Settings"
         - checkbox "Show Social Header Viewlet" is checked
@@ -98,7 +98,7 @@ Propertyshelfs Realia-II Theme
         <p>Smaller text below</p>
     </div>
     
-    Multi-lingual Slogans
+    **Multi-lingual Slogans**
     
     - to identify a content as language-active you will need to add the css class lang at your slogan
     - to identify the language of the content you will need to add the css class lang-XX (XX is the used language code)
@@ -115,7 +115,7 @@ Propertyshelfs Realia-II Theme
         </div>
     </div>
 
-    *Skype Contact:*
+    **Skype Contact:**
     
     In "Site Setup" > "Theming Toolkit Settings"
     
