@@ -102,7 +102,7 @@ Propertyshelfs Realia-II Theme
     
     - to identify a content as language-active you will need to add the css class lang at your slogan
     - to identify the language of the content you will need to add the css class lang-XX (XX is the used language code)
-    - Example:
+    **Example:**
     
     <div class="slogan">
         <div class= "lang lang-en" >
