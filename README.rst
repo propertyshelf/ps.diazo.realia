@@ -81,7 +81,8 @@ Propertyshelfs Realia-II Theme
 	- in "Social Plugins Code" text-area you will need the html below:
 
         <div id="site_contact_link">
-            <a class="btn btn-primary btn-large list-your-property arrow-right" href="URL">TEXT</a></div>
+            <a class="btn btn-primary btn-large list-your-property arrow-right" href="URL">TEXT</a>
+            </div>
         
     You can adjust URL and TEXT as you need.
     If you want to switch slogan
