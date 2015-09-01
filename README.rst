@@ -69,3 +69,51 @@ Propertyshelfs Realia-II Theme
 	    - violet
 	    - gray-violet
 	    - *Default:* theme_color = string:blue
+
+:Header features:
+
+    *This package have 2 features for its header 
+    
+    Default: "List your property"-button
+
+    In "Site Setup" > "Theming Toolkit Settings"
+        - Check Box "Show Social Header Viewlet"
+	- Space on "Social Plugins Code" have html
+
+    <div id="site_contact_link">
+	<a class="btn btn-primary btn-large list-your-property arrow-right" href="http://test.com/">List your property</a>
+    </div>
+
+    You can change URL and TEXT whatever you want
+    If you want to switch slogan
+
+    just change <div id="site_contact_link"> to <div class="slogan">
+    and write H1 for title P for text
+
+    Dont forget check box "Show Site title & contact viewlet"
+
+    And Then put your name Skype
+
+    Example
+
+    <div class="slogan">
+	<h1>Real Estate</h1>
+	<p>Your Global Real Estate & MLS Connection</p>
+    </div>
+
+    *For multilanguage* 
+
+    Just create new html inside div slogan <div class="lang lang-??"> for language
+
+    Exmaple
+
+    <div class="slogan">
+	<div class="lang lang-es">
+             <h1>Title for page es</h1>
+	     <p>Text for page es</p>
+	</div>
+	<div class="lang lang-en">
+             <h1>Title for page es</h1>
+	     <p>Text for page es</p>
+	</div>
+    </div>
