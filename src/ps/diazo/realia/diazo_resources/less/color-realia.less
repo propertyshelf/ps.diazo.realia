@@ -2,7 +2,7 @@
     @header-light-breadcrumb-wrapper: #fff;
     @header-header-wrapper: #fff;
 // Color Setting blue Less 
-@main-1: #022a3b;
+@main-1: #39233a;
     @search-buttons: @main-1;
     @color-dev-icon: @main-1;
     @bg-dev-listing-detail: @main-1;
@@ -12,19 +12,19 @@
     @h3: @main-1;
     @header-normal-breadcrumb-wrapper: @main-1;
     @header-dark-dark-breadcrumb-wrapper: @main-1;
-@main-2: #0581b5;
+@main-2: #8e5c90;
     @bg-portletquicksearch: @main-2;
     @bg-submit-button: @main-2;
-@main-3: #0584b8;
+@main-3: #6f4871;
     @hover-link: @main-3;
     @bg-submit-button-hover: @main-3;
-@main-4: #02344a;
+@main-4: #472c48;
     @header-dark-dark-navigation: @main-4;
     @bg-footer-top: @main-4;
     @bg-pagination-hover: @main-4;
     @header-light-navigation: @main-4;
     @header-dark-header-inner: @main-4;
-@main-5: #06a7ea;
+@main-5: #cb84ce;
     @bg-carousel-prev: @main-5;
     @bg-carousel-next: @main-5;
     @text-link-breadcrumb: @main-5;
@@ -36,12 +36,15 @@
     @text-body-a: @main-5;
     @bg-dev-listing-detail-price: @main-5;
     @bg-dev-group-listing-active: @main-5;
+    @slogan: @main-5;
 @background: #f0f0f0;
 @border-input: #d5d5d5;
-@slogan: #b5b5b5;
 @main-text: #707070;
 @text-menu-price: #313131;
 
+body form input.standalone[type="submit"]{
+    background-color: @main-5;
+}
 html body a:hover, html body a:focus {
     color: @hover-link;
 }
@@ -492,11 +495,9 @@ color:@main-1;
 font-size:24px;
 margin:0px;
 padding:0px}
-#header-wrapper #header #header-inner .navbar .navbar-inner .site-slogan{
+#header-wrapper #header #header-inner .navbar .navbar-inner .site-slogan h1{
 color:@slogan;
-float:left;
-margin-top:30px;
-margin-left:15px}
+}
 #header-wrapper #header #header-inner .navbar .navbar-inner .site-slogan span{
 border-left:2px solid @background;
 display:inline-block;
@@ -3437,7 +3438,7 @@ form input.standalone[type="submit"]{
     background-color: @main-4;
 }
 body form input.standalone[type="submit"]:hover{
-    background-color: @main-1;
+    background-color: @main-3;
 }
 #portal-column-content .listing-collection-tile figure{ 
     background-color: #ccc;
