@@ -97,11 +97,11 @@ Propertyshelfs Realia-II Theme
     
     - in "Social Plugins Code" text-area you will need the html below:
         
-    <div class="slogan">
-        <h1>Customer Slogan</h1>
+        <div class="slogan">
+            <h1>Customer Slogan</h1>
         
-        <p>Smaller text below</p>
-    </div>
+            <p>Smaller text below</p>
+        </div>
     
     **Multi-lingual Slogans**
     
