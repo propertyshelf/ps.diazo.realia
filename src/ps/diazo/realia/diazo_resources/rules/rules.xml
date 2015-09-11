@@ -8,11 +8,7 @@
     <rules css:if-content="#visual-portal-wrapper">
 
         <after css:theme-children="html head">
-            <link rel="stylesheet" href="{$portal_url}/++theme++ps.diazo.realia/assets/css/realia.css" type="text/css"/>
-            <link rel="stylesheet" href="{$portal_url}/++theme++ps.diazo.realia/assets/css/bootstrap.css" type="text/css"/>
-            <link rel="stylesheet" href="{$portal_url}/++theme++ps.diazo.realia/assets/css/bootstrap-responsive.css" type="text/css"/>
-            <link rel="stylesheet" href="{$portal_url}/++theme++ps.diazo.realia/assets/libraries/chosen/chosen.css" type="text/css"/>
-            <link rel="stylesheet" href="{$portal_url}/++theme++ps.diazo.realia/assets/libraries/bootstrap-fileupload/bootstrap-fileupload.css" type="text/css"/>
+            <link rel="stylesheet" href="{$portal_url}/++theme++ps.diazo.realia/assets/css/realia.css" type="text/css" />
             <link rel="stylesheet" href="{$portal_url}/++theme++ps.diazo.realia/assets/css/realia-{$theme_color}.css" type="text/css" />
         </after>       
     
@@ -92,7 +88,7 @@
 
         <replace
             css:theme-children=".account .account-login"
-            css:content-children="#portal-personaltools-wrapper #portal-personaltools #anon-personalbar"
+            css:content-children="#anon-personalbar"
         />        
     
         <replace
@@ -102,14 +98,14 @@
 
 		<rules css:if-content="#portal-searchbox">
 			<replace
-				css:content-children="#portal-searchbox"
-				css:theme-children=".site-search"
+                css:content-children="#portal-searchbox"
+                css:theme-children=".site-search"
 			/>
         </rules>
 
 		<rules css:if-not-content="#portal-searchbox">
 			<drop
-				css:theme=".site-search"
+                css:theme=".site-search"
 			/>
          </rules>
 
@@ -136,13 +132,13 @@
         />
 
         <replace
-            css:content-children="#portal-footer-wrapper .width-full .row #doormat-container"
-            css:theme="#footer-top-inner.container .row"
+            css:content-children="#doormat-container"
+            css:theme-children="#footer-top-inner"
         />
 
         <replace
-            css:content-children="#footer.container"
-            css:theme-children="#footer.container"
+            css:content-children="#footer"
+            css:theme-children="#footer"
         />
         
         <drop
@@ -203,12 +199,12 @@
  
         <rules css:if-content=".carousel" if="$slider_fullscreen = 'true'">
 			<before
-				css:theme="#content.container"
-				css:content=".carousel"
-				method="raw"
+                css:theme="#content.container"
+                css:content=".carousel"
+                method="raw"
 			/>
 			<drop
-				css:content=".carousel"
+                css:content=".carousel"
 			/>
         </rules>
 
