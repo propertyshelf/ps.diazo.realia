@@ -1,3 +1,9 @@
+function config_reset_height_listing(listing){
+  var h = ['h3', 'h2', '.item.listing_type', '.item.location', '.item.location_type', '.item.view_type', '.item.lot_size', '.item.object_type'];
+  $(listing).children(h).each(function(index){
+    $(this).height('auto');
+  });
+}
 function column_counter(items){
   my_width = $(items).width();
   my_head_width = $(items).find('.collection-item h2:first').width();
@@ -19,27 +25,39 @@ function column_counter(items){
   else{
     listing_col=false;
   }
-  
   return listing_col;
 }
-
 function balance_height(items){
   //get nr. of item columns
   columns= column_counter(items);
   //we have more then 1 column
   if(columns>1){
     //set height depending on column nr.
+	lastelement = $(items).children('.collection-item').length;
+	lastelement = lastelement-1;
     $(items).children('.collection-item').each(function(index){
       // Modulo operator to fing begin of each row 
       mod=index%columns;
-      
       if(mod<1){
+        // 0%2 = 0
+        // 1%2 = 1
+        // 2%2 = 0
+        // 3%2 = 1
         //mod == 0 -> first element in a row
-        if(index > 0){
-          // we are at least in second row
-          // get the max height of last row items
+    		if(index > 0) {
+    		  balance_item(item0, item1, item2);
+      		height0=item0.height();
+          if(item1){
+            height1=item1.height();
+          } else {
+            height1=0;
+          }
+      		if(item2){
+            height2=item2.height();
+          } else {
+            height2=0;
+          }
           row_height= Math.max(height0, height1, height2);
-          // set the new heights for each item in the last row
           if(item0){
             $(item0).height(row_height);
           }
@@ -49,46 +67,150 @@ function balance_height(items){
           if(item2){
             $(item2).height(row_height);
           }
-        }
-
-        // remember first row item with the name 'item0'
-        item0 =$(this);
-        // unset css defaults for calculate real height
-        item0.height('auto');
-        item0.css('min-height', 'auto');
-        height0=item0.height();
-        item1=null;
-        height1=0;
-        item2=null;
-        height2=0;
-
-      }
-      else{
-        if(mod==1){
-          // remember second row item with the name 'item1'
-          // last item when have 2 columns
-          item1 = $(this);
-          // unset css defaults for calculate real height
-          item1.height('auto');
-          item1.css('min-height', 'auto');
-          height1=item1.height();
-        }
-        if(mod==2){
-          // remember third row item with the name 'item2'
-          // last when have 3 columns
-          item2= $(this);
-          // unset css defaults for calculate real height
-          item2.height('auto');
-          item2.css('min-height', 'auto');
-          height2=item2.height();
-        }
-      }
+    		}
+		// remember first row item with the name 'item0'
+      item0 =$(this);
+      // unset css defaults for calculate real height
+		  item0.height('auto');
+      item0.css('min-height', 'auto');
+      item1=null;
+      height1=0;
+      item2=null;
+      height2=0;
+      }else{
+		  if(mod==1){
+			  // remember second row item with the name 'item1'
+			  // last item when have 2 columns
+			  item1 = $(this);
+			  // unset css defaults for calculate real height
+			  item1.height('auto');
+			  item1.css('min-height', 'auto');
+			}
+		   if(mod==2){
+			  // remember third row item with the name 'item2'
+			  // last when have 3 columns
+			  item2= $(this);
+			  // unset css defaults for calculate real height
+			  item2.height('auto');
+			  item2.css('min-height', 'auto');
+			}
+		  }
+      // For last row
       
+			if(lastelement == index) {
+        balance_bedbath(item0, item1, item2);
+        balance_item(item0, item1, item2);
+        height0=item0.height();
+        if(item1){
+          height1=item1.height();
+        } else {
+          height1=0;
+        }
+        if(item2){
+          height2=item2.height();
+        } else {
+          height2=0;
+        }
+				row_height= Math.max(height0, height1, height2);
+			  if(item0){
+				$(item0).height(row_height);
+			  }
+			  if(item1){
+				$(item1).height(row_height);
+			  }
+			  if(item2){
+				$(item2).height(row_height);
+			  }
+
+			}
     });
   }
   else{
     //do nothing
   }
+}
+function balance_field(name, item0, item1, item2){
+    item_field0=$(item0).children(name);
+    item_field1=$(item1).children(name);
+    item_field2=$(item2).children(name);
+    field_height0=item_field0.height();
+    if(item1){
+      field_height1=item_field1.height(); 
+    } else {
+      field_height1=0;
+    }
+    if(item2){
+      field_height2=item_field2.height(); 
+    } else {
+      field_height2=0;
+    }
+    listing_field_height = Math.max(field_height0, field_height1, field_height2);
+    if(item_field0){
+      $(item_field0).height(listing_field_height);
+    }
+    if(item_field1){
+      $(item_field1).height(listing_field_height);
+    }
+    if(item_field2){
+      $(item_field2).height(listing_field_height);
+    }
+}
+function balance_bedbath(item0, item1, item2){
+    name='.item.beds_baths';
+    item_field0=$(item0).children(name);
+    item_field1=$(item1).children(name);
+    item_field2=$(item2).children(name);
+    clone='<div class="item beds_baths">&nbsp;</div>';
+    if(item_field0.length > 0){
+      next_object=item_field0.next();
+      next_class=next_object.attr('class');
+      next_class=next_class.replace(' ', '.');
+      next_field=true;
+      hasBedbath0=true;
+    } else {
+      $(item0).children('.'+next_class).before(clone);
+      hasBedbath0=false;
+      next_field=false;
+    }
+    if(item_field1.length > 0){
+      if(next_field==false){
+        next_object=item_field1.next();
+        next_class=next_object.attr('class');
+        next_class=next_class.replace(' ', '.');
+        next_field=true;
+      }
+      hasBedbath1=true;
+    } else {
+      $(item1).children('.'+next_class).before(clone);
+      hasBedbath1=false;
+    }
+    if(item_field2.length > 0){
+      if(next_field==false){
+        next_object=item_field2.next();
+        next_class=next_object.attr('class');
+        next_class=next_class.replace(' ', '.');
+        next_field=true;
+      }
+      hasBedbath2=true;
+    } else {
+      $(item2).children('.'+next_class).before(clone);
+      hasBedbath2=false;
+    }
+    // One item have bedbath else return false
+    // Find out with item dont have bedbath
+    // Prepend this div class to next field
+}
+function balance_item(item0, item1, item2){
+    balance_bedbath(item0, item1, item2);
+    // class title
+    balance_field('h2, h3', item0, item1, item2);
+    // class item 
+    balance_field('.item.listing_type', item0, item1, item2);
+    balance_field('.item.location', item0, item1, item2);
+    balance_field('.item.location_type', item0, item1, item2);
+    balance_field('.item.view_type', item0, item1, item2);
+    balance_field('.item.lot_size', item0, item1, item2);
+    balance_field('.item.object_type', item0, item1, item2);
 }
 function map_listing_data(obj){
  //use data input to give back a easy to access array for mapping
@@ -522,11 +644,14 @@ $(document).ready(function() {
        // $(".item h5.item-heading").text("Area");
 		$(window).resize(function() {
 			if ($('.listing-collection-tile').length >0){
-				$('.listing-collection-tile').each(function(index){
-					balance_height($(this));
-				});
-			}
-		});
+					$('.listing-collection-tile .collection-item').each(function(index){  
+					config_reset_height_listing($(this));
+			});
+			$('.listing-collection-tile').each(function(index){  
+				balance_height($(this));
+			});
+		}
+    });
 		$( window ).load(function() {
 			if ($('.listing-collection-tile').length >0){
 				$('.listing-collection-tile').each(function(index){
