@@ -3,7 +3,7 @@
 
 from setuptools import setup, find_packages
 
-version = '0.7.dev1'
+version = '0.7.dev2'
 description = 'Plone Realia Theme'
 long_description = ('\n'.join([
     open('README.rst').read(),
