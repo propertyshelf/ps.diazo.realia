@@ -160,42 +160,23 @@ function balance_bedbath(item0, item1, item2){
     item_field0=$(item0).children(name);
     item_field1=$(item1).children(name);
     item_field2=$(item2).children(name);
-    clone='<div class="item beds_baths">&nbsp;</div>';
-    if(item_field0.length > 0){
-      next_object=item_field0.next();
-      next_class=next_object.attr('class');
-      next_class=next_class.replace(' ', '.');
-      next_field=true;
-      hasBedbath0=true;
-    } else {
-      $(item0).children('.'+next_class).before(clone);
-      hasBedbath0=false;
-      next_field=false;
-    }
-    if(item_field1.length > 0){
-      if(next_field==false){
-        next_object=item_field1.next();
-        next_class=next_object.attr('class');
-        next_class=next_class.replace(' ', '.');
-        next_field=true;
-      }
-      hasBedbath1=true;
-    } else {
-      $(item1).children('.'+next_class).before(clone);
-      hasBedbath1=false;
-    }
-    if(item_field2.length > 0){
-      if(next_field==false){
-        next_object=item_field2.next();
-        next_class=next_object.attr('class');
-        next_class=next_class.replace(' ', '.');
-        next_field=true;
-      }
-      hasBedbath2=true;
-    } else {
-      $(item2).children('.'+next_class).before(clone);
-      hasBedbath2=false;
-    }
+	if ($('.collection-item.tileItem .item.beds_baths').length > 0){
+		next_class= $('.collection-item.tileItem').find(name).next().attr('class').replace(' ', '.');
+		clone='<div class="item beds_baths">&nbsp;</div>';
+		if(item_field0.length>0 || item_field1.length>0 ||item_field2.length>0){
+			if(item_field0.length < 1){
+			  $(item0).children('.'+next_class).before(clone);
+			}
+			if(item_field1.length < 1){
+			  $(item1).children('.'+next_class).before(clone);
+			}
+			if(item_field2.length < 1){
+			  $(item2).children('.'+next_class).before(clone);
+			}
+		}
+	} else {
+		return false;
+	}
     // One item have bedbath else return false
     // Find out with item dont have bedbath
     // Prepend this div class to next field
