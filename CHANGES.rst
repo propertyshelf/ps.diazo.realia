@@ -6,7 +6,11 @@ Changelog
 0.7 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- add theme-colors for development icons
+- add theme-color for custom slogan
+- auto-balance ListingCollections for cover tiles
+- update documentation
+- minify & speed improvements 
 
 
 0.6 (2015-07-28)
