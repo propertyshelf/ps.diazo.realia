@@ -3,7 +3,7 @@ Changelog
 =========
 
 
-0.7 (unreleased)
+0.7 (2015-10-05)
 ----------------
 
 - add theme-colors for development icons
