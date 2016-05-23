@@ -20,6 +20,7 @@ install_requires = [
     'setuptools',
     # -*- Extra requirements: -*-
     'plone.api',
+    'plone.app.theming',
     'z3c.jbot',
 ]
 
