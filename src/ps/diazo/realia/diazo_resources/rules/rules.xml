@@ -10,8 +10,8 @@
         <after css:theme-children="html head">
             <link rel="stylesheet" href="{$portal_url}/++theme++ps.diazo.realia/assets/css/realia.css" type="text/css" />
             <link rel="stylesheet" href="{$portal_url}/++theme++ps.diazo.realia/assets/css/realia-{$theme_color}.css" type="text/css" />
-        </after>       
-    
+        </after>
+
         <before theme-children="/html/body" method="raw">
             <xsl:attribute name="class">
               <xsl:value-of select="/html/body/@class" />
@@ -33,19 +33,19 @@
                 <a href="mailto:{$email}"><xsl:value-of select="$email" /></a>
             </div>
         </after>
-        
+
         <after css:theme-children=".info .site-phone" method="raw">
             <div class="site_contact_phone">
                 <a href="tel:{$nr_phone}"><xsl:value-of select="$nr_phone_show" /></a>
             </div>
         </after>
 
-        <before 
+        <before
             css:content=".development__header"
             css:theme="#content"
             method="raw"
-        />     
-           
+        />
+
         <!-- Replace title with Plone's page title  -->
         <replace css:theme="html head title" css:content="html head title" />
 
@@ -58,17 +58,17 @@
 
         <!-- merge classes from Plone body with theme body -->
         <merge attributes="class" css:theme="body" css:content="body"/>
-        
+
         <!-- Copy script tags from Plone head to end of body -->
         <after css:theme-children="html head" css:content="html head script" />
 
         <!-- Insert your own rules here -->
-        <rules css:if-content="#portal-column-content.width-full">     
-          <drop 
+        <rules css:if-content="#portal-column-content.width-full">
+          <drop
             css:theme=".content-portlets"
           />
         </rules>
-        
+
         <replace
             css:content="#portal-logo"
             css:theme=".logo a"
@@ -89,24 +89,24 @@
         <replace
             css:theme-children=".account .account-login"
             css:content-children="#anon-personalbar"
-        />        
-    
+        />
+
         <replace
             css:content="dt.portletHeader"
             css:theme-children=".portlet .portletHeader span"
         />
 
-		<rules css:if-content="#portal-searchbox">
-			<replace
+    <rules css:if-content="#portal-searchbox">
+      <replace
                 css:content-children="#portal-searchbox"
                 css:theme-children=".site-search"
-			/>
+      />
         </rules>
 
-		<rules css:if-not-content="#portal-searchbox">
-			<drop
+    <rules css:if-not-content="#portal-searchbox">
+      <drop
                 css:theme=".site-search"
-			/>
+      />
          </rules>
 
         <replace
@@ -140,11 +140,11 @@
             css:content-children="#footer"
             css:theme-children="#footer"
         />
-        
+
         <drop
             css:theme="#breadcrumbs-you-are-here"
         />
-        
+
         <replace
             css:theme-children=".info .site-email a"
             css:content-children=".socialheader .toolkit"
@@ -169,18 +169,18 @@
                 css:content=".account-register"
             />
         </rules>
-    
+
         <replace
             css:theme-children=".breadcrumb-wrapper ul.breadcrumb.pull-left li"
             css:content-children="#portal-breadcrumbs"
         />
-        
+
         <drop
             css:content="span#breadcrumbs-you-are-here"/>
-        
+
         <drop
             css:theme=".toggle"/>
-        
+
         <rules css:if-content="#portal-personaltools .actionMenuHeader">
             <prepend
                 css:theme=".account.pull-right"
@@ -193,35 +193,35 @@
             <prepend
                 css:theme="#wrapper-inner #content"
                 css:content="#portal-column-content .documentEditablet #edit-bar"
-            />    
-        </rules>  
-   
- 
+            />
+        </rules>
+
+
         <rules css:if-content=".carousel" if="$slider_fullscreen = 'true'">
-			<before
+      <before
                 css:theme="#content.container"
                 css:content=".carousel"
                 method="raw"
-			/>
-			<drop
+      />
+      <drop
                 css:content=".carousel"
-			/>
+      />
         </rules>
 
         <drop
             css:content="#LSResult #livesearchLegend"
-		/>
-        
+    />
+
         <drop
             css:content=".searchSection"
         />
-        
-        
+
+
         <replace
             css:content="#portal-languageselector"
             css:theme-children=".language-switcher"
         />
-  
+
         <!-- porlet left Start -->
         <replace
             css:theme-children=".portlet-left #maincontent #portal-column-content"
@@ -330,20 +330,20 @@
         <!-- porlet bold : start -->
             <rules css:if-content="#portal-column-one">
                 <rules css:if-content="#portal-column-two">
-					<replace
-					css:theme-children=".portlet-both #maincontent #portal-column-content"
-					css:content-children="#portal-column-content"
-					/>
-					<drop
-						css:theme=".no-portlet"
-					/>
-					<drop
-						css:theme=".portlet-left"
-					/>
-					<drop
-						css:theme=".portlet-right"
-					/>
-				</rules>
+          <replace
+          css:theme-children=".portlet-both #maincontent #portal-column-content"
+          css:content-children="#portal-column-content"
+          />
+          <drop
+            css:theme=".no-portlet"
+          />
+          <drop
+            css:theme=".portlet-left"
+          />
+          <drop
+            css:theme=".portlet-right"
+          />
+        </rules>
             </rules>
             <rules css:if-content="#portal-column-one">
                 <replace
@@ -357,15 +357,15 @@
                     css:theme-children="#portlet-left #portal-column-one"
                     css:content-children="#portal-column-one"
                     css:if-content="#portal-column-one"
-                />            
+                />
             </rules>
         <!-- Portlet bold : END -->
         <!-- No portlet : Start -->
         <rules css:if-not-content="#portal-column-one">
-			<rules css:if-not-content="#portal-column-two">
-				<replace
-					css:theme-children=".no-portlet #maincontent #portal-column-content"
-					css:content-children="#portal-column-content"/>
+      <rules css:if-not-content="#portal-column-two">
+        <replace
+          css:theme-children=".no-portlet #maincontent #portal-column-content"
+          css:content-children="#portal-column-content"/>
                 <drop
                     css:theme=".portlet-both"
                 />
@@ -380,7 +380,7 @@
         <!-- No Portlet : End -->
         <!-- Listing Row rules -->
         <rules css:if-content=".listing-summary">
-                
+
         </rules>
     </rules>
 

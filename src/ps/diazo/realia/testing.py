@@ -14,7 +14,6 @@ from plone.testing import (
     Layer,
     z2,
 )
-from zope.configuration import xmlconfig
 
 
 class PsDiazoRealiaLayer(PloneSandboxLayer):
@@ -25,11 +24,7 @@ class PsDiazoRealiaLayer(PloneSandboxLayer):
         """Set up Zope for testing."""
         # Load ZCML
         import ps.diazo.realia
-        xmlconfig.file(
-            'configure.zcml',
-            ps.diazo.realia,
-            context=configurationContext
-        )
+        self.loadZCML(package=ps.diazo.realia)
 
     def setUpPloneSite(self, portal):
         applyProfile(portal, 'ps.diazo.realia:default')

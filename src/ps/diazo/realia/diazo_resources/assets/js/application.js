@@ -33,10 +33,10 @@ function balance_height(items){
   //we have more then 1 column
   if(columns>1){
     //set height depending on column nr.
-	lastelement = $(items).children('.collection-item').length;
-	lastelement = lastelement-1;
+  lastelement = $(items).children('.collection-item').length;
+  lastelement = lastelement-1;
     $(items).children('.collection-item').each(function(index){
-      // Modulo operator to fing begin of each row 
+      // Modulo operator to fing begin of each row
       mod=index%columns;
       if(mod<1){
         // 0%2 = 0
@@ -44,15 +44,15 @@ function balance_height(items){
         // 2%2 = 0
         // 3%2 = 1
         //mod == 0 -> first element in a row
-    		if(index > 0) {
-    		  balance_item(item0, item1, item2);
-      		height0=item0.height();
+        if(index > 0) {
+          balance_item(item0, item1, item2);
+          height0=item0.height();
           if(item1){
             height1=item1.height();
           } else {
             height1=0;
           }
-      		if(item2){
+          if(item2){
             height2=item2.height();
           } else {
             height2=0;
@@ -67,37 +67,37 @@ function balance_height(items){
           if(item2){
             $(item2).height(row_height);
           }
-    		}
-		// remember first row item with the name 'item0'
+        }
+    // remember first row item with the name 'item0'
       item0 =$(this);
       // unset css defaults for calculate real height
-		  item0.height('auto');
+      item0.height('auto');
       item0.css('min-height', 'auto');
       item1=null;
       height1=0;
       item2=null;
       height2=0;
       }else{
-		  if(mod==1){
-			  // remember second row item with the name 'item1'
-			  // last item when have 2 columns
-			  item1 = $(this);
-			  // unset css defaults for calculate real height
-			  item1.height('auto');
-			  item1.css('min-height', 'auto');
-			}
-		   if(mod==2){
-			  // remember third row item with the name 'item2'
-			  // last when have 3 columns
-			  item2= $(this);
-			  // unset css defaults for calculate real height
-			  item2.height('auto');
-			  item2.css('min-height', 'auto');
-			}
-		  }
+      if(mod==1){
+        // remember second row item with the name 'item1'
+        // last item when have 2 columns
+        item1 = $(this);
+        // unset css defaults for calculate real height
+        item1.height('auto');
+        item1.css('min-height', 'auto');
+      }
+       if(mod==2){
+        // remember third row item with the name 'item2'
+        // last when have 3 columns
+        item2= $(this);
+        // unset css defaults for calculate real height
+        item2.height('auto');
+        item2.css('min-height', 'auto');
+      }
+      }
       // For last row
-      
-			if(lastelement == index) {
+
+      if(lastelement == index) {
         balance_bedbath(item0, item1, item2);
         balance_item(item0, item1, item2);
         height0=item0.height();
@@ -111,18 +111,18 @@ function balance_height(items){
         } else {
           height2=0;
         }
-				row_height= Math.max(height0, height1, height2);
-			  if(item0){
-				$(item0).height(row_height);
-			  }
-			  if(item1){
-				$(item1).height(row_height);
-			  }
-			  if(item2){
-				$(item2).height(row_height);
-			  }
+        row_height= Math.max(height0, height1, height2);
+        if(item0){
+        $(item0).height(row_height);
+        }
+        if(item1){
+        $(item1).height(row_height);
+        }
+        if(item2){
+        $(item2).height(row_height);
+        }
 
-			}
+      }
     });
   }
   else{
@@ -135,12 +135,12 @@ function balance_field(name, item0, item1, item2){
     item_field2=$(item2).children(name);
     field_height0=item_field0.height();
     if(item1){
-      field_height1=item_field1.height(); 
+      field_height1=item_field1.height();
     } else {
       field_height1=0;
     }
     if(item2){
-      field_height2=item_field2.height(); 
+      field_height2=item_field2.height();
     } else {
       field_height2=0;
     }
@@ -160,23 +160,23 @@ function balance_bedbath(item0, item1, item2){
     item_field0=$(item0).children(name);
     item_field1=$(item1).children(name);
     item_field2=$(item2).children(name);
-	if ($('.collection-item.tileItem .item.beds_baths').length > 0){
-		next_class= $('.collection-item.tileItem').find(name).next().attr('class').replace(' ', '.');
-		clone='<div class="item beds_baths">&nbsp;</div>';
-		if(item_field0.length>0 || item_field1.length>0 ||item_field2.length>0){
-			if(item_field0.length < 1){
-			  $(item0).children('.'+next_class).before(clone);
-			}
-			if(item_field1.length < 1){
-			  $(item1).children('.'+next_class).before(clone);
-			}
-			if(item_field2.length < 1){
-			  $(item2).children('.'+next_class).before(clone);
-			}
-		}
-	} else {
-		return false;
-	}
+  if ($('.collection-item.tileItem .item.beds_baths').length > 0){
+    next_class= $('.collection-item.tileItem').find(name).next().attr('class').replace(' ', '.');
+    clone='<div class="item beds_baths">&nbsp;</div>';
+    if(item_field0.length>0 || item_field1.length>0 ||item_field2.length>0){
+      if(item_field0.length < 1){
+        $(item0).children('.'+next_class).before(clone);
+      }
+      if(item_field1.length < 1){
+        $(item1).children('.'+next_class).before(clone);
+      }
+      if(item_field2.length < 1){
+        $(item2).children('.'+next_class).before(clone);
+      }
+    }
+  } else {
+    return false;
+  }
     // One item have bedbath else return false
     // Find out with item dont have bedbath
     // Prepend this div class to next field
@@ -185,7 +185,7 @@ function balance_item(item0, item1, item2){
     balance_bedbath(item0, item1, item2);
     // class title
     balance_field('h2, h3', item0, item1, item2);
-    // class item 
+    // class item
     balance_field('.item.listing_type', item0, item1, item2);
     balance_field('.item.location', item0, item1, item2);
     balance_field('.item.location_type', item0, item1, item2);
@@ -198,28 +198,28 @@ function map_listing_data(obj){
   dict=[];
   counter = $(obj).children('dd').length;
   if(counter<10){
-    dict.type ='land';  
+    dict.type ='land';
   }
   else{
     dict.type ='house';
   }
    try{
-		dict.price= obj[0].children[1].innerHTML;
-   } 
-   catch(err){ 
-		dict.price='';
+    dict.price= obj[0].children[1].innerHTML;
+   }
+   catch(err){
+    dict.price='';
    }
   try{
-		dict.listingtype= obj[0].children[5].innerHTML;
-   } 
+    dict.listingtype= obj[0].children[5].innerHTML;
+   }
   catch(err){
-	    dict.listingtype='';
+      dict.listingtype='';
   }
    try{
-		dict.propertytype= obj[0].children[9].innerHTML;
-  } 
+    dict.propertytype= obj[0].children[9].innerHTML;
+  }
   catch(err){
-	    dict.propertytype='';
+      dict.propertytype='';
   }
 
   if(dict.type =="house"){
@@ -241,8 +241,8 @@ function map_listing_data(obj){
 }
 function parse_location(location){
     //unparsed: San Joaquín, San Joaquín de Flores, Flores, Heredia, Costa Rica
-    //parsed: San Joaquín, Heredia, Costa Rica 
-    
+    //parsed: San Joaquín, Heredia, Costa Rica
+
     try {
         var splitter = location.split(",");
         //react on different location types
@@ -250,7 +250,7 @@ function parse_location(location){
         var center = splitter.length - 2;
         if(center>0 && last>1){
             location = splitter[0] +","+ splitter[center] +","+ splitter[last];
-        }      
+        }
     }
     catch(err) {
         console.log(error);
@@ -258,7 +258,7 @@ function parse_location(location){
     return location;
 }
 
-function enhance_listiggrid(){ 
+function enhance_listiggrid(){
     $( ".listing-collection-tile .collection-item .item.location .item-body" ).each(function( index ) {
             mylocation = parse_location($(this).text());
             $(this).text(mylocation);
@@ -267,10 +267,10 @@ function enhance_listiggrid(){
             //remove the label of lot size to replace it with css icon
             $(this).children('.item-heading').remove();
             $(this).prepend('<span class="key" title="Area"> </span>');
-            
+
     });
-    
-    
+
+
 }
 
 /*Improve listing bar*/
@@ -285,15 +285,15 @@ function enhance_listingbar(){
 /*Improve Filter Listing Portlet*/
 function enhance_filterportlet(){
     //open or close collapsible fields
-   $('.portletQuickSearch .collapsible').each(function( index ){  
+   $('.portletQuickSearch .collapsible').each(function( index ){
        //if collapsible div have checked checkboxes inside
-       checkers = $(this).find('input[type="checkbox"]:checked');      
+       checkers = $(this).find('input[type="checkbox"]:checked');
         if(checkers.length>0){
             //open this field by default
              $(this).children('.collapse').show('slow');
             // clean up classes
             $(this).children(".collapser").removeClass().addClass('horizontal collapser expanded');
-            
+
         }
         else{
             //nothing selected -> close field
@@ -340,7 +340,7 @@ function getDoormatClass(){
         //six columns
         col_class="span2";
     }
-    
+
     return col_class;
 }
 /*Click bluebox show option*/
@@ -361,7 +361,7 @@ function clickshow_option(){
     $(".listing-search-tile #formfield-form-widgets-object_type label.horizontal").addClass('collapser collapsed');
     $(".listing-search-tile #formfield-form-widgets-ownership_type span").hide('slow');
     $(".listing-search-tile #formfield-form-widgets-ownership_type label.horizontal").addClass('collapser collapsed');
-    
+
     $(".listing-search-tile #formfield-form-widgets-air_condition label.horizontal").click(function(){
         $(".listing-search-tile #formfield-form-widgets-air_condition span").slideToggle("slow");
         if($(".listing-search-tile #formfield-form-widgets-air_condition label.horizontal.collapsed").length>0){
@@ -370,7 +370,7 @@ function clickshow_option(){
         else{
             $(".listing-search-tile #formfield-form-widgets-air_condition label.horizontal.expanded").removeClass('expanded').addClass('collapsed');
         }
-        
+
     });
     $(".listing-search-tile #formfield-form-widgets-pool label.horizontal").click(function(){
         $(".listing-search-tile #formfield-form-widgets-pool span").slideToggle("slow");
@@ -445,10 +445,10 @@ function input_addclass(){
 
 function InitOffCanvasNavigation() {
     $('#btn-nav').on({
-		click: function() {
-			$('body').toggleClass('nav-open');
-		}
-	})
+    click: function() {
+      $('body').toggleClass('nav-open');
+    }
+  })
 }
 function have_search(){
     $(".container .navigation ul.nav").addClass("have-search");
@@ -483,33 +483,33 @@ function nr_phone(){
 //set jquery
 jq=$;
 $(document).ready(function() {
-	isdevelopment = $('.development-summary').length;
-	islistingsummery = $('.listing-summary').length;
+  isdevelopment = $('.development-summary').length;
+  islistingsummery = $('.listing-summary').length;
 
     if(islistingsummery >0 && isdevelopment < 1 ){
-		$(".listing-summary .tileItem").addClass('property ' + width_indicator).wrapInner('<div class="row propertyrow" />');
-		$(".listing-summary .property .row figure").addClass('image').wrapInner('<div class="content" />');
-		$(".listing-summary").addClass('properties-rows').wrapInner('<div class="row" />');
-    }  
+    $(".listing-summary .tileItem").addClass('property ' + width_indicator).wrapInner('<div class="row propertyrow" />');
+    $(".listing-summary .property .row figure").addClass('image').wrapInner('<div class="content" />');
+    $(".listing-summary").addClass('properties-rows').wrapInner('<div class="row" />');
+    }
 
     if($(".site_contact_phone a").html().length < 1){
         phone_parameter_string_empty();
-    }  
+    }
      if($("#site_contact_email a").html().length < 1){
         email_parameter_string_empty();
     }
-    
+
     nr_phone();
     if($(".accordion").length >0){
         $( "table.accordion_table" ).wrap( "<div class='accordion_wrapper'></div>" );
         $( ".accordion" ).accordion({ header: "h2", heightStyle:"content", collapsible: true, active:false });
     }
-	
+
     if($("#portal-searchbox").length >0){
         have_search();
     }
     InitOffCanvasNavigation();
-    
+
     no_register();
     //add arrow on input , submit
     if($("form").length >0){
@@ -518,12 +518,12 @@ $(document).ready(function() {
 
     // remove this class when js working
     $("body").removeClass("no-js");
-    
-    // only do when we have listing collection  
+
+    // only do when we have listing collection
     if($(".listing-collection-tile").length >0){
         hover_remove_active();
     }
-    // only do when we have search tiles   
+    // only do when we have search tiles
     if($(".listing-search-tile").length >0){
         clickshow_option();
     }
@@ -557,7 +557,7 @@ $(document).ready(function() {
         default:
             text_width_indicator = 'span6';
     }
-    
+
     if($('.nav li ul').length){
         var parent;
         //Improve submenue
@@ -566,7 +566,7 @@ $(document).ready(function() {
             $(parent).addClass("menuparent");
             $( this ).siblings( "a.plain" ).addClass( "menuparent" );
             $(".nav.nav-pills").append( $( "#portal-personaltools" ) );
-        });   
+        });
     }
         $(".submenu").removeClass("submenu");
         //Improve footer
@@ -578,17 +578,17 @@ $(document).ready(function() {
         $("#portal-searchbox").addClass("site-search").show();
         //Remove Plone classes from content rows
         $("#portal-column-content").addClass(width_indicator).show();
-     
+
         //listing grid
         if($(".listing-collection-tile").length>0){
             //prepare listing grid
-            enhance_listiggrid();      
+            enhance_listiggrid();
         }
-     
+
         //listing row
         //add some classes
 
-        
+
         // move image out of parent link
         $( ".listing-summary .property .row .image .content a" ).each(function( index ) {
             child = $(this).children('img');
@@ -608,36 +608,36 @@ $(document).ready(function() {
             //set location
             $(this).append('<div class="location"><a href="'+ dictonary.linktarget +'">'+dictonary.propertytype+' - '+ dictonary.listingtype +'</a></div>');
             $(this).append('<p class="freetext">'+dictonary.location+'</p>');
-           
+
 
             if(dictonary.type=="house"){
-                $(this).append('<div class="bedrooms" title="Bedroom and Bathroom" >'+dictonary.bedbath+'</div><div class="bathrooms" />');    
+                $(this).append('<div class="bedrooms" title="Bedroom and Bathroom" >'+dictonary.bedbath+'</div><div class="bathrooms" />');
             }
             else{
-                $(this).append('<div class="locationtype"><span class="key" title="Location Type" >&nbsp</span><span class="value">'+dictonary.locationtype+'</span></div>');   
+                $(this).append('<div class="locationtype"><span class="key" title="Location Type" >&nbsp</span><span class="value">'+dictonary.locationtype+'</span></div>');
             }
              $(this).append('<div class="area"><span class="key" title="Area" >&nbsp</span><span class="value">'+dictonary.area+'</span></div>');
              $(this).append('<div class="price" >'+ dictonary.price +'</div>');
-            
+
         });
-    
+
         $("#recent-listings .tileItem section").addClass("new-listings");
        // $(".item h5.item-heading").text("Area");
-		$(window).resize(function() {
-			if ($('.listing-collection-tile').length >0){
-					$('.listing-collection-tile .collection-item').each(function(index){  
-					config_reset_height_listing($(this));
-			});
-			$('.listing-collection-tile').each(function(index){  
-				balance_height($(this));
-			});
-		}
+    $(window).resize(function() {
+      if ($('.listing-collection-tile').length >0){
+          $('.listing-collection-tile .collection-item').each(function(index){
+          config_reset_height_listing($(this));
+      });
+      $('.listing-collection-tile').each(function(index){
+        balance_height($(this));
+      });
+    }
     });
-		$( window ).load(function() {
-			if ($('.listing-collection-tile').length >0){
-				$('.listing-collection-tile').each(function(index){
-					balance_height($(this));
-				});
-			}
-		});
+    $( window ).load(function() {
+      if ($('.listing-collection-tile').length >0){
+        $('.listing-collection-tile').each(function(index){
+          balance_height($(this));
+        });
+      }
+    });
 });
