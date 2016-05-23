@@ -1,12 +1,18 @@
 # -*- coding: utf-8 -*-
 """Setup for ps.diazo.realia package."""
 
-from setuptools import setup, find_packages
+from setuptools import (
+    find_packages,
+    setup,
+)
 
 version = '0.8.dev0'
-description = 'Plone Realia Theme'
+description = 'Propertyshelf Realia Theme'
 long_description = ('\n'.join([
     open('README.rst').read(),
+    'Contributors',
+    '------------\n',
+    open('CONTRIBUTORS.rst').read(),
     open('CHANGES.rst').read(),
 ]))
 
@@ -28,6 +34,7 @@ setup(
         'Development Status :: 4 - Beta',
         'Environment :: Web Environment',
         'Framework :: Plone',
+        'Framework :: Plone :: 4.1',
         'Framework :: Plone :: 4.2',
         'Framework :: Plone :: 4.3',
         'Intended Audience :: Developers',

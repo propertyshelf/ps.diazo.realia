@@ -1,0 +1,3 @@
+- Jens Krause, jens@propertyshelf.com
+- Kantanart, kantanat@propertyshelf.com
+- Thomas Massmann, thomas@propertyshelf.com
