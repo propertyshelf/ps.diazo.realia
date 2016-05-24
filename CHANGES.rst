@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.8 (unreleased)
+0.8 (2016-05-24)
 ----------------
 
 - Add support for plone.mls.listing > 1.7.
