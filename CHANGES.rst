@@ -4,7 +4,7 @@ Changelog
 0.9 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Fixed manifest file.
 
 
 0.8 (2016-05-24)
