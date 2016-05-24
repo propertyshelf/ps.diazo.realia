@@ -1,387 +1,338 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rules
-    xmlns="http://namespaces.plone.org/diazo"
+<rules xmlns="http://namespaces.plone.org/diazo"
     xmlns:css="http://namespaces.plone.org/diazo/css"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-    <!-- Apply the following rules to standard Plone pages -->
-    <rules css:if-content="#visual-portal-wrapper">
+  <!-- Apply the following rules to standard Plone pages -->
+  <rules css:if-content="#visual-portal-wrapper">
 
-        <after css:theme-children="html head">
-            <link rel="stylesheet" href="{$portal_url}/++theme++ps.diazo.realia/assets/css/realia.css" type="text/css" />
-            <link rel="stylesheet" href="{$portal_url}/++theme++ps.diazo.realia/assets/css/realia-{$theme_color}.css" type="text/css" />
-        </after>
+    <after css:theme-children="html head">
+      <link rel="stylesheet" href="{$portal_url}/++theme++ps.diazo.realia/assets/css/realia.css" type="text/css" />
+      <link rel="stylesheet" href="{$portal_url}/++theme++ps.diazo.realia/assets/css/realia-{$theme_color}.css" type="text/css" />
+    </after>
 
-        <before theme-children="/html/body" method="raw">
-            <xsl:attribute name="class">
-              <xsl:value-of select="/html/body/@class" />
-              <xsl:if css:test=".titlecontact"> skypecontacts</xsl:if>
-              <xsl:if css:test="#portal-column-one"> portal-col-one</xsl:if>
-              <xsl:if css:test="#portal-column-content"> portal-col-content</xsl:if>
-              <xsl:if css:test="#portal-column-two"> portal-col-two</xsl:if> header-<xsl:value-of select="$header_class"/>
-            </xsl:attribute>
-        </before>
+    <before theme-children="/html/body" method="raw">
+      <xsl:attribute name="class">
+        <xsl:value-of select="/html/body/@class" />
+        <xsl:if css:test=".titlecontact"> skypecontacts</xsl:if>
+        <xsl:if css:test="#portal-column-one"> portal-col-one</xsl:if>
+        <xsl:if css:test="#portal-column-content"> portal-col-content</xsl:if>
+        <xsl:if css:test="#portal-column-two"> portal-col-two</xsl:if> header-<xsl:value-of select="$header_class" />
+      </xsl:attribute>
+    </before>
 
-        <before theme-children="/html/body/div" method="raw">
-            <xsl:attribute name="class">
-              <xsl:value-of select="/html/body/div/@class" />carousel-fullscreen-<xsl:value-of select="$slider_fullscreen"/>
-            </xsl:attribute>
-        </before>
+    <before theme-children="/html/body/div" method="raw">
+      <xsl:attribute name="class">
+        <xsl:value-of select="/html/body/div/@class" />carousel-fullscreen-<xsl:value-of select="$slider_fullscreen" />
+      </xsl:attribute>
+    </before>
 
-        <after css:theme-children=".info .site-email" method="raw">
-            <div id="site_contact_email">
-                <a href="mailto:{$email}"><xsl:value-of select="$email" /></a>
-            </div>
-        </after>
+    <after css:theme-children=".info .site-email" method="raw">
+      <div id="site_contact_email">
+        <a href="mailto:{$email}"><xsl:value-of select="$email" /></a>
+      </div>
+    </after>
 
-        <after css:theme-children=".info .site-phone" method="raw">
-            <div class="site_contact_phone">
-                <a href="tel:{$nr_phone}"><xsl:value-of select="$nr_phone_show" /></a>
-            </div>
-        </after>
+    <after css:theme-children=".info .site-phone" method="raw">
+      <div class="site_contact_phone">
+        <a href="tel:{$nr_phone}"><xsl:value-of select="$nr_phone_show" /></a>
+      </div>
+    </after>
 
-        <before
-            css:content=".development__header"
-            css:theme="#content"
-            method="raw"
+    <before
+        css:content=".development__header"
+        css:theme="#content"
+        method="raw"
         />
 
-        <!-- Replace title with Plone's page title  -->
-        <replace css:theme="html head title" css:content="html head title" />
+    <!-- Replace title with Plone's page title  -->
+    <replace css:theme="html head title" css:content="html head title" />
 
-        <!-- Copy base tag from Plone -->
-        <before css:theme-children="html head" css:content="html head base" />
+    <!-- Copy base tag from Plone -->
+    <before css:theme-children="html head" css:content="html head base" />
 
-        <!-- Copy link, style, meta tags from Plone head -->
-        <after css:theme-children="html head"
-               content="/html/head/link | /html/head/style | /html/head/meta" />
+    <!-- Copy link, style, meta tags from Plone head -->
+    <after
+        css:theme-children="html head"
+        content="/html/head/link | /html/head/style | /html/head/meta"
+        />
 
-        <!-- merge classes from Plone body with theme body -->
-        <merge attributes="class" css:theme="body" css:content="body"/>
+    <!-- merge classes from Plone body with theme body -->
+    <merge attributes="class" css:theme="body" css:content="body" />
 
-        <!-- Copy script tags from Plone head to end of body -->
-        <after css:theme-children="html head" css:content="html head script" />
+    <!-- Copy script tags from Plone head to end of body -->
+    <after css:theme-children="html head" css:content="html head script" />
 
-        <!-- Insert your own rules here -->
-        <rules css:if-content="#portal-column-content.width-full">
-          <drop
-            css:theme=".content-portlets"
+    <!-- Insert your own rules here -->
+    <rules css:if-content="#portal-column-content.width-full">
+      <drop css:theme=".content-portlets" />
+    </rules>
+
+    <replace css:content="#portal-logo" css:theme=".logo a" />
+
+    <rules css:if-content="#google-script">
+      <append
+          css:content="#google-script script"
+          css:theme="body"
           />
-        </rules>
+    </rules>
 
-        <replace
-            css:content="#portal-logo"
-            css:theme=".logo a"
+    <append
+        css:content="#portal-footer-wrapper script"
+        css:theme="body"
         />
 
-        <rules css:if-content="#google-script">
-            <append
-                css:content="#google-script script"
-                css:theme="body"
-            />
-        </rules>
-
-        <append
-            css:content="#portal-footer-wrapper script"
-            css:theme="body"
+    <replace
+        css:theme-children=".account .account-login"
+        css:content-children="#anon-personalbar"
         />
 
-        <replace
-            css:theme-children=".account .account-login"
-            css:content-children="#anon-personalbar"
-        />
-
-        <replace
-            css:content="dt.portletHeader"
-            css:theme-children=".portlet .portletHeader span"
+    <replace
+        css:content="dt.portletHeader"
+        css:theme-children=".portlet .portletHeader span"
         />
 
     <rules css:if-content="#portal-searchbox">
       <replace
-                css:content-children="#portal-searchbox"
-                css:theme-children=".site-search"
-      />
-        </rules>
+          css:content-children="#portal-searchbox"
+          css:theme-children=".site-search"
+          />
+    </rules>
 
     <rules css:if-not-content="#portal-searchbox">
-      <drop
-                css:theme=".site-search"
-      />
-         </rules>
+      <drop css:theme=".site-search" />
+    </rules>
 
-        <replace
-            css:content-children="#portal-globalnav"
-            css:theme-children="#navigation .have-search"
-            css:if-content="#portal-searchbox"
+    <replace
+        css:content-children="#portal-globalnav"
+        css:theme-children="#navigation .have-search"
+        css:if-content="#portal-searchbox"
         />
 
-        <replace
-            css:content-children="#portal-globalnav"
-            css:theme-children="#navigation .no-search"
-            css:if-not-content="#portal-searchbox"
+    <replace
+        css:content-children="#portal-globalnav"
+        css:theme-children="#navigation .no-search"
+        css:if-not-content="#portal-searchbox"
         />
 
-         <drop
-            css:theme="#navigation ul.nav.no-search"
-            css:if-content="#portal-searchbox"
+    <drop css:theme="#navigation ul.nav.no-search" css:if-content="#portal-searchbox" />
+    <drop css:theme="#navigation ul.nav.have-search" css:if-not-content="#portal-searchbox" />
+
+    <replace
+        css:content-children="#doormat-container"
+        css:theme-children="#footer-top-inner"
         />
 
-         <drop
-            css:theme="#navigation ul.nav.have-search"
-            css:if-not-content="#portal-searchbox"
+    <replace
+        css:content-children="#footer"
+        css:theme-children="#footer"
         />
 
-        <replace
-            css:content-children="#doormat-container"
-            css:theme-children="#footer-top-inner"
+    <drop css:theme="#breadcrumbs-you-are-here" />
+
+    <replace
+        css:theme-children=".info .site-email a"
+        css:content-children=".socialheader .toolkit"
         />
 
-        <replace
-            css:content-children="#footer"
-            css:theme-children="#footer"
+    <rules css:if-content="#site_contact_email">
+      <prepend
+          css:theme=".site-email"
+          css:content-children="#site_contact_email"
+          />
+      <drop css:content="#site_contact_email" />
+    </rules>
+
+    <rules css:if-content="#site_contact_email">
+      <replace
+          css:theme-children=".account-register"
+          css:content-children=".account-register"
+          />
+      <drop css:content=".account-register" />
+    </rules>
+
+    <replace
+        css:theme-children=".breadcrumb-wrapper ul.breadcrumb.pull-left li"
+        css:content-children="#portal-breadcrumbs"
         />
 
-        <drop
-            css:theme="#breadcrumbs-you-are-here"
-        />
+    <drop css:content="span#breadcrumbs-you-are-here" />
+    <drop css:theme=".toggle" />
 
-        <replace
-            css:theme-children=".info .site-email a"
-            css:content-children=".socialheader .toolkit"
-        />
+    <rules css:if-content="#portal-personaltools .actionMenuHeader">
+      <prepend
+          css:theme=".account.pull-right"
+          css:content="#portal-personaltools-wrapper"
+          />
+    </rules>
 
-        <rules css:if-content="#site_contact_email">
-            <prepend
-                css:theme=".site-email"
-                css:content-children="#site_contact_email"
-            />
-            <drop
-                css:content="#site_contact_email"
-            />
-        </rules>
+    <!-- Add Menu bar dont work : Gun -->
+    <rules css:if-content="#portal-personaltools .actionMenuHeader">
+      <prepend
+          css:theme="#wrapper-inner #content"
+          css:content="#portal-column-content .documentEditablet #edit-bar"
+          />
+    </rules>
 
-        <rules css:if-content="#site_contact_email">
-            <replace
-                css:theme-children=".account-register"
-                css:content-children=".account-register"
-            />
-            <drop
-                css:content=".account-register"
-            />
-        </rules>
-
-        <replace
-            css:theme-children=".breadcrumb-wrapper ul.breadcrumb.pull-left li"
-            css:content-children="#portal-breadcrumbs"
-        />
-
-        <drop
-            css:content="span#breadcrumbs-you-are-here"/>
-
-        <drop
-            css:theme=".toggle"/>
-
-        <rules css:if-content="#portal-personaltools .actionMenuHeader">
-            <prepend
-                css:theme=".account.pull-right"
-                css:content="#portal-personaltools-wrapper"
-            />
-        </rules>
-
-        <!-- Add Menu bar dont work : Gun -->
-         <rules css:if-content="#portal-personaltools .actionMenuHeader">
-            <prepend
-                css:theme="#wrapper-inner #content"
-                css:content="#portal-column-content .documentEditablet #edit-bar"
-            />
-        </rules>
-
-
-        <rules css:if-content=".carousel" if="$slider_fullscreen = 'true'">
+    <rules css:if-content=".carousel" if="$slider_fullscreen = 'true'">
       <before
-                css:theme="#content.container"
-                css:content=".carousel"
-                method="raw"
-      />
-      <drop
-                css:content=".carousel"
-      />
-        </rules>
+          css:theme="#content.container"
+          css:content=".carousel"
+          method="raw"
+          />
+      <drop css:content=".carousel" />
+    </rules>
 
-        <drop
-            css:content="#LSResult #livesearchLegend"
-    />
+    <drop css:content="#LSResult #livesearchLegend" />
+    <drop css:content=".searchSection" />
 
-        <drop
-            css:content=".searchSection"
+    <replace
+        css:content="#portal-languageselector"
+        css:theme-children=".language-switcher"
         />
 
-
-        <replace
-            css:content="#portal-languageselector"
-            css:theme-children=".language-switcher"
+    <!-- porlet left Start -->
+    <replace
+        css:theme-children=".portlet-left #maincontent #portal-column-content"
+        css:content-children="#portal-column-content"
+        css:if-content="#portal-column-one"
+        css:if-not-content="#portal-column-two"
         />
+    <replace
+        css:theme-children=".portlet-left #portlet-left #portal-column-one"
+        css:content-children="#portal-column-one"
+        css:if-content="#portal-column-one"
+        css:if-not-content="#portal-column-two"
+        />
+    <drop
+        css:theme=".portlet-right"
+        css:if-content="#portal-column-one"
+        css:if-not-content="#portal-column-two"
+        />
+    <drop
+        css:theme=".portlet-both"
+        css:if-content="#portal-column-one"
+        css:if-not-content="#portal-column-two"
+        />
+    <drop
+        css:theme=".no-portlet"
+        css:if-content="#portal-column-one"
+        css:if-not-content="#portal-column-two"
+        />
+    <!-- porlet left : END -->
 
-        <!-- porlet left Start -->
+    <!-- porlet right : start -->
+    <replace
+        css:theme-children=".portlet-right #maincontent #portal-column-content"
+        css:content-children="#portal-column-content"
+        css:if-content="#portal-column-two"
+        css:if-not-content="#portal-column-one"
+        />
+    <replace
+        css:theme-children=".portlet-right #portlet-right #portal-column-two"
+        css:content-children="#portal-column-two"
+        css:if-content="#portal-column-two"
+        css:if-not-content="#portal-column-one"
+        />
+    <drop
+        css:theme=".portlet-left"
+        css:if-content="#portal-column-two"
+        css:if-not-content="#portal-column-one"
+        />
+    <drop
+        css:theme=".portlet-both"
+        css:if-content="#portal-column-two"
+        css:if-not-content="#portal-column-one"
+        />
+    <drop
+        css:theme=".no-portlet"
+        css:if-content="#portal-column-two"
+        css:if-not-content="#portal-column-one"
+        />
+    <rules css:if-content="#site_contact_link">
+      <replace
+          css:theme=".list-your-property"
+          css:content="#site_contact_link"
+          method="raw"
+          />
+      <drop css:content="#site_contact_link" />
+    </rules>
+
+    <rules css:if-not-content="#site_contact_link">
+      <drop css:theme=".btn.btn-primary.list-your-property" />
+    </rules>
+
+    <rules css:if-content=".site_contact_phone">
+      <prepend
+          css:theme=".info .site-phone"
+          css:content=".site_contact_phone"
+          />
+      <drop css:content=".site_contact_phone" />
+    </rules>
+
+    <rules css:if-content=".titlecontact">
+      <replace
+          css:theme-children=".skype_contacts"
+          css:content-children=".titlecontact .toolkit"
+          method="raw"
+          />
+      <drop css:content=".titlecontact" />
+    </rules>
+
+    <rules css:if-content=".slogan">
+      <replace
+          css:theme-children=".site-slogan"
+          css:content-children=".slogan"
+          method="raw"
+          />
+      <drop css:content=".slogan" />
+    </rules>
+
+    <!-- porlet bold : start -->
+    <rules css:if-content="#portal-column-one">
+      <rules css:if-content="#portal-column-two">
         <replace
-            css:theme-children=".portlet-left #maincontent #portal-column-content"
+            css:theme-children=".portlet-both #maincontent #portal-column-content"
             css:content-children="#portal-column-content"
-            css:if-content="#portal-column-one"
-            css:if-not-content="#portal-column-two"
-        />
-        <replace
-            css:theme-children=".portlet-left #portlet-left #portal-column-one"
-            css:content-children="#portal-column-one"
-            css:if-content="#portal-column-one"
-            css:if-not-content="#portal-column-two"
-        />
-        <drop
-            css:theme=".portlet-right"
-            css:if-content="#portal-column-one"
-            css:if-not-content="#portal-column-two"
-        />
-        <drop
-            css:theme=".portlet-both"
-            css:if-content="#portal-column-one"
-            css:if-not-content="#portal-column-two"
-        />
-        <drop
-            css:theme=".no-portlet"
-            css:if-content="#portal-column-one"
-            css:if-not-content="#portal-column-two"
-        />
-        <!-- porlet left : END -->
-        <!-- porlet right : start -->
-        <replace
-            css:theme-children=".portlet-right #maincontent #portal-column-content"
-            css:content-children="#portal-column-content"
-            css:if-content="#portal-column-two"
-            css:if-not-content="#portal-column-one"
-        />
-        <replace
-            css:theme-children=".portlet-right #portlet-right #portal-column-two"
-            css:content-children="#portal-column-two"
-            css:if-content="#portal-column-two"
-            css:if-not-content="#portal-column-one"
-        />
-        <drop
-            css:theme=".portlet-left"
-            css:if-content="#portal-column-two"
-            css:if-not-content="#portal-column-one"
-        />
-        <drop
-            css:theme=".portlet-both"
-            css:if-content="#portal-column-two"
-            css:if-not-content="#portal-column-one"
-        />
-        <drop
-            css:theme=".no-portlet"
-            css:if-content="#portal-column-two"
-            css:if-not-content="#portal-column-one"
-        />
-        <rules css:if-content="#site_contact_link">
-            <replace
-                css:theme=".list-your-property"
-                css:content="#site_contact_link"
-                method="raw"
             />
-            <drop
-                css:content="#site_contact_link"
-            />
-        </rules>
-
-        <rules css:if-not-content="#site_contact_link">
-            <drop
-                css:theme=".btn.btn-primary.list-your-property"
-            />
-        </rules>
-
-        <rules css:if-content=".site_contact_phone">
-            <prepend
-                css:theme=".info .site-phone"
-                css:content=".site_contact_phone"
-            />
-            <drop
-                css:content=".site_contact_phone"
-            />
-        </rules>
-
-        <rules css:if-content=".titlecontact">
-            <replace
-                css:theme-children=".skype_contacts"
-                css:content-children=".titlecontact .toolkit"
-                method="raw"
-            />
-            <drop
-                css:content=".titlecontact"
-            />
-        </rules>
-
-        <rules css:if-content=".slogan">
-            <replace
-                css:theme-children=".site-slogan"
-                css:content-children=".slogan"
-                method="raw"
-            />
-            <drop
-                css:content=".slogan"
-            />
-        </rules>
-        <!-- porlet bold : start -->
-            <rules css:if-content="#portal-column-one">
-                <rules css:if-content="#portal-column-two">
-          <replace
-          css:theme-children=".portlet-both #maincontent #portal-column-content"
-          css:content-children="#portal-column-content"
+        <drop css:theme=".no-portlet" />
+        <drop css:theme=".portlet-left" />
+        <drop css:theme=".portlet-right" />
+      </rules>
+    </rules>
+    <rules css:if-content="#portal-column-one">
+      <replace
+          css:theme-children="#portlet-right #portal-column-two"
+          css:content-children="#portal-column-two"
+          css:if-content="#portal-column-two"
           />
-          <drop
-            css:theme=".no-portlet"
+    </rules>
+    <rules css:if-content="#portal-column-two">
+      <replace
+          css:theme-children="#portlet-left #portal-column-one"
+          css:content-children="#portal-column-one"
+          css:if-content="#portal-column-one"
           />
-          <drop
-            css:theme=".portlet-left"
-          />
-          <drop
-            css:theme=".portlet-right"
-          />
-        </rules>
-            </rules>
-            <rules css:if-content="#portal-column-one">
-                <replace
-                css:theme-children="#portlet-right #portal-column-two"
-                css:content-children="#portal-column-two"
-                css:if-content="#portal-column-two"
-                />
-            </rules>
-            <rules css:if-content="#portal-column-two">
-                <replace
-                    css:theme-children="#portlet-left #portal-column-one"
-                    css:content-children="#portal-column-one"
-                    css:if-content="#portal-column-one"
-                />
-            </rules>
-        <!-- Portlet bold : END -->
-        <!-- No portlet : Start -->
-        <rules css:if-not-content="#portal-column-one">
+    </rules>
+    <!-- Portlet bold : END -->
+
+    <!-- No portlet : Start -->
+    <rules css:if-not-content="#portal-column-one">
       <rules css:if-not-content="#portal-column-two">
         <replace
-          css:theme-children=".no-portlet #maincontent #portal-column-content"
-          css:content-children="#portal-column-content"/>
-                <drop
-                    css:theme=".portlet-both"
-                />
-                <drop
-                    css:theme=".portlet-left"
-                />
-                <drop
-                    css:theme=".portlet-right"
-                />
-            </rules>
-        </rules>
-        <!-- No Portlet : End -->
-        <!-- Listing Row rules -->
-        <rules css:if-content=".listing-summary">
-
-        </rules>
+            css:theme-children=".no-portlet #maincontent #portal-column-content"
+            css:content-children="#portal-column-content"
+            />
+        <drop css:theme=".portlet-both" />
+        <drop css:theme=".portlet-left" />
+        <drop css:theme=".portlet-right" />
+      </rules>
     </rules>
+    <!-- No Portlet : End -->
+
+    <!-- Listing Row rules -->
+    <rules css:if-content=".listing-summary">
+    </rules>
+  </rules>
 
 </rules>
