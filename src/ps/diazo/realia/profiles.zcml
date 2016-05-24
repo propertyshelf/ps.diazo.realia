@@ -8,7 +8,7 @@
   <!-- ====================== -->
   <genericsetup:registerProfile
       name="default"
-      title="Propertyshelf Propertyshelfs Realia Theme"
+      title="Propertyshelf Realia Theme"
       directory="profiles/default"
       description="Installs the diazo theme in the Plone site."
       provides="Products.GenericSetup.interfaces.EXTENSION"
@@ -16,7 +16,7 @@
 
   <genericsetup:registerProfile
       name="uninstall"
-      title="Propertyshelf Propertyshelfs Realia Theme: Uninstall"
+      title="Propertyshelf Realia Theme: Uninstall"
       directory="profiles/uninstall"
       description="Removes the diazo theme from the Plone site."
       provides="Products.GenericSetup.interfaces.EXTENSION"
@@ -27,7 +27,7 @@
   <!-- ========================== -->
   <genericsetup:importStep
       name="ps.diazo.realia-postInstall"
-      title="Propertyshelf Propertyshelfs Realia Theme post_install import step"
+      title="Propertyshelf Realia Theme post_install import step"
       description="Post install import step from ps.diazo.realia."
       handler=".setuphandlers.post_install">
   </genericsetup:importStep>
