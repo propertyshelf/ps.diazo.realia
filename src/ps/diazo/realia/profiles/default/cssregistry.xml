@@ -14,4 +14,8 @@
     expression=""
     />
   -->
+
+  <stylesheet id="public.css" enabled="0" />
+  <stylesheet id="reset.css" enabled="0" />
+
 </object>
