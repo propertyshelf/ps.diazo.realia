@@ -255,10 +255,10 @@ function map_listing_data(obj) {
       dict.bedbath = "";
       dict.locationtype = obj[0].children[13].innerHTML;
     }
-
-    // parse location
-    dict.location = parse_location(dict.location);
   }
+
+  // parse location
+  dict.location = parse_location(dict.location);
   return dict;
 }
 
