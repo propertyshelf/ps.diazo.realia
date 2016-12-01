@@ -4,7 +4,9 @@ Changelog
 0.9 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Add crunch configuration to compile less to CSS.
+- Fix listing bar styles for Plone 4.3.11.
+- Add CSS bugfixes.
 
 
 0.8.1 (2016-05-24)
