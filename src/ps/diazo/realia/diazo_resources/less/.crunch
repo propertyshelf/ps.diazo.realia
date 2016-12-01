@@ -1,0 +1,406 @@
+{
+	"files": {
+		"realia.less": {
+			"engines": [
+				{
+					"compiler": "less",
+					"output": "../assets/css/realia.css",
+					"options": {
+						"compress": true,
+						"ieCompat": true,
+						"strictMath": false,
+						"strictUnits": false,
+						"javascriptEnabled": false,
+						"sourceMap": false
+					}
+				}
+			],
+			"sources": [
+				"bootstrap-responsive.less",
+				"bootstrap.less",
+				"realia-base.less",
+				"realia-font.less"
+			]
+		},
+		"realia-blue.less": {
+			"engines": [
+				{
+					"compiler": "less",
+					"output": "../assets/css/realia-blue.css",
+					"options": {
+						"compress": true,
+						"ieCompat": true,
+						"strictMath": false,
+						"strictUnits": false,
+						"javascriptEnabled": false,
+						"sourceMap": false
+					}
+				}
+			],
+			"sources": [
+				"realia-color.less"
+			]
+		},
+		"realia-brown-dark.less": {
+			"engines": [
+				{
+					"compiler": "less",
+					"output": "../assets/css/realia-brown-dark.css",
+					"options": {
+						"compress": true,
+						"ieCompat": true,
+						"strictMath": false,
+						"strictUnits": false,
+						"javascriptEnabled": false,
+						"sourceMap": false
+					}
+				}
+			],
+			"sources": [
+				"realia-color.less"
+			]
+		},
+		"realia-brown.less": {
+			"engines": [
+				{
+					"compiler": "less",
+					"output": "../assets/css/realia-brown.css",
+					"options": {
+						"compress": true,
+						"ieCompat": true,
+						"strictMath": false,
+						"strictUnits": false,
+						"javascriptEnabled": false,
+						"sourceMap": false
+					}
+				}
+			],
+			"sources": [
+				"realia-color.less"
+			]
+		},
+		"realia-gray-blue.less": {
+			"engines": [
+				{
+					"compiler": "less",
+					"output": "../assets/css/realia-gray-blue.css",
+					"options": {
+						"compress": true,
+						"ieCompat": true,
+						"strictMath": false,
+						"strictUnits": false,
+						"javascriptEnabled": false,
+						"sourceMap": false
+					}
+				}
+			],
+			"sources": [
+				"realia-color.less"
+			]
+		},
+		"realia-gray-brown-dark.less": {
+			"engines": [
+				{
+					"compiler": "less",
+					"output": "../assets/css/realia-gray-brown-dark.css",
+					"options": {
+						"compress": true,
+						"ieCompat": true,
+						"strictMath": false,
+						"strictUnits": false,
+						"javascriptEnabled": false,
+						"sourceMap": false
+					}
+				}
+			],
+			"sources": [
+				"realia-color.less"
+			]
+		},
+		"realia-gray-brown.less": {
+			"engines": [
+				{
+					"compiler": "less",
+					"output": "../assets/css/realia-gray-brown.css",
+					"options": {
+						"compress": true,
+						"ieCompat": true,
+						"strictMath": false,
+						"strictUnits": false,
+						"javascriptEnabled": false,
+						"sourceMap": false
+					}
+				}
+			],
+			"sources": [
+				"realia-color.less"
+			]
+		},
+		"realia-gray-green-light.less": {
+			"engines": [
+				{
+					"compiler": "less",
+					"output": "../assets/css/realia-gray-green-light.css",
+					"options": {
+						"compress": true,
+						"ieCompat": true,
+						"strictMath": false,
+						"strictUnits": false,
+						"javascriptEnabled": false,
+						"sourceMap": false
+					}
+				}
+			],
+			"sources": [
+				"realia-color.less"
+			]
+		},
+		"realia-gray-green.less": {
+			"engines": [
+				{
+					"compiler": "less",
+					"output": "../assets/css/realia-gray-green.css",
+					"options": {
+						"compress": true,
+						"ieCompat": true,
+						"strictMath": false,
+						"strictUnits": false,
+						"javascriptEnabled": false,
+						"sourceMap": false
+					}
+				}
+			],
+			"sources": [
+				"realia-color.less"
+			]
+		},
+		"realia-gray-magenta.less": {
+			"engines": [
+				{
+					"compiler": "less",
+					"output": "../assets/css/realia-gray-magenta.css",
+					"options": {
+						"compress": true,
+						"ieCompat": true,
+						"strictMath": false,
+						"strictUnits": false,
+						"javascriptEnabled": false,
+						"sourceMap": false
+					}
+				}
+			],
+			"sources": [
+				"realia-color.less"
+			]
+		},
+		"realia-gray-orange.less": {
+			"engines": [
+				{
+					"compiler": "less",
+					"output": "../assets/css/realia-gray-orange.css",
+					"options": {
+						"compress": true,
+						"ieCompat": true,
+						"strictMath": false,
+						"strictUnits": false,
+						"javascriptEnabled": false,
+						"sourceMap": false
+					}
+				}
+			],
+			"sources": [
+				"realia-color.less"
+			]
+		},
+		"realia-gray-red.less": {
+			"engines": [
+				{
+					"compiler": "less",
+					"output": "../assets/css/realia-gray-red.css",
+					"options": {
+						"compress": true,
+						"ieCompat": true,
+						"strictMath": false,
+						"strictUnits": false,
+						"javascriptEnabled": false,
+						"sourceMap": false
+					}
+				}
+			],
+			"sources": [
+				"realia-color.less"
+			]
+		},
+		"realia-gray-turquiose.less": {
+			"engines": [
+				{
+					"compiler": "less",
+					"output": "../assets/css/realia-gray-turquiose.css",
+					"options": {
+						"compress": true,
+						"ieCompat": true,
+						"strictMath": false,
+						"strictUnits": false,
+						"javascriptEnabled": false,
+						"sourceMap": false
+					}
+				}
+			],
+			"sources": [
+				"realia-color.less"
+			]
+		},
+		"realia-gray-violet.less": {
+			"engines": [
+				{
+					"compiler": "less",
+					"output": "../assets/css/realia-gray-violet.css",
+					"options": {
+						"compress": true,
+						"ieCompat": true,
+						"strictMath": false,
+						"strictUnits": false,
+						"javascriptEnabled": false,
+						"sourceMap": false
+					}
+				}
+			],
+			"sources": [
+				"realia-color.less"
+			]
+		},
+		"realia-green-light.less": {
+			"engines": [
+				{
+					"compiler": "less",
+					"output": "../assets/css/realia-green-light.css",
+					"options": {
+						"compress": true,
+						"ieCompat": true,
+						"strictMath": false,
+						"strictUnits": false,
+						"javascriptEnabled": false,
+						"sourceMap": false
+					}
+				}
+			],
+			"sources": [
+				"realia-color.less"
+			]
+		},
+		"realia-green.less": {
+			"engines": [
+				{
+					"compiler": "less",
+					"output": "../assets/css/realia-green.css",
+					"options": {
+						"compress": true,
+						"ieCompat": true,
+						"strictMath": false,
+						"strictUnits": false,
+						"javascriptEnabled": false,
+						"sourceMap": false
+					}
+				}
+			],
+			"sources": [
+				"realia-color.less"
+			]
+		},
+		"realia-magenta.less": {
+			"engines": [
+				{
+					"compiler": "less",
+					"output": "../assets/css/realia-magenta.css",
+					"options": {
+						"compress": true,
+						"ieCompat": true,
+						"strictMath": false,
+						"strictUnits": false,
+						"javascriptEnabled": false,
+						"sourceMap": false
+					}
+				}
+			],
+			"sources": [
+				"realia-color.less"
+			]
+		},
+		"realia-orange.less": {
+			"engines": [
+				{
+					"compiler": "less",
+					"output": "../assets/css/realia-orange.css",
+					"options": {
+						"compress": true,
+						"ieCompat": true,
+						"strictMath": false,
+						"strictUnits": false,
+						"javascriptEnabled": false,
+						"sourceMap": false
+					}
+				}
+			],
+			"sources": [
+				"realia-color.less"
+			]
+		},
+		"realia-red.less": {
+			"engines": [
+				{
+					"compiler": "less",
+					"output": "../assets/css/realia-red.css",
+					"options": {
+						"compress": true,
+						"ieCompat": true,
+						"strictMath": false,
+						"strictUnits": false,
+						"javascriptEnabled": false,
+						"sourceMap": false
+					}
+				}
+			],
+			"sources": [
+				"realia-color.less"
+			]
+		},
+		"realia-turquiose.less": {
+			"engines": [
+				{
+					"compiler": "less",
+					"output": "../assets/css/realia-turquiose.css",
+					"options": {
+						"compress": true,
+						"ieCompat": true,
+						"strictMath": false,
+						"strictUnits": false,
+						"javascriptEnabled": false,
+						"sourceMap": false
+					}
+				}
+			],
+			"sources": [
+				"realia-color.less"
+			]
+		},
+		"realia-violet.less": {
+			"engines": [
+				{
+					"compiler": "less",
+					"output": "../assets/css/realia-violet.css",
+					"options": {
+						"compress": true,
+						"ieCompat": true,
+						"strictMath": false,
+						"strictUnits": false,
+						"javascriptEnabled": false,
+						"sourceMap": false
+					}
+				}
+			],
+			"sources": [
+				"realia-color.less"
+			]
+		}
+	}
+}
