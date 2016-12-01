@@ -910,7 +910,8 @@ label.horizontal.collapser.collapsed{
 .doormatSectionBody ul.menu li{
     display: list-item;
 }
-.listingBar span.active{
+.listingBar span.active,
+.listingBar span.current {
     border-width: 0 !important;
     box-shadow: 0 1px 1px rgba(1, 1, 1, 0.25);
     color: #ffffff;
@@ -1011,7 +1012,8 @@ body .properties-rows .property .bedrooms{
     padding:0;
     width: auto;
 }
-.listingBar span.next a{
+.listingBar span.next a,
+.listingBar a.next {
     width: auto;
 }
 .listingBar span.previous{
@@ -1022,7 +1024,8 @@ body .properties-rows .property .bedrooms{
     padding:0;
     width: auto;
 }
-.listingBar span.previous a{
+.listingBar span.previous a,
+.listingBar a.previous {
     width: auto;    
 }
 section#listing-collection .propertyrow{
@@ -1338,13 +1341,13 @@ body .listing-grid .listing-collection-tile .collection-item.tileItem .price{
     margin-left: 5px;
     margin-right: 5px;
     padding: 7px 14px !important;
-    width: 8px;
+    min-width: 8px;
 }
-.listingBar span:last-child{
-    border: medium none !important;
-    box-shadow: none !important;
-    background-color: transparent;
-}
+// .listingBar span:last-child{
+//     border: medium none !important;
+//     box-shadow: none !important;
+//     background-color: transparent;
+// }
 .listingBar span:last-child a{
     border: medium none;
     box-shadow: 0 1px 1px rgba(1, 1, 1, 0.25);
@@ -4328,4 +4331,3 @@ table.accordion_table th{
     #search-form #form .form-rows .field .separator{
         margin-top: 4px;
     }
-}
