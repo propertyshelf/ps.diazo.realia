@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.9 (unreleased)
+0.9 (2016-12-01)
 ----------------
 
 - Add crunch configuration to compile less to CSS.
