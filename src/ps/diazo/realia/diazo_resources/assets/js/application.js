@@ -1,10 +1,3 @@
-// Listen for orientation changes
-window.addEventListener("orientationchange", function() {
-  // Reload page from cache to avoid blank page.
-  window.location.reload(false);
-}, false);
-
-
 function config_reset_height_listing(listing) {
   var h = ['h3', 'h2', '.item.listing_type', '.item.location', '.item.location_type', '.item.view_type', '.item.lot_size', '.item.object_type'];
   jQuery(listing).children(h).each(function(index) {
