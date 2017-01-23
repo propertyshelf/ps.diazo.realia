@@ -4,7 +4,8 @@ Changelog
 0.11 (unreleased)
 -----------------
 
-- Nothing changed yet.
+- Drop viewport meta element coming from Plone.
+- Revert "Fix blank page issue when switching orientation on mobile devices."
 
 
 0.10 (2017-01-23)
