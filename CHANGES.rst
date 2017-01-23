@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.11 (unreleased)
+0.11 (2017-01-23)
 -----------------
 
 - Drop viewport meta element coming from Plone.
