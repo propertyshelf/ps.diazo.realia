@@ -4,7 +4,7 @@ Changelog
 0.10 (unreleased)
 -----------------
 
-- Nothing changed yet.
+- Fix blank page issue when switching orientation on mobile devices.
 
 
 0.9 (2016-12-01)
