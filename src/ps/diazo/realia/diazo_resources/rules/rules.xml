@@ -52,6 +52,7 @@
     <before css:theme-children="html head" css:content="html head base" />
 
     <!-- Copy link, style, meta tags from Plone head -->
+    <drop content="/html/head/meta[@name='viewport']" />
     <after
         css:theme-children="html head"
         content="/html/head/link | /html/head/style | /html/head/meta"
