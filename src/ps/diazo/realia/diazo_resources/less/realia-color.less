@@ -3447,3 +3447,41 @@ body form input.standalone[type="submit"]:hover{
     background-color: #ccc;
     border-right: 1px dotted #ccc;
 }
+
+.listingsearchbanner ul.formTabs li a {
+  background-color: @background;
+  border: 0px !important;
+  color: @main-text;
+}
+
+.listingsearchbanner ul.formTabs li a.selected,
+.listingsearchbanner ul.formTabs li a:hover {
+    background-color: #fff;
+    color: @main-1;
+}
+
+.listingsearchbanner ul.formTabs li.firstFormTab a,
+.listingsearchbanner ul.formTabs li.lastFormTab a {
+    border-top-left-radius: 0px;
+}
+
+.listingsearchbanner dl.enableFormTabbing dd {
+  -webkit-box-shadow:0px 1px 1px rgba(0,0,0,0.1);
+  -moz-box-shadow:0px 1px 1px rgba(0,0,0,0.1);
+  box-shadow:0px 1px 1px rgba(0,0,0,0.1);
+  background-color:#fff;
+  border: none;
+  padding:20px;
+}
+
+.listingsearchbanner input[type=submit] {
+  -webkit-transition:background-color 0.2s ease-in;
+  -moz-transition:background-color 0.2s ease-in;
+  -o-transition:background-color 0.2s ease-in;
+  transition:background-color 0.2s ease-in;
+  background-color:@main-5;
+
+  &:hover {
+    background-color:@main-3;
+  }
+}
