@@ -40,6 +40,12 @@
     </after>
 
     <before
+        css:content=".listingsearchbanner"
+        css:theme="#content"
+        method="raw"
+        />
+
+    <before
         css:content=".development__header"
         css:theme="#content"
         method="raw"
