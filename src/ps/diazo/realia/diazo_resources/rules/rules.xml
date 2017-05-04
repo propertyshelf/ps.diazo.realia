@@ -6,11 +6,6 @@
   <!-- Apply the following rules to standard Plone pages -->
   <rules css:if-content="#visual-portal-wrapper">
 
-    <after css:theme-children="html head">
-      <link rel="stylesheet" href="{$portal_url}/++theme++ps.diazo.realia/assets/css/realia.css" type="text/css" />
-      <link rel="stylesheet" href="{$portal_url}/++theme++ps.diazo.realia/assets/css/realia-{$theme_color}.css" type="text/css" />
-    </after>
-
     <before theme-children="/html/body" method="raw">
       <xsl:attribute name="class">
         <xsl:value-of select="/html/body/@class" />
@@ -69,6 +64,11 @@
 
     <!-- Copy script tags from Plone head to end of body -->
     <after css:theme-children="html head" css:content="html head script" />
+
+    <after css:theme-children="html head">
+      <link rel="stylesheet" href="{$portal_url}/++theme++ps.diazo.realia/assets/css/realia.css" type="text/css" />
+      <link rel="stylesheet" href="{$portal_url}/++theme++ps.diazo.realia/assets/css/realia-{$theme_color}.css" type="text/css" />
+    </after>
 
     <!-- Insert your own rules here -->
     <rules css:if-content="#portal-column-content.width-full">
