@@ -24,6 +24,13 @@ install_requires = [
     'z3c.jbot',
 ]
 
+testfixture_requires = [
+    'ps.plone.fotorama',
+    'ps.plone.mls',
+    # 'ps.plone.mlstiles',
+    # 'webcouturier.dropdownmenu',
+]
+
 setup(
     name='ps.diazo.realia',
     version=version,
@@ -55,6 +62,7 @@ setup(
     include_package_data=True,
     zip_safe=False,
     extras_require=dict(
+        testfixture=testfixture_requires,
         test=[
             'plone.app.robotframework',
             'plone.app.testing',
