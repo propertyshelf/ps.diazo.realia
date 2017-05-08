@@ -2168,7 +2168,7 @@ ul#portal-languageselector li {
 ul#portal-languageselector {
     position: absolute;
     right: 0;
-    z-index: 999;
+    z-index: 99;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 }
 
@@ -4358,6 +4358,9 @@ table.accordion_table th{
 
 
 .listingsearchbanner {
+  padding-left: 0;
+  padding-right: 0;
+
   ul {
     margin-bottom: 0;
 
@@ -4371,15 +4374,42 @@ table.accordion_table th{
     margin-top: 0;
   }
 
+  form {
+    margin-bottom: 0;
+    overflow: visible;
+  }
+
   form div.field {
-    margin: 0 0.25em;
+    margin: 0 .25em 0.5em 0.35em;
   }
 
   .field input,
   .field select,
   .formControls input {
     font-size: 1.25em;
-    vertical-align: baseline;
+    height: 26px;
   }
 
+  input[type=submit] {
+    border-radius: 0px;
+    font-weight: bold;
+    height: 38px;
+  }
+
+  .chzn-container {
+    font-size: 1.25em;
+    text-align: initial;
+  }
+
+  .chzn-container .chzn-single div b {
+    background-position: 60% 60%;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.carousel + .listingsearchbanner {
+    margin-top: -20px;
 }
