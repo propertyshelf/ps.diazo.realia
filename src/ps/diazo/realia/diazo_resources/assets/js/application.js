@@ -1,3 +1,16 @@
+jQuery(document).ready(function() {
+  InitChosen();
+});
+
+
+function InitChosen() {
+  jQuery('.listingsearchbanner select').chosen({
+    disable_search_threshold: 10,
+    width: "auto"
+  });
+}
+
+
 function config_reset_height_listing(listing) {
   var h = ['h3', 'h2', '.item.listing_type', '.item.location', '.item.location_type', '.item.view_type', '.item.lot_size', '.item.object_type'];
   jQuery(listing).children(h).each(function(index) {
