@@ -34,11 +34,17 @@
       </div>
     </after>
 
-    <before
-        css:content=".listingsearchbanner"
-        css:theme="#content"
-        method="raw"
-        />
+    <before css:theme="#content" method="raw">
+      <xsl:for-each css:select=".listingsearchbanner">
+        <div class="listingsearchbanner"><xsl:copy-of select="attribute::*" />
+          <div class="container">
+            <div class="span12">
+              <xsl:copy-of select="./node()" />
+            </div>
+          </div>
+        </div>
+      </xsl:for-each>
+    </before>
 
     <before
         css:content=".development__header"
