@@ -72,6 +72,8 @@
     <after css:theme-children="html head" css:content="html head script" />
 
     <after css:theme-children="html head">
+      <script src="{$portal_url}/++theme++ps.diazo.realia/assets/libraries/chosen/chosen.jquery.min.js" type="text/javascript"></script>
+      <link rel="stylesheet" href="{$portal_url}/++theme++ps.diazo.realia/assets/libraries/chosen/chosen.css" type="text/css" />
       <link rel="stylesheet" href="{$portal_url}/++theme++ps.diazo.realia/assets/css/realia.css" type="text/css" />
       <link rel="stylesheet" href="{$portal_url}/++theme++ps.diazo.realia/assets/css/realia-{$theme_color}.css" type="text/css" />
     </after>
