@@ -6,7 +6,7 @@ jQuery(document).ready(function() {
 function InitChosen() {
   jQuery('.listingsearchbanner select').chosen({
     disable_search_threshold: 10,
-    width: "auto"
+    width: "100%"
   });
 }
 
