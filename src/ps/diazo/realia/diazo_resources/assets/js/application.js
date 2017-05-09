@@ -13,6 +13,10 @@ function InitChosen() {
       disable_search_threshold: 10,
       width: "100%"
     });
+    jQuery('.listing-search-tile select').chosen({
+      disable_search_threshold: 10,
+      width: "100%"
+    });
   } catch(err) {
     console.log('Chosen library not found.');
   }
@@ -346,17 +350,6 @@ function enhance_filterportlet() {
 }
 
 
-function hover_remove_active() {
-  jQuery(".tileItem figure").each(function(index) {
-    jQuery(this).hover(function() {
-      jQuery(this).siblings(".workflow_status").hide();
-    }, function() {
-      jQuery(this).siblings(".workflow_status").show();
-    });
-  });
-}
-
-
 function getDoormatClass() {
   /* Get the existing doormat columns and translate them to the span grid system. */
   var col_class = "";
@@ -580,11 +573,6 @@ jQuery(document).ready(function($) {
 
   // remove this class when js working
   $("body").removeClass("no-js");
-
-  // only do when we have listing collection
-  if ($(".listing-collection-tile").length > 0) {
-    hover_remove_active();
-  }
 
   // only do when we have search tiles
   if ($(".listing-search-tile").length > 0) {
