@@ -983,7 +983,6 @@ section .row{
       }
 
       .field {
-        padding: 0;
         overflow: visible;
       }
     }
@@ -1668,8 +1667,8 @@ body section .tileItem section {
     margin:0;
     width: 49.3%;
 }
-.portletQuickSearch .separator{
-    display: none;
+.portletQuickSearch .field .separator {
+    color: #fff;
 }
 .portletQuickSearch .formControls{
     margin: 0em;
@@ -1707,18 +1706,12 @@ body section .tileItem section {
 .portletQuickSearch #formfield-form-widgets-location_county{
     margin:0;
 }
-.portletQuickSearch #formfield-form-widgets-location_state{
-    margin:0;
-}
 
 .portletQuickSearch .formfield-form-widgets-lot_size{
     width: 100%;
 }
 .portletQuickSearch .form-row-sizes select{
     width: 49%;
-}
-.portletQuickSearch .form-row-sizes .separator{
-    width: 100px;
 }
 /*--porletQuickSearch : END --*/
 /*--Listing search tile--*/
@@ -1979,9 +1972,6 @@ dl.portletAgentContact {
     margin-left: 40px;
     padding-left: 0;
 }
-body .listing-summary #search-form .form-row-price .field input[type="text"]{
-     width: 86% !important;
-}
 
 .listing-summary #search-form .form-rows .field select,
 .listing-summary #search-form .form-rows .field input[type=text] {
@@ -1998,6 +1988,7 @@ body .listing-summary #search-form .form-row-price .field input[type="text"]{
 }
 body .listing-summary #search-form .form-rows .field input[type="text"]{
     width: 87%;
+    width: calc(~"100% - 12px");
 }
 .form-row-other .option label input.choice-field{
     margin-right: 5%;
@@ -2005,9 +1996,6 @@ body .listing-summary #search-form .form-rows .field input[type="text"]{
 .portletQuickSearch .form-row-beds-baths select{
     margin: 0;
     width: 49.3%;
-}
-.portletQuickSearch .form-row-beds-baths .separator{
-    padding-left: 3px;
 }
 .span-phone{
     display: none;
