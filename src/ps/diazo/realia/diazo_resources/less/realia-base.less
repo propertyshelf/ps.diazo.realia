@@ -1623,16 +1623,27 @@ body section .tileItem section {
     width: 100%;
     line-height: 40px;
 }
-.portletQuickSearch #form-widgets-location_city{
-    height: 25px !important;
-    padding: 4px 0 !important;
-}
-.portletQuickSearch #form-widgets-price_min{
-    border: medium none;
-    height: 25px !important;
-    padding: 4px 6px;
+
+.portletQuickSearch {
+  .field {
+    input[type="text"] {
+      border: medium none;
+      height: 25px;
+      padding: 4px 6px;
+      width: 95%;
+    }
+
+    span.option {
+      display: block;
+    }
+  }
+
+  #form-widgets-price_min {
     width: 88%;
+  }
 }
+
+
 .portletQuickSearch .form-row-beds-baths select,.portletQuickSearch .form-row-sizes select{
     margin:0;
     width: 49.3%;
@@ -1680,9 +1691,6 @@ body section .tileItem section {
     margin:0;
 }
 
-.portletQuickSearch .field input[type="text"]{
-    width: 45%;
-}
 .portletQuickSearch .formfield-form-widgets-lot_size{
     width: 100%;
 }
@@ -1971,16 +1979,8 @@ body .listing-summary #search-form .form-row-price .field input[type="text"]{
 body .listing-summary #search-form .form-rows .field input[type="text"]{
     width: 87%;
 }
-.portletQuickSearch #form-widgets-location_city{
-    border: medium none;
-    padding: 4px 6px !important;
-    width: 95%;
-}
 .form-row-other .option label input.choice-field{
     margin-right: 5%;
-}
-.portletQuickSearch #formfield-form-widgets-listing_type{
-    padding-left: 10px;
 }
 .portletQuickSearch .form-row-beds-baths select{
     margin: 0;
@@ -2142,7 +2142,7 @@ body .logo img{
     min-height: 2.4em !important;
 }
 dl.portlet li, div.portletStaticText li {
-    display: inline !important;
+    display: inline;
 }
 #content .configlets li {
     display: block !important;
