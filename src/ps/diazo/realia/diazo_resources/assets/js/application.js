@@ -11,6 +11,7 @@ function InitChosen() {
     });
     jQuery('.portletQuickSearch select, #listing-search select').chosen({
       disable_search_threshold: 10,
+      width: "100%"
     });
   } catch(err) {
     console.log('Chosen library not found.');
