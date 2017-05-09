@@ -8,6 +8,9 @@ function InitChosen() {
     disable_search_threshold: 10,
     width: "100%"
   });
+  jQuery('.portletQuickSearch select').chosen({
+    disable_search_threshold: 10,
+  });
 }
 
 
