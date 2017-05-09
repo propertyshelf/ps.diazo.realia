@@ -965,9 +965,29 @@ section .row{
 #viewlet-below-content-body #listing-search .row{
     margin:auto 0;
 }
-.listing-summary #search-form .form-rows .field{
-    /* width: 100%; */
-    padding: 0;
+.listing-summary {
+  #search-form {
+    dd:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    .form-rows {
+      overflow: visible;
+
+      &:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      .field {
+        padding: 0;
+        overflow: visible;
+      }
+    }
+  }
 }
 .userrole-anonymous #login-form .field input{
     width: 180px !important;
