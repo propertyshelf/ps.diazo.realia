@@ -330,12 +330,13 @@ function enhance_listingbar() {
 }
 
 
-function enhance_filterportlet() {
+function handle_collapsible() {
   /* Improve Filter Listing Portlet. */
   // open or close collapsible fields
-  jQuery('.portletQuickSearch .collapsible').each(function(index) {
+  jQuery('.collapsible').each(function(index) {
     // if collapsible div have checked checkboxes inside
     checkers = jQuery(this).find('input[type="checkbox"]:checked');
+    console.log(checkers);
     if (checkers.length > 0) {
       // open this field by default
       jQuery(this).children('.collapse').show('slow');
@@ -381,98 +382,6 @@ function getDoormatClass() {
   return col_class;
 }
 
-
-function clickshow_option() {
-  /* Click bluebox show option. */
-  jQuery(".listing-search-tile #formfield-form-widgets-jacuzzi span").hide('slow');
-  jQuery(".listing-search-tile #formfield-form-widgets-jacuzzi label.horizontal").addClass('collapser collapsed');
-  jQuery(".listing-search-tile #formfield-form-widgets-pool span").hide('slow');
-  jQuery(".listing-search-tile #formfield-form-widgets-pool label.horizontal").addClass('collapser collapsed');
-  jQuery(".listing-search-tile #formfield-form-widgets-air_condition span").hide('slow');
-  jQuery(".listing-search-tile #formfield-form-widgets-air_condition label.horizontal").addClass('collapser collapsed');
-  jQuery(".listing-search-tile #formfield-form-widgets-view_type span").hide('slow');
-  jQuery(".listing-search-tile #formfield-form-widgets-view_type label.horizontal").addClass('collapser collapsed');
-  jQuery(".listing-search-tile #formfield-form-widgets-location_type span").hide('slow');
-  jQuery(".listing-search-tile #formfield-form-widgets-location_type label.horizontal").addClass('collapser collapsed');
-  jQuery(".listing-search-tile #formfield-form-widgets-geographic_type span").hide('slow');
-  jQuery(".listing-search-tile #formfield-form-widgets-geographic_type label.horizontal").addClass('collapser collapsed');
-  jQuery(".listing-search-tile #formfield-form-widgets-object_type span").hide('slow');
-  jQuery(".listing-search-tile #formfield-form-widgets-object_type label.horizontal").addClass('collapser collapsed');
-  jQuery(".listing-search-tile #formfield-form-widgets-ownership_type span").hide('slow');
-  jQuery(".listing-search-tile #formfield-form-widgets-ownership_type label.horizontal").addClass('collapser collapsed');
-
-  jQuery(".listing-search-tile #formfield-form-widgets-air_condition label.horizontal").click(function() {
-    jQuery(".listing-search-tile #formfield-form-widgets-air_condition span").slideToggle("slow");
-    if (jQuery(".listing-search-tile #formfield-form-widgets-air_condition label.horizontal.collapsed").length > 0) {
-      jQuery(".listing-search-tile #formfield-form-widgets-air_condition label.horizontal.collapsed").removeClass('collapsed').addClass('expanded');
-    } else {
-      jQuery(".listing-search-tile #formfield-form-widgets-air_condition label.horizontal.expanded").removeClass('expanded').addClass('collapsed');
-    }
-  });
-
-  jQuery(".listing-search-tile #formfield-form-widgets-pool label.horizontal").click(function() {
-    jQuery(".listing-search-tile #formfield-form-widgets-pool span").slideToggle("slow");
-    if (jQuery(".listing-search-tile #formfield-form-widgets-pool label.horizontal.collapsed").length > 0) {
-      jQuery(".listing-search-tile #formfield-form-widgets-pool label.horizontal.collapsed").removeClass('collapsed').addClass('expanded');
-    } else {
-      jQuery(".listing-search-tile #formfield-form-widgets-pool label.horizontal.expanded").removeClass('expanded').addClass('collapsed');
-    }
-  });
-
-  jQuery(".listing-search-tile #formfield-form-widgets-jacuzzi label.horizontal").click(function() {
-    jQuery(".listing-search-tile #formfield-form-widgets-jacuzzi span").slideToggle("slow");
-    if (jQuery(".listing-search-tile #formfield-form-widgets-jacuzzi label.horizontal.collapsed").length > 0) {
-      jQuery(".listing-search-tile #formfield-form-widgets-jacuzzi label.horizontal.collapsed").removeClass('collapsed').addClass('expanded');
-    } else {
-      jQuery(".listing-search-tile #formfield-form-widgets-jacuzzi label.horizontal.expanded").removeClass('expanded').addClass('collapsed');
-    }
-  });
-
-  jQuery(".listing-search-tile #formfield-form-widgets-view_type label.horizontal").click(function() {
-    jQuery(".listing-search-tile #formfield-form-widgets-view_type span").slideToggle("slow");
-    if (jQuery(".listing-search-tile #formfield-form-widgets-view_type label.horizontal.collapsed").length > 0) {
-      jQuery(".listing-search-tile #formfield-form-widgets-view_type label.horizontal.collapsed").removeClass('collapsed').addClass('expanded');
-    } else {
-      jQuery(".listing-search-tile #formfield-form-widgets-view_type label.horizontal.expanded").removeClass('expanded').addClass('collapsed');
-    }
-  });
-
-  jQuery(".listing-search-tile #formfield-form-widgets-location_type label.horizontal").click(function() {
-    jQuery(".listing-search-tile #formfield-form-widgets-location_type span").slideToggle("slow");
-    if (jQuery(".listing-search-tile #formfield-form-widgets-location_type label.horizontal.collapsed").length > 0) {
-      jQuery(".listing-search-tile #formfield-form-widgets-location_type label.horizontal.collapsed").removeClass('collapsed').addClass('expanded');
-    } else {
-      jQuery(".listing-search-tile #formfield-form-widgets-location_type label.horizontal.expanded").removeClass('expanded').addClass('collapsed');
-    }
-  });
-
-  jQuery(".listing-search-tile #formfield-form-widgets-geographic_type label.horizontal").click(function() {
-    jQuery(".listing-search-tile #formfield-form-widgets-geographic_type span").slideToggle("slow");
-    if (jQuery(".listing-search-tile #formfield-form-widgets-geographic_type label.horizontal.collapsed").length > 0) {
-      jQuery(".listing-search-tile #formfield-form-widgets-geographic_type label.horizontal.collapsed").removeClass('collapsed').addClass('expanded');
-    } else {
-      jQuery(".listing-search-tile #formfield-form-widgets-geographic_type label.horizontal.expanded").removeClass('expanded').addClass('collapsed');
-    }
-  });
-
-  jQuery(".listing-search-tile #formfield-form-widgets-object_type label.horizontal").click(function() {
-    jQuery(".listing-search-tile #formfield-form-widgets-object_type span").slideToggle("slow");
-    if (jQuery(".listing-search-tile #formfield-form-widgets-object_type label.horizontal.collapsed").length > 0) {
-      jQuery(".listing-search-tile #formfield-form-widgets-object_type label.horizontal.collapsed").removeClass('collapsed').addClass('expanded');
-    } else {
-      jQuery(".listing-search-tile #formfield-form-widgets-object_type label.horizontal.expanded").removeClass('expanded').addClass('collapsed');
-    }
-  });
-
-  jQuery(".listing-search-tile #formfield-form-widgets-ownership_type label.horizontal").click(function() {
-    jQuery(".listing-search-tile #formfield-form-widgets-ownership_type span").slideToggle("slow");
-    if (jQuery(".listing-search-tile #formfield-form-widgets-ownership_type label.horizontal.collapsed").length > 0) {
-      jQuery(".listing-search-tile #formfield-form-widgets-ownership_type label.horizontal.collapsed").removeClass('collapsed').addClass('expanded');
-    } else {
-      jQuery(".listing-search-tile #formfield-form-widgets-ownership_type label.horizontal.expanded").removeClass('expanded').addClass('collapsed');
-    }
-  });
-}
 
 
 function input_addclass() {
@@ -574,9 +483,25 @@ jQuery(document).ready(function($) {
   // remove this class when js working
   $("body").removeClass("no-js");
 
-  // only do when we have search tiles
+  // Add collapsible function to listing search tile.
   if ($(".listing-search-tile").length > 0) {
-    clickshow_option();
+    $.each([
+      '#formfield-form-widgets-geographic_type',
+      '#formfield-form-widgets-location_type',
+      '#formfield-form-widgets-object_type',
+      '#formfield-form-widgets-ownership_type',
+      '#formfield-form-widgets-view_type',
+      '#formfield-form-widgets-air_condition',
+      '#formfield-form-widgets-pool',
+      '#formfield-form-widgets-jacuzzi',
+    ], function(key, value) {
+      $('.listing-search-tile').find(value).addClass('collapsible').children().not('label').wrapAll('<div class="collapse"></div>');
+      $('.listing-search-tile').find(value + ' label.horizontal').addClass('collapser');
+    });
+    // Re-load the collapse init script from Plone.
+    try {
+      $('.listing-search-tile .field.collapsible').do_search_collapse();
+    } catch(err) {}
   }
 
   // only do when we have a listingbar
@@ -584,9 +509,7 @@ jQuery(document).ready(function($) {
     enhance_listingbar();
   }
 
-  if ($('.portletQuickSearch .collapsible').length > 0 ) {
-    enhance_filterportlet();
-  }
+  handle_collapsible();
 
   switch(width_indicator) {
     case 'span12':
