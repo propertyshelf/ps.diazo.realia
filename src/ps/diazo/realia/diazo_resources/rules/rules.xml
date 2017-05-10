@@ -46,19 +46,6 @@
       </xsl:for-each>
     </before>
 
-    <replace css:content=".development__header">
-      <section class="development__header">
-        <xsl:attribute name="style">background-image: url(<xsl:value-of select="img/@src" />);</xsl:attribute>
-        <div class="header_caption">
-          <div class="container">
-            <div class="span12">
-              <xsl:apply-templates select="div[@class='header_caption']/node()" />
-            </div>
-          </div>
-        </div>
-      </section>
-    </replace>
-
     <before
         css:content=".development__header"
         css:theme="#content"

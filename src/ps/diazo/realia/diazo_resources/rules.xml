@@ -5,6 +5,8 @@
     xmlns:xi="http://www.w3.org/2001/XInclude">
 
   <rules css:if-content="#visual-portal-wrapper">
+    <!-- Include custom rules. -->
+    <xi:include href="/++theme++ps.diazo.realia/rules/transformations.xml" />
     <xi:include href="/++theme++ps.diazo.realia/rules/rules.xml"/>
 
     <!-- Use the theme template from index.html. -->

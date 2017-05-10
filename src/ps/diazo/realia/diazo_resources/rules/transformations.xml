@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules xmlns="http://namespaces.plone.org/diazo"
+    xmlns:css="http://namespaces.plone.org/diazo/css"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <!-- Wrap develoment header caption in container and use bg image. -->
+  <replace content="//section[contains(@class, 'development__header')]">
+    <section class="development__header">
+      <xsl:attribute name="style">background-image: url(<xsl:value-of select="img/@src" />);</xsl:attribute>
+      <div class="header_caption">
+        <div class="container">
+          <div class="span12">
+            <xsl:apply-templates select="div[@class='header_caption']/node()" />
+          </div>
+        </div>
+      </div>
+    </section>
+  </replace>
+
+</rules>
