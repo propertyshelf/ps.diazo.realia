@@ -27,8 +27,8 @@ install_requires = [
 testfixture_requires = [
     'ps.plone.fotorama',
     'ps.plone.mls',
-    # 'ps.plone.mlstiles',
-    # 'webcouturier.dropdownmenu',
+    'ps.plone.mlstiles',
+    'webcouturier.dropdownmenu',
 ]
 
 setup(
