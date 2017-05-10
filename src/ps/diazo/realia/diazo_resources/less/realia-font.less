@@ -136,14 +136,14 @@ form input.standalone[type="submit"]{
     font-size: 20px;
     font-weight: bold;  
 }
-.listing-search-tile #form .horizontal{
+.listing-search-tile form .horizontal{
     font-size: 14px;
     font-weight: bold;
 }
-.listing-search-tile #form span.option label span{
+.listing-search-tile form span.option label span{
     font-weight: 700 !important;
 }
-.listing-search-tile #form-buttons-search{
+.listing-search-tile input[type="submit"] {
     font-size: 17.5px;
     font-weight: bold;
 }
@@ -208,10 +208,12 @@ section dd.List0{
     font-size: 14px;
     font-weight: bold;
 }
-.portletQuickSearch input#form-buttons-search{
-    font-weight: bold;
-    font-size: 17.5px;
+
+.portletQuickSearch input[type="submit"] {
+  font-weight: bold;
+  font-size: 17.5px;
 }
+
 .listing-search-tile .portletHeader{
     font-size: 20px;
     font-weight: bold;
@@ -223,9 +225,9 @@ section dd.List0{
     font-size: 14px;
     font-weight: bold;
 }
-#listing-search #form-buttons-search,
-.portletQuickSearch #form-buttons-search,
-.listing-search-tile input#form-buttons-search{
+#listing-search input[type="submit"],
+.portletQuickSearch input[type="submit"],
+.listing-search-tile input[type="submit"] {
     font-weight: bold;
     font-size: 17.5px;
 }

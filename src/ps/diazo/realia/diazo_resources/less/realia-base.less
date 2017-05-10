@@ -874,19 +874,19 @@ label.horizontal.collapser.collapsed{
 #formfield-form-widgets-pool span.option label input,#formfield-form-widgets-air_condition span.option label input,#formfield-form-widgets-jacuzzi span.option label input{
     margin-right: 5%;
 }
-#form #formfield-form-widgets-air_condition .collapse span.option{
+form #formfield-form-widgets-air_condition .collapse span.option{
     float: left;
     margin-bottom: 10px;
     width: 27% !important;
     padding-left: 5%;
 }
-#form #formfield-form-widgets-pool .collapse span.option{
+form #formfield-form-widgets-pool .collapse span.option{
     float: left;
     margin-bottom: 10px;
     width: 27% !important;
     padding-left: 5%;
 }
-#form #formfield-form-widgets-jacuzzi .collapse span.option{
+form #formfield-form-widgets-jacuzzi .collapse span.option{
     float: left;
     margin-bottom: 10px;
     width: 27% !important;
@@ -1046,19 +1046,43 @@ body .properties-rows .property .bedrooms{
 section#listing-collection .propertyrow{
     margin: 0 !important;
 }
-/*Listing-search-tile : Start*/
-.listing-search-tile #formfield-form-widgets-price_min{
-    clear: none;
-    float: right;
-    left: -9px;
-    position: relative;
-    width: 45%;
-}
-.listing-search-tile #formfield-form-widgets-price_max{
+
+
+.listing-search-tile {
+  form span.option {
+    display: block;
+    padding-left: 1ex;
+
+    label span {
+      background-color: transparent;
+      color: #fff !important;
+      background-color: transparent;
+    }
+  }
+
+  #formfield-form-widgets-price_min {
     clear: none;
     float: left;
     width: 45%;
+  }
+
+  #formfield-form-widgets-price_max {
+      clear: none;
+      float: right;
+      left: -9px;
+      position: relative;
+      width: 45%;
+  }
+
+  .field input[type="text"] {
+    border: medium none;
+    height: 25px;
+    padding: 4px 6px;
+    width: 95%;
+    width: calc(~'100% - 12px');
+  }
 }
+
 .listing-search-tile #formfield-form-widgets-beds select{
     width: 48.5% !important;
 }
@@ -1200,20 +1224,11 @@ section .tileItem section.body .title-price .title{
     color: #fff;
     line-height: 20px;   
 }
-.listing-search-tile #form .horizontal{
+.listing-search-tile form .horizontal{
     color: #fff;
     line-height: 20px;
 }
-.listing-search-tile #form span.option{
-    padding-left: 5%;
-    width: 95%;
-}
-.listing-search-tile #form span.option label span{
-    background-color: transparent;
-    color: #fff !important;
-    background-color: transparent;
-}
-.listing-search-tile #form select{
+.listing-search-tile form select{
     background-image: none;
     border: 0 none;
     border-radius: 0;
@@ -1221,23 +1236,18 @@ section .tileItem section.body .title-price .title{
     line-height: 40px;
     width: 100%;
 }
-.listing-search-tile #form #formfield-form-widgets-location_city input{
+.listing-search-tile form #formfield-form-widgets-price_min input{
     border: medium none;
     padding: 4px 6px !important;
     width: 93%;
 }
-.listing-search-tile #form #formfield-form-widgets-price_min input{
-    border: medium none;
-    padding: 4px 6px !important;
-    width: 93%;
-}
-.listing-search-tile #form #formfield-form-widgets-price_max input{
+.listing-search-tile form #formfield-form-widgets-price_max input{
     border: medium none;
     padding: 4px 6px !important;
     width: 93%;
     height: 25px;
 }
-.listing-search-tile #form-buttons-search{
+.listing-search-tile input[type="submit"] {
     border: 0 none;
     color: #fff;
     margin: 0;
@@ -1669,12 +1679,12 @@ body section .tileItem section {
 .portletQuickSearch .formControls{
     margin: 0em;
 }
-.portletQuickSearch input#form-buttons-search{
-    border: 0 none;
-    color: #fff;
-    margin: 0;
-    padding: 11px 19px;
-    width: 100%;
+.portletQuickSearch input[type="submit"] {
+  border: 0 none;
+  color: #fff;
+  margin: 0;
+  padding: 11px 19px;
+  width: 100%;
 }
 .portletQuickSearch .form-row-price{
     position: relative;
@@ -1744,10 +1754,6 @@ body section .tileItem section {
     width: 100%;
     line-height: 40px;
 }
-.listing-search-tile #form-widgets-location_city{
-    height: 25px !important;
-    padding: 4px 0 !important;
-}
 .listing-search-tile #form-widgets-price_min{
     border: medium none;
     height: 25px !important;
@@ -1764,24 +1770,25 @@ body section .tileItem section {
 .listing-search-tile .formControls{
     margin: 0em;
 }
-#listing-search #form-buttons-search,
-.portletQuickSearch #form-buttons-search,
-.listing-search-tile input#form-buttons-search{
+#listing-search input[type="submit"],
+.portletQuickSearch input[type="submit"],
+.listing-search-tile input[type="submit"] {
     border: 0 none;
     color: #fff;
     margin: 0;
     padding: 11px 19px;
     width: 100%;
 }
-#listing-search #form-buttons-search{
+#listing-search input[type="submit"] {
     width: 30%;
     min-width: 138px;
 }
-#search-form #form .formControls{
-    text-align:center;
-    padding:0;
-    }
-    
+
+#search-form form .formControls{
+  text-align:center;
+  padding:0;
+}
+
 .listing-search-tile .form-row-price{
     position: relative;
     width: 100%;
@@ -1804,22 +1811,7 @@ body section .tileItem section {
     padding: 4px 6px;
     width: 83%;
 }
-.listing-search-tile #formfield-form-widgets-location_district{
-    margin:0;
-}
-.listing-search-tile #formfield-form-widgets-location_county{
-    margin:0;
-}
-.listing-search-tile #formfield-form-widgets-location_state{
-    margin:0;
-}
 
-.listing-search-tile .field input[type="text"]{
-    width: 45%;
-}
-.listing-search-tile #formfield-form-widgets-listing_type label.horizontal{
-    display:none;
-}
 .listing-search-tile .formfield-form-widgets-lot_size{
     width: 100%;
 }
@@ -2044,7 +2036,7 @@ span.formHelp{
     background-color: transparent !important;
     color: #707070 !important;
 }
-#search-form #form .form-row-listing-type #formfield-form-widgets-listing_type span.option:nth-child(5){
+#search-form form .form-row-listing-type #formfield-form-widgets-listing_type span.option:nth-child(5){
     margin:0 !important;
 }
 
@@ -2054,8 +2046,7 @@ span.formHelp{
 #formfield-form-widgets-listing_type .option{
     width: 35%;
 }
-.portletQuickSearch .collapse,
-.form-row-filter .collapse{
+.collapse{
     overflow: inherit;
     height: auto;
 }
@@ -2819,7 +2810,7 @@ table.accordion_table th{
         padding: 1px 20px;
         width: 100%;
     }
-    #search-form #form .form-rows .field .separator{
+    #search-form form .form-rows .field .separator{
         margin-left: 4px;
         margin-top: 4px;
     }
@@ -2843,7 +2834,7 @@ table.accordion_table th{
         top: -36px;
         width: 45%;
     }
-    #search-form #form .form-row-listing-type #formfield-form-widgets-listing_type span.option{
+    #search-form form .form-row-listing-type #formfield-form-widgets-listing_type span.option{
         width: 25% !important; 
         margin-right: 5.4em !important;
     }
@@ -2917,7 +2908,7 @@ table.accordion_table th{
         position: relative;
         top: 13px;
     }
-    #search-form #form .form-rows .field .separator{
+    #search-form form .form-rows .field .separator{
         margin-left: 4px;
         margin-top: 4px;
     }
@@ -2955,10 +2946,10 @@ table.accordion_table th{
     body #content .listing-summary figure{
 
     }
-    #search-form #form .form-row-listing-type #formfield-form-widgets-listing_type span.option:nth-child(4){
+    #search-form form .form-row-listing-type #formfield-form-widgets-listing_type span.option:nth-child(4){
         margin-right:7% !important;
     }
-    #search-form #form .form-row-listing-type #formfield-form-widgets-listing_type span.option{
+    #search-form form .form-row-listing-type #formfield-form-widgets-listing_type span.option{
         width: 25% !important; 
         margin-right: 5.4em !important;
     }
@@ -3045,7 +3036,7 @@ table.accordion_table th{
     body section .row .tileItem .propertyrow section.body{
         width: 70%;
     }
-    #search-form #form .form-rows .field .separator{
+    #search-form form .form-rows .field .separator{
         margin-left: 4px;
         margin-top: 4px;
     }
@@ -3071,10 +3062,10 @@ table.accordion_table th{
     .listing #listing-images{
         margin-right: 0 !important;
     }
-    #search-form #form .form-row-listing-type #formfield-form-widgets-listing_type span.option:nth-child(4){
+    #search-form form .form-row-listing-type #formfield-form-widgets-listing_type span.option:nth-child(4){
         margin-right:7% !important;
     }
-    #search-form #form .form-row-listing-type #formfield-form-widgets-listing_type span.option{
+    #search-form form .form-row-listing-type #formfield-form-widgets-listing_type span.option{
         width: 24% !important; 
         margin-right: 5.4em !important;
     }
@@ -3232,14 +3223,14 @@ table.accordion_table th{
         height: auto;
         width: auto;
     }
-    #search-form #form .form-rows .field .separator{
+    #search-form form .form-rows .field .separator{
         margin-left: 4px;
         margin-top: 4px;
     }
     section .row .tileItem .propertyrow section.body{
         width: 96%;
     }
-    #search-form #form .form-row-listing-type #formfield-form-widgets-listing_type span.option{
+    #search-form form .form-row-listing-type #formfield-form-widgets-listing_type span.option{
         width: 24% !important; 
         margin-right: 10% !important;
     }
@@ -3534,14 +3525,14 @@ table.accordion_table th{
         height: auto;
         width: auto;
     }
-    #search-form #form .form-rows .field .separator{
+    #search-form form .form-rows .field .separator{
         margin-left: 4px;
         margin-top: 4px;
     }
     body section .row .tileItem .propertyrow section.body{
         width: 96%;
     }
-    #search-form #form .form-row-listing-type #formfield-form-widgets-listing_type span.option{
+    #search-form form .form-row-listing-type #formfield-form-widgets-listing_type span.option{
         width: 24% !important; 
         margin-right: 10% !important;
     }
@@ -3810,14 +3801,14 @@ table.accordion_table th{
         height: auto;
         width: auto;
     }
-    #search-form #form .form-rows .field .separator{
+    #search-form form .form-rows .field .separator{
         margin-left: 4px;
         margin-top: 4px;
     }
     body section .row .tileItem .propertyrow section.body{
         width: 96%;
     }
-    #search-form #form .form-row-listing-type #formfield-form-widgets-listing_type span.option{
+    #search-form form .form-row-listing-type #formfield-form-widgets-listing_type span.option{
         margin-right: 0 !important;
         width: 34% !important;
     }
@@ -4063,7 +4054,7 @@ table.accordion_table th{
     .container .navigation ul.nav{
         max-width: 100%;
     }
-    #search-form #form .form-row-listing-type #formfield-form-widgets-listing_type span.option{
+    #search-form form .form-row-listing-type #formfield-form-widgets-listing_type span.option{
         width: 60% !important;
     }
     #content .cell{
@@ -4143,7 +4134,7 @@ table.accordion_table th{
     .listing-summary #search-form form span.option{
         width: 32%;
     }
-    #search-form #form .form-row-listing-type #formfield-form-widgets-listing_type span.option:nth-child(4){
+    #search-form form .form-row-listing-type #formfield-form-widgets-listing_type span.option:nth-child(4){
         margin-right:0 !important;
     }
 }
@@ -4216,7 +4207,7 @@ table.accordion_table th{
     .listing #listing-images .galleria-image img{
         width: 100% !important;
     }
-    #search-form #form .form-row-listing-type #formfield-form-widgets-listing_type span.option{
+    #search-form form .form-row-listing-type #formfield-form-widgets-listing_type span.option{
         width: 60% !important;
     }
     .container .navigation ul.nav{
@@ -4324,7 +4315,7 @@ table.accordion_table th{
     #form-widgets-location_state{
         width: auto;
     }
-    #search-form #form .form-rows .field .separator{
+    #search-form form .form-rows .field .separator{
         margin-top: 4px;
     }
 }
