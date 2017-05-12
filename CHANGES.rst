@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.12 (unreleased)
+0.12 (2017-05-12)
 -----------------
 
 - Show listing search banner, if enabled.
