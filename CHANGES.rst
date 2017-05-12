@@ -4,7 +4,10 @@ Changelog
 0.12 (unreleased)
 -----------------
 
-- Nothing changed yet.
+- Show listing search banner, if enabled.
+- Fix wrong order of CSS and JS resource files.
+- Use chosen JS library for listing search forms.
+- Make development header more user friendly.
 
 
 0.11 (2017-01-23)
