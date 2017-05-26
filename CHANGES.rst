@@ -4,7 +4,8 @@ Changelog
 0.13 (unreleased)
 -----------------
 
-- Nothing changed yet.
+- Remove console.log() statements.
+- Fix chozen inputs CSS.
 
 
 0.12 (2017-05-12)
