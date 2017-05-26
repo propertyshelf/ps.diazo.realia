@@ -167,7 +167,7 @@ padding-bottom:7px}
   *zoom: 1;
   filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFFFFFFF', endColorstr='#FFFFFFFF');
   background-image:none;
-  border: none;
+  border: 1px solid @border-input;
   height: 38px;
   line-height: 40px;
 }
@@ -3444,6 +3444,12 @@ body form input.standalone[type="submit"]:hover{
  #content .listing-summary figure{
     background-color: #ccc;
     border-right: 1px dotted #ccc;
+}
+
+.portletQuickSearch {
+  .chzn-container .chzn-single {
+    border: none;
+  }
 }
 
 .listingsearchbanner ul.formTabs li a {
