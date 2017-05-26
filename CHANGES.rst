@@ -1,8 +1,8 @@
 Changelog
 =========
 
-0.13 (unreleased)
------------------
+0.12.2 (2017-05-26)
+-------------------
 
 - Adjust chozen CSS for quicksearch portlet.
 
