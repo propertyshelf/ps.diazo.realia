@@ -336,7 +336,6 @@ function handle_collapsible() {
   jQuery('.collapsible').each(function(index) {
     // if collapsible div have checked checkboxes inside
     checkers = jQuery(this).find('input[type="checkbox"]:checked');
-    console.log(checkers);
     if (checkers.length > 0) {
       // open this field by default
       jQuery(this).children('.collapse').show('slow');
