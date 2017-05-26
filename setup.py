@@ -25,6 +25,7 @@ install_requires = [
 ]
 
 testfixture_requires = [
+    'plone.app.multilingual',
     'ps.plone.fotorama',
     'ps.plone.mls',
     'ps.plone.mlstiles',
