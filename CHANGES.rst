@@ -4,7 +4,7 @@ Changelog
 0.13 (unreleased)
 -----------------
 
-- Nothing changed yet.
+- Adjust CSS after removing the duplicate #content id from the template.
 
 
 0.12.3 (2017-05-28)
