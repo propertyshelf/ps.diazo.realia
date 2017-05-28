@@ -1,8 +1,8 @@
 Changelog
 =========
 
-0.13 (unreleased)
------------------
+0.12.3 (2017-05-28)
+-------------------
 
 - Fix portal footer diazo rule.
 - Don't use the CSS id "content" twice (theme and content).
