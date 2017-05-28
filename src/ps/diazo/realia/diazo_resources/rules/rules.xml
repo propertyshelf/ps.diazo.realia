@@ -34,7 +34,7 @@
       </div>
     </after>
 
-    <before css:theme="#content" method="raw">
+    <before css:theme="#content-wrapper" method="raw">
       <xsl:for-each css:select=".listingsearchbanner">
         <div class="listingsearchbanner"><xsl:copy-of select="attribute::*" />
           <div class="container">
@@ -48,7 +48,7 @@
 
     <before
         css:content=".development__header"
-        css:theme="#content"
+        css:theme="#content-wrapper"
         />
 
     <!-- Replace title with Plone's page title  -->
@@ -183,14 +183,14 @@
     <!-- Add Menu bar dont work : Gun -->
     <rules css:if-content="#portal-personaltools .actionMenuHeader">
       <prepend
-          css:theme="#wrapper-inner #content"
+          css:theme="#wrapper-inner #content-wrapper"
           css:content="#portal-column-content .documentEditablet #edit-bar"
           />
     </rules>
 
     <rules css:if-content=".carousel" if="$slider_fullscreen = 'true'">
       <before
-          css:theme="#content.container"
+          css:theme="#content-wrapper.container"
           css:content=".carousel"
           method="raw"
           />
