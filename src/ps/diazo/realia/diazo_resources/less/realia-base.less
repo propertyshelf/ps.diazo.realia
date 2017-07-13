@@ -831,15 +831,6 @@ div.portletStaticText{
 #portal-personaltools dd ul li{
     list-style: none outside none;
 }
-.userrole-member .breadcrumb-wrapper .nav li.account-register{
-    display: none;
-}
-.userrole-authenticated .breadcrumb-wrapper .nav li.account-register{
-    display: none;
-}
-.userrole-manager .breadcrumb-wrapper .nav li.account-register{
-    display: none;
-}
 .userrole-member .nav-pills{
     min-width: 185px !important;
 }
@@ -2014,9 +2005,6 @@ input[type="submit"]{
 #footer-wrapper #footer #footer-inner .row{
     width: 100%;
 }
-dt.actionMenuHeader a#user-name {
-    padding-top: 3px;
-}
 dd.actionMenuContent{
     z-index: 100;
 }
@@ -2249,11 +2237,6 @@ ul, ol {
 }
 .row .logo-wrapper.span4{
     width: 370px;
-}
-.userrole-anonymous ul.nav-pills{
-    left: -18px;
-    position: relative;
-    min-width: 150px !important;
 }
 /*Hide listing start*/
 .listing-collection-tile .image_count{
@@ -4303,12 +4286,8 @@ table.accordion_table th{
 }
 
 /* Fix realia theme. */
-.account-register {
-    display: none;
-}
-
-.breadcrumb-wrapper .account ul li {
-    float: right;
+.breadcrumb-wrapper .account .nav-pills {
+    min-width: 0px !important;
 }
 
 .breadcrumb-wrapper .account ul li a {
@@ -4415,4 +4394,8 @@ hr {
 
 #content .chzn-container .chzn-results {
   margin: 0 4px 4px 0;
+}
+
+body.header-light .breadcrumb-wrapper .nav li .actionMenuContent a {
+    color: #fff !important;
 }
