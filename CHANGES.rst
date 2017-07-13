@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.13 (unreleased)
+0.13 (2017-07-13)
 -----------------
 
 - Load fonts from https.
