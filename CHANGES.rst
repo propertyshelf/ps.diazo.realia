@@ -4,7 +4,9 @@ Changelog
 0.13 (unreleased)
 -----------------
 
-- Nothing changed yet.
+- Load fonts from https.
+- Fix positioning bug for language selector and search box.
+- Fix portal_personaltools.
 
 
 0.12.4 (2017-05-28)
