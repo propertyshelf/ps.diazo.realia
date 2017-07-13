@@ -18,4 +18,14 @@
     </section>
   </replace>
 
+  <!-- Adjust personal tools menu. -->
+  <replace css:theme-children=".account .nav">
+    <xsl:for-each css:select="ul#portal-personaltools li a">
+      <li><xsl:copy-of select="." /></li>
+    </xsl:for-each>
+    <xsl:for-each css:select="dl#portal-personaltools">
+      <li><xsl:copy-of select="." /></li>
+    </xsl:for-each>
+  </replace>
+
 </rules>

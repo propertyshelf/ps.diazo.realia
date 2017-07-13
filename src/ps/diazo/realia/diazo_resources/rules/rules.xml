@@ -97,11 +97,6 @@
         />
 
     <replace
-        css:theme-children=".account .account-login"
-        css:content-children="#anon-personalbar"
-        />
-
-    <replace
         css:content="dt.portletHeader"
         css:theme-children=".portlet .portletHeader span"
         />
@@ -157,14 +152,6 @@
       <drop css:content="#site_contact_email" />
     </rules>
 
-    <rules css:if-content="#site_contact_email">
-      <replace
-          css:theme-children=".account-register"
-          css:content-children=".account-register"
-          />
-      <drop css:content=".account-register" />
-    </rules>
-
     <replace
         css:theme-children=".breadcrumb-wrapper ul.breadcrumb.pull-left li"
         css:content-children="#portal-breadcrumbs"
@@ -172,13 +159,6 @@
 
     <drop css:content="span#breadcrumbs-you-are-here" />
     <drop css:theme=".toggle" />
-
-    <rules css:if-content="#portal-personaltools .actionMenuHeader">
-      <prepend
-          css:theme=".account.pull-right"
-          css:content="#portal-personaltools-wrapper"
-          />
-    </rules>
 
     <!-- Add Menu bar dont work : Gun -->
     <rules css:if-content="#portal-personaltools .actionMenuHeader">
