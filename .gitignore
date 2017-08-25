@@ -15,3 +15,5 @@ downloads/
 eggs/
 parts/
 var/
+package-lock.json
+node_modules
