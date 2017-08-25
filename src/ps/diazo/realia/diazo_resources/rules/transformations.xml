@@ -29,8 +29,8 @@
   </replace>
 
 
-  <!-- Transform development collection tile into realia property rows. -->
-  <replace content="div[@class[contains(., 'development-collection-tile')]]">
+  <!-- Transform list of developments into realia property rows. -->
+  <replace css:content=".development-collection-tile, .development-summary">
     <div>
       <xsl:copy-of select="attribute::*[not(name()='class')]" />
       <xsl:attribute name="class"><xsl:value-of select="@class" /> properties-rows</xsl:attribute>
@@ -53,11 +53,20 @@
                 <div class="row-fluid">
                   <div class="image span4">
                     <div class="content">
-                      <a href="detail.html">
-                        <xsl:copy-of select="figure[@class[contains(., 'logo')]]/a/attribute::*[not(name()='href')]" />
-                        <xsl:attribute name="href"><xsl:value-of select="figure[@class[contains(., 'logo')]]/a/@href" /></xsl:attribute>
-                      </a>
-                      <xsl:apply-templates select="figure[@class[contains(., 'logo')]]/a/img" />
+                      <xsl:if css:test="figure.logo">
+                        <a href="detail.html">
+                          <xsl:copy-of select="figure[@class[contains(., 'logo')]]/a/attribute::*[not(name()='href')]" />
+                          <xsl:attribute name="href"><xsl:value-of select="figure[@class[contains(., 'logo')]]/a/@href" /></xsl:attribute>
+                        </a>
+                        <xsl:apply-templates select="figure[@class[contains(., 'logo')]]/a/img" />
+                      </xsl:if>
+                      <xsl:if test="figure[not(@class)]">
+                        <a href="detail.html">
+                          <xsl:copy-of select="figure[not(@class)]/a/attribute::*[not(name()='href')]" />
+                          <xsl:attribute name="href"><xsl:value-of select="figure[not(@class)]/a/@href" /></xsl:attribute>
+                        </a>
+                        <xsl:apply-templates select="figure[not(@class)]/a/img" />
+                      </xsl:if>
                     </div>
                   </div>
 
@@ -69,33 +78,33 @@
                     </div>
 
                     <div class="location">
-                      <xsl:value-of css:select=".location .item-body" />
+                      <xsl:value-of css:select=".location .item-body, dd.location" />
                     </div>
                     <p>
-                      <xsl:value-of css:select=".description" />
+                      <xsl:value-of css:select=".description, p" />
                     </p>
 
                     <xsl:if css:test=".location_type">
                       <div class="location_type">
-                        <xsl:attribute name="title"><xsl:value-of css:select=".location_type .item-heading" /></xsl:attribute>
-                        <span class="key"><xsl:value-of css:select=".location_type .item-heading" /></span>
-                        <span class="value"><xsl:value-of css:select=".location_type .item-body" /></span>
+                        <xsl:attribute name="title"><xsl:value-of css:select=".location_type .item-heading, dt.location_type" /></xsl:attribute>
+                        <span class="key"><xsl:value-of css:select=".location_type .item-heading, dt.location_type" /></span>
+                        <span class="value"><xsl:value-of css:select=".location_type .item-body, dd.location_type" /></span>
                       </div>
                     </xsl:if>
 
                     <xsl:if css:test=".number_of_listings">
                       <div class="number_of_listings">
-                        <xsl:attribute name="title"><xsl:value-of css:select=".number_of_listings .item-heading" /></xsl:attribute>
-                        <span class="key"><xsl:value-of css:select=".number_of_listings .item-heading" /></span>
-                        <span class="value"><xsl:value-of css:select=".number_of_listings .item-body" /></span>
+                        <xsl:attribute name="title"><xsl:value-of css:select=".number_of_listings .item-heading, dt.number_of_listings" /></xsl:attribute>
+                        <span class="key"><xsl:value-of css:select=".number_of_listings .item-heading, dt.number_of_listings" /></span>
+                        <span class="value"><xsl:value-of css:select=".number_of_listings .item-body, dd.number_of_listings" /></span>
                       </div>
                     </xsl:if>
 
                     <xsl:if css:test=".number_of_groups">
                       <div class="number_of_groups">
-                        <xsl:attribute name="title"><xsl:value-of css:select=".number_of_groups .item-heading" /></xsl:attribute>
-                        <span class="key"><xsl:value-of css:select=".number_of_groups .item-heading" /></span>
-                        <span class="value"><xsl:value-of css:select=".number_of_groups .item-body" /></span>
+                        <xsl:attribute name="title"><xsl:value-of css:select=".number_of_groups .item-heading, dt.number_of_groups" /></xsl:attribute>
+                        <span class="key"><xsl:value-of css:select=".number_of_groups .item-heading, dt.number_of_groups" /></span>
+                        <span class="value"><xsl:value-of css:select=".number_of_groups .item-body, dd.number_of_groups" /></span>
                       </div>
                     </xsl:if>
                   </div>
