@@ -28,4 +28,87 @@
     </xsl:for-each>
   </replace>
 
+
+  <!-- Transform development collection tile into realia property rows. -->
+  <replace content="div[@class[contains(., 'development-collection-tile')]]">
+    <div>
+      <xsl:copy-of select="attribute::*[not(name()='class')]" />
+      <xsl:attribute name="class"><xsl:value-of select="@class" /> properties-rows</xsl:attribute>
+      <div class="row-fluid">
+        <xsl:for-each select="div">
+          <xsl:choose>
+            <xsl:when test="@class[contains(.,'tileItem')]">
+              <div class="property span12">
+                <xsl:if css:test="figure.banner">
+                  <div class="row-fluid">
+                    <div class="span12">
+                      <a class="banner" href="detail.html">
+                        <xsl:copy-of select="figure[@class[contains(., 'banner')]]/a/attribute::*[not(name()='href')]" />
+                        <xsl:attribute name="style">background-image: url(<xsl:value-of select="figure[@class[contains(., 'banner')]]/a/img/@src" />);</xsl:attribute>
+                        <xsl:attribute name="href"><xsl:value-of select="figure[@class[contains(., 'banner')]]/a/@href" /></xsl:attribute>
+                      </a>
+                    </div>
+                  </div>
+                </xsl:if>
+                <div class="row-fluid">
+                  <div class="image span4">
+                    <div class="content">
+                      <a href="detail.html">
+                        <xsl:copy-of select="figure[@class[contains(., 'logo')]]/a/attribute::*[not(name()='href')]" />
+                        <xsl:attribute name="href"><xsl:value-of select="figure[@class[contains(., 'logo')]]/a/@href" /></xsl:attribute>
+                      </a>
+                      <xsl:apply-templates select="figure[@class[contains(., 'logo')]]/a/img" />
+                    </div>
+                  </div>
+
+                  <div class="body span8">
+                    <div class="title-price">
+                      <div class="title">
+                        <xsl:apply-templates select="h2" />
+                      </div>
+                    </div>
+
+                    <div class="location">
+                      <xsl:value-of css:select=".location .item-body" />
+                    </div>
+                    <p>
+                      <xsl:value-of css:select=".description" />
+                    </p>
+
+                    <xsl:if css:test=".location_type">
+                      <div class="location_type">
+                        <xsl:attribute name="title"><xsl:value-of css:select=".location_type .item-heading" /></xsl:attribute>
+                        <span class="key"><xsl:value-of css:select=".location_type .item-heading" /></span>
+                        <span class="value"><xsl:value-of css:select=".location_type .item-body" /></span>
+                      </div>
+                    </xsl:if>
+
+                    <xsl:if css:test=".number_of_listings">
+                      <div class="number_of_listings">
+                        <xsl:attribute name="title"><xsl:value-of css:select=".number_of_listings .item-heading" /></xsl:attribute>
+                        <span class="key"><xsl:value-of css:select=".number_of_listings .item-heading" /></span>
+                        <span class="value"><xsl:value-of css:select=".number_of_listings .item-body" /></span>
+                      </div>
+                    </xsl:if>
+
+                    <xsl:if css:test=".number_of_groups">
+                      <div class="number_of_groups">
+                        <xsl:attribute name="title"><xsl:value-of css:select=".number_of_groups .item-heading" /></xsl:attribute>
+                        <span class="key"><xsl:value-of css:select=".number_of_groups .item-heading" /></span>
+                        <span class="value"><xsl:value-of css:select=".number_of_groups .item-body" /></span>
+                      </div>
+                    </xsl:if>
+                  </div>
+                </div>
+              </div>
+            </xsl:when>
+            <xsl:otherwise>
+              <xsl:apply-templates select="." />
+            </xsl:otherwise>
+          </xsl:choose>
+        </xsl:for-each>
+      </div>
+    </div>
+  </replace>
+
 </rules>
