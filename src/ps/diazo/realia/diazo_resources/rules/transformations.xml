@@ -28,6 +28,39 @@
     </xsl:for-each>
   </replace>
 
+  <!-- Transform input submits into Bootstrap buttons. -->
+  <replace content="//input[@type[contains(., 'submit') or contains(., 'button')]]">
+    <input>
+      <xsl:copy-of select="attribute::*[not(name()='class')]" />
+      <xsl:attribute name="class"><xsl:value-of select="@class" /> btn
+        <xsl:choose>
+          <xsl:when test="@name[contains(., 'delete')]">btn-danger</xsl:when>
+          <xsl:when test="@class[contains(., 'destructive')]">btn-danger</xsl:when>
+          <xsl:when test="@class[contains(., 'standalone')]">btn-info</xsl:when>
+          <xsl:when test="@class[contains(., 'context')]">btn-primary</xsl:when>
+          <xsl:otherwise>btn-inverse</xsl:otherwise>
+        </xsl:choose>
+      </xsl:attribute>
+      <xsl:apply-templates />
+    </input>
+  </replace>
+
+  <!-- Transform buttons into Bootstrap buttons. -->
+  <replace content="//button[@type[contains(., 'submit') or contains(., 'button')]]">
+    <button>
+      <xsl:copy-of select="attribute::*[not(name()='class')]" />
+      <xsl:attribute name="class"><xsl:value-of select="@class" /> btn
+        <xsl:choose>
+          <xsl:when test="@name[contains(., 'delete')]">btn-danger</xsl:when>
+          <xsl:when test="@class[contains(., 'destructive')]">btn-danger</xsl:when>
+          <xsl:when test="@class[contains(., 'standalone')]">btn-info</xsl:when>
+          <xsl:when test="@class[contains(., 'context')]">btn-primary</xsl:when>
+          <xsl:otherwise>btn-inverse</xsl:otherwise>
+        </xsl:choose>
+      </xsl:attribute>
+      <xsl:apply-templates />
+    </button>
+  </replace>
 
   <!-- Transform list of developments into realia property rows. -->
   <replace css:content=".development-collection-tile, .development-summary">

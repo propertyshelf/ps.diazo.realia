@@ -383,14 +383,6 @@ function getDoormatClass() {
 
 
 
-function input_addclass() {
-  /* Add arrow on input , submit. */
-  jQuery('input[type="submit"].context').addClass("btn btn-primary arrow-right");
-  jQuery('.portletAgentContact input[type="submit"].submit-widget').addClass("btn btn-primary arrow-right");
-  jQuery('input[type="submit"]#form-buttons-cancel').addClass("btn btn-primary arrow-right");
-}
-
-
 function InitOffCanvasNavigation() {
   jQuery('#btn-nav').on({
     click: function() {
@@ -474,10 +466,6 @@ jQuery(document).ready(function($) {
 
   no_register();
 
-  //add arrow on input , submit
-  if ($("form").length > 0) {
-    input_addclass();
-  }
 
   // remove this class when js working
   $("body").removeClass("no-js");
