@@ -4,7 +4,10 @@ Changelog
 0.14 (unreleased)
 -----------------
 
-- Nothing changed yet.
+- Transform development collection results into realia property rows.
+- Create bootstrap style buttons using diazo, not JS.
+- Use grunt tasks to compile less files and release CSS.
+- Several small CSS fixes.
 
 
 0.13 (2017-07-13)
