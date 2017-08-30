@@ -6,7 +6,7 @@ from setuptools import (
     setup,
 )
 
-version = '0.14'
+version = '0.15.dev0'
 description = 'Propertyshelf Realia Theme'
 long_description = ('\n'.join([
     open('README.rst').read(),
