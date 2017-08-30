@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.14 (unreleased)
+0.14 (2017-08-30)
 -----------------
 
 - Transform development collection results into realia property rows.
