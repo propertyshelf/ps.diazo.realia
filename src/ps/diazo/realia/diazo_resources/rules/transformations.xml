@@ -67,8 +67,8 @@
     <div>
       <xsl:copy-of select="attribute::*[not(name()='class')]" />
       <xsl:attribute name="class"><xsl:value-of select="@class" /> properties-rows</xsl:attribute>
-      <div class="row-fluid">
-        <xsl:for-each select="div">
+      <xsl:for-each select="div">
+        <div class="row-fluid">
           <xsl:choose>
             <xsl:when test="@class[contains(.,'tileItem')]">
               <div class="property span12">
@@ -148,8 +148,8 @@
               <xsl:apply-templates select="." />
             </xsl:otherwise>
           </xsl:choose>
-        </xsl:for-each>
-      </div>
+        </div>
+      </xsl:for-each>
     </div>
   </replace>
 
