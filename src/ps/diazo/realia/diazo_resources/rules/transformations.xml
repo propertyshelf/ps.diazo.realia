@@ -36,8 +36,8 @@
         <xsl:choose>
           <xsl:when test="@name[contains(., 'delete')]">btn-danger</xsl:when>
           <xsl:when test="@class[contains(., 'destructive')]">btn-danger</xsl:when>
-          <xsl:when test="@class[contains(., 'standalone')]">btn-info</xsl:when>
-          <xsl:when test="@class[contains(., 'context')]">btn-primary</xsl:when>
+          <xsl:when test="@class[contains(., 'standalone')]">btn-info arrow-right</xsl:when>
+          <xsl:when test="@class[contains(., 'context')]">btn-primary arrow-right</xsl:when>
           <xsl:otherwise>btn-inverse</xsl:otherwise>
         </xsl:choose>
       </xsl:attribute>
@@ -53,8 +53,8 @@
         <xsl:choose>
           <xsl:when test="@name[contains(., 'delete')]">btn-danger</xsl:when>
           <xsl:when test="@class[contains(., 'destructive')]">btn-danger</xsl:when>
-          <xsl:when test="@class[contains(., 'standalone')]">btn-info</xsl:when>
-          <xsl:when test="@class[contains(., 'context')]">btn-primary</xsl:when>
+          <xsl:when test="@class[contains(., 'standalone')]">btn-info arrow-right</xsl:when>
+          <xsl:when test="@class[contains(., 'context')]">btn-primary arrow-right</xsl:when>
           <xsl:otherwise>btn-inverse</xsl:otherwise>
         </xsl:choose>
       </xsl:attribute>
