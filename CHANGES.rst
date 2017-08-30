@@ -1,8 +1,8 @@
 Changelog
 =========
 
-0.15 (unreleased)
------------------
+0.14.1 (2017-08-30)
+-------------------
 
 - Wrap every property into it's own row-fluid (fixes margin errors).
 - Adjust CSS for property rows.
